@@ -1,0 +1,141 @@
+ *{
+    margin: 0;
+    padding: 0;
+}
+.productDetail {
+  font-family: 'Raleway', sans-serif; 
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.product-main {
+  display: flex;
+  flex-direction: column; 
+  gap: 40px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.pro-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product{
+  flex: 1;
+}
+
+.pname {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.pprice {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+.pdes, .psize, .pmaterial, .porigin {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 5px;
+}
+.checkout {
+  margin-top: 20px;
+}
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.quantity button {
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: #f9f9f9;
+}
+
+.quantity span {
+  padding: 0 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.quantity span {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+.buttons button {
+  flex: 1;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.buttons .buy {
+  background: #ff3e6c;
+  color: #fff;
+  border: none;
+}
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+@media (min-width: 992px) {
+  .product-main {
+    flex-direction: row; 
+  }
+
+  .product {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .product-main {
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  .pname {
+    font-size: 1.5rem;
+  }
+
+  .pprice {
+    font-size: 1.2rem;
+  }
+
+  .pdes, .psize, .pmaterial, .porigin {
+    font-size: 0.9rem;
+  }
+} 

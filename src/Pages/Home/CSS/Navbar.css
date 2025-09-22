@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@1,100..900&family=Liter&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f6efe4;
+}
+/* .nav-main{   
+     width: 100%;
+    background-color: rgb(249, 216, 196); 
+      padding: 12px 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    position: static;
+    font-family: "Playfair Display", serif;
+}
+
+.topics{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.topics li:hover{
+    cursor: pointer;
+}
+.topics li {
+    color: rgb(12, 0, 0);
+    text-decoration: none;
+    font-family: "Playfair+Display";
+    font-size: 1.2rem;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+
+
+.nav-main {
+  width: 100%;
+  background-color: rgb(249, 216, 196); 
+  padding: 8px 28px;   /* smaller height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 110px;  /* thoda small for balance */
+  height: auto;
+}
+
+.topics {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.topics li {
+  font-size: 1.25rem;   /* bigger text */
+  font-weight: 500;     /* slightly bold */
+  font-family: "Playfair Display", serif;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.topics li:hover {
+  color: #c27b4b;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topics {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

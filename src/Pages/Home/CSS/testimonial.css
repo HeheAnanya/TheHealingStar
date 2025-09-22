@@ -1,0 +1,8 @@
+.test-main {
+  display: flex;
+  overflow-x: auto;
+  gap: 25px;
+  padding: 20px 20px
+  /* scrollbar-width: none; firefox */
+}
+ 

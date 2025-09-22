@@ -1,0 +1,184 @@
+.about-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+.tagline {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.tagline h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #222;
+    margin: 0;
+}
+
+.tagline p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+}
+hr {
+    border: none;
+    height: 1px;
+    background-color: #f0e6d6;
+    margin: 40px auto;
+    width: 80%;
+}
+/* Story Section - Updated to use Flexbox */
+.story {
+    display: flex; /* Makes the container a flexbox */
+    align-items: center; /* Vertically centers the items */
+    gap: 50px; /* Adds space between the image and text */
+    max-width: 1200px; /* Use a wider container for a better layout */
+    margin: 40px auto; /* Centers the container and adds vertical spacing */
+    padding: 20px;
+    text-align: left; /* Aligns text to the left within the text container */
+}
+
+.story img {
+    width: 45%; /* Image takes up slightly less than half the space */
+    border-radius: 10px; /* Adds subtle rounded corners */
+}
+
+/* This new container will hold the text content */
+.story .text-container {
+    width: 55%; /* Text container takes up the remaining space */
+}
+
+.story h3 {
+    font-weight: 400;
+    font-size: 1rem; /* Adjusting font size to match the image */
+    color: #a08253;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #222;
+    margin: 10px 0 20px;
+}
+
+.story p {
+    line-height: 1.6;
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+    color: #555;
+}
+.actual {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.founder,
+.core {
+    flex: 1;
+    padding: 20px;
+}
+
+.founder h3,
+.core h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Founder Section */
+.founder {
+    text-align: center;
+}
+
+.founder img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0e6d6;
+    margin-bottom: 20px;
+}
+
+.founder h3:nth-of-type(2) {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 10px 0 5px;
+}
+
+.founder h4 {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #777;
+    margin: 0;
+}
+
+/* Core Values Section */
+/* Core Values Section */
+.core {
+    text-align: left;
+}
+
+.core h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* New CSS to correctly align each value block */
+.value-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    text-align: center; /* Ensures text is centered */
+}
+
+.value-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 0 5px;
+}
+
+.value-card h5 {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .actual {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .values {
+        grid-template-columns: 1fr;
+    }
+    .story {
+        flex-direction: column; /* Stacks items vertically on small screens */
+        text-align: center;
+        gap: 30px;
+    }
+    .story img,
+    .story .text-container {
+        width: 100%; /* Makes both elements full-width */
+    }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Lapis Lazuli Crystal Bracelet",
+    "images": "/bracelet1.png", 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "6mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "ABC"
+  },
+  {
+    "id": "2",
+    "name": "Bracelet2",
+    "images": "/bracelet2.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "6mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  },
+    {
+    "id": "3",
+    "name": "Bracelet3",
+    "images": "/bracelet3.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "6mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  }
+,  {
+    "id": "4",
+    "name": "Bracelet4",
+    "images": "/bracelet4.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "6mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  }
+,  {
+    "id": "5",
+    "name": "Bracelet5",
+    "images": "/bracelet5.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "8mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  }
+,  {
+    "id": "6",
+    "name": "Bracelet6",
+    "images": "/bracelet6.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "8mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  }
+,  {
+    "id": "7",
+    "name": "Bracelet7",
+    "images": "/bracelet7.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "6mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  }
+,  {
+    "id": "8",
+    "name": "Bracelet8",
+    "images": "/bracelet8.png",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.",
+    "size": "8mm",
+    "price": 500,
+    "material": "XXX",
+    "origin": "DEF"
+  }
+]
