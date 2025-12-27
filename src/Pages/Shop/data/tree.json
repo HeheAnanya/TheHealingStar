@@ -1,0 +1,58 @@
+[
+        {
+            "id":"1",
+            "src":"../../../assets/Tree/amethyst.jpg",
+            "alt":"Lapis Lazuli crystal Bracelet",
+            "price":"\u20B9500",
+            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
+        },
+        {
+            "id":"2",
+            "src":"../../../assets/Tree/carnelian.jpg",
+            "alt":"bracelet2",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"3",
+            "src":"../../../assets/Tree/clearquartz.jpg",
+            "alt":"bracelet3",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"4",
+            "src":"../../../assets/Tree/lapis.jpg",
+            "alt":"bracelet4",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"5",
+            "src":"/assets/Tree/mds.jpg",
+            "alt":"bracelet5",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"6",
+            "src":"/assets/Tree/money.jpg",
+            "alt":"bracelet6",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"7",
+            "src":"/assets/Tree/redJasper.jpg",
+            "alt":"bracelet7",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"8",
+            "src":"/assets/Tree/rose.jpg",
+            "alt":"bracelet8",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]

@@ -1,11 +1,12 @@
 import React from 'react'
 import "../CSS/About.css"
-import founder from "../../../assets/founder.png"
-import authenticity from "../../../assets/authenticity.png"
-import compassionate from "../../../assets/compassionate.png"
-import sustainable from "../../../assets/sustainable.png"
-import excellence from "../../../assets/excellence.png"
-import showroom from "../../../assets/showroom.png"
+// import founder from ".    assets/founder.png"
+import founder from "../../../../public/assets/founder.png"
+import authenticity from "../../../../public/assets/authenticity.png"
+import compassionate from "../../../../public/assets/compassionate.png"
+import sustainable from "../../../../public/assets/sustainable.png"
+import excellence from "../../../../public/assets/excellence.png"
+import showroom from "../../../../public/assets/showroom.png"
 
 
 const Hero = () => {

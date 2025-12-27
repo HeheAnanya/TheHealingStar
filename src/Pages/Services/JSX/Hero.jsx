@@ -3,10 +3,10 @@ import {useNavigate} from 'react-router-dom'
 import Work from './Work';
 import "../CSS/Hero.css"; 
 import "../CSS/Work.css"; 
-import Tarot from "../../../assets/tarrot.png"; 
-import Numerology from "../../../assets/numerlogy.png"; 
-import Reiki from "../../../assets/reiki.png"; 
-import Crystal from "../../../assets/crystal.png"; 
+import Tarot from "../../../../public/assets/tarrot.png"; 
+import Numerology from "../../../../public/assets/numerlogy.png"; 
+import Reiki from "../../../../public/assets/reiki.png"; 
+import Crystal from "../../../../public/assets/crystal.png"; 
 
 
 const Hero = () => { 

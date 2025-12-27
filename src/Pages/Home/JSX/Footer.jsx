@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../../../public/assets/logo.png";
 import "../CSS/Footer.css";
 import { useNavigate } from 'react-router-dom'
 

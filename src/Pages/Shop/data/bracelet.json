@@ -1,0 +1,58 @@
+[
+        {
+            "id":"1",
+            "src":"/assets/bracelet1.png",
+            "alt":"Lapis Lazuli crystal Bracelet",
+            "price":"\u20B9500",
+            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
+        },
+        {
+            "id":"2",
+            "src":"/assets/bracelet2.png",
+            "alt":"bracelet2",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"3",
+            "src":"/assets/bracelet3.png",
+            "alt":"bracelet3",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"4",
+            "src":"/assets/bracelet4.png",
+            "alt":"bracelet4",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"5",
+            "src":"/assets/bracelet5.png",
+            "alt":"bracelet5",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"6",
+            "src":"/assets/bracelet6.png",
+            "alt":"bracelet6",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"7",
+            "src":"/assets/bracelet7.png",
+            "alt":"bracelet7",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"8",
+            "src":"/assets/bracelet8.png",
+            "alt":"bracelet8",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]

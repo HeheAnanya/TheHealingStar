@@ -2,20 +2,18 @@ import React from 'react'
 import Collection from './JSX/Collection'
 import Navbar from '../Home/JSX/Navbar'
 import Footer from '../Home/JSX/Footer'
-import { useParams } from 'react-router'
 
 
-const Shop = () => {
-  const { category } = useParams()
+const Crystal = () => {
   return (
     <div>
       
         <Navbar/>
-        <Collection category={category}/>
+        <Collection/>
         <Footer/>
         
     </div>
   )
 }
 
-export default Shop
+export default Crystal

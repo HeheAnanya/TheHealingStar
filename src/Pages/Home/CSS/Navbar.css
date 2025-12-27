@@ -66,6 +66,9 @@ body{
   width: 110px;  /* thoda small for balance */
   height: auto;
 }
+.logo:hover{
+  cursor:pointer;
+}
 
 .topics {
   list-style: none;
@@ -100,6 +103,49 @@ body{
   background-color: #333;
   border-radius: 2px;
 }
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+
+/* dropdown exactly below Shop */
+.shop-dropdown {
+  /* position: static;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: inherit;
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 10px;
+  text-align: center; */
+    position: static;      /* VERY IMPORTANT */
+  margin-top: 12px;
+
+  background: inherit;   /* same navbar bg */
+  padding: 0;
+}
+.shop-dropdown li {
+  padding: 6px 0;
+  font-size: 14px;
+  white-space: nowrap;
+  
+  
+}
+ul{
+  list-style: none;
+}
+
+/* optional hover */
+.shop-dropdown li:hover {
+  opacity: 0.7;
+}
+
+.shop-dropdown li:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

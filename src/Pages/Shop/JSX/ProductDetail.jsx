@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import details from './ProuctDetail.json'
+// import details from './ProuctDetail.json'
+import productData from '../data';
 import Navbar from '../../Home/JSX/Navbar';
 import { useParams } from "react-router-dom";
 import "../CSS/ProductDetail.css"
@@ -14,8 +15,10 @@ const ProductDetail = () => {
             setCount(prev => prev - 1)
         }
     }
-    const { id } = useParams();
-    const product = details.find(p => p.id === id);
+        const { category,id } = useParams();
+
+    const products = productData[category] || []
+    const product = products.find(p =>p.id === id );
     if (!product) {
         alert("Out of Stock! Check Back Later🥺")
         return null

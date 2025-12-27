@@ -1,6 +1,6 @@
 .shop-hero {
   height: 70vh;
-  background: url("../../../assets/crystals.jpg") center/cover no-repeat;
+  background: url("../../../../public/assets/crystals.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;

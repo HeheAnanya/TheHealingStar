@@ -1,0 +1,58 @@
+[
+        {
+            "id":"1",
+            "src":"/assets/Pendant/angelite.jpeg",
+            "alt":"Lapis Lazuli crystal Bracelet",
+            "price":"\u20B9500",
+            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
+        },
+        {
+            "id":"2",
+            "src":"../../../assets/Pendant/bloodstone.jpeg",
+            "alt":"bracelet2",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"3",
+            "src":"../../../assets/Pendant/goldstoneblue.jpg",
+            "alt":"bracelet3",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"4",
+            "src":"../../../assets/Pendant/rainbow.jpg",
+            "alt":"bracelet4",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"5",
+            "src":"../../../assets/Pendant/rose.jpg",
+            "alt":"bracelet5",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"6",
+            "src":"../../../assets/Pendant/sodalite.jpg",
+            "alt":"bracelet6",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"7",
+            "src":"../../../assets/Pendant/tiger.jpg",
+            "alt":"bracelet7",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        {
+            "id":"8",
+            "src":"../../../assets/Pendant/vessonite.jpg",
+            "alt":"bracelet8",
+            "price":"\u20B9500",
+            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    ]

@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from './Card'
 import "../CSS/testimonial.css"
-import TeenageGirl1 from "../../../assets/tg1.jpeg"
-import BuisnessWomen from "../../../assets/bw1.jpeg"
-import TeenageBoy1 from "../../../assets/tb2.jpeg"
-import OldMan from "../../../assets/om.jpeg"
-import OldLady from "../../../assets/ow.jpeg"
-import Doctor from "../../../assets/bw2.jpeg"
+import TeenageGirl1 from "../../../../public/assets/tg1.jpeg"
+import BuisnessWomen from "../../../../public/assets/bw1.jpeg"
+import TeenageBoy1 from "../../../../public/assets/tb2.jpeg"
+import OldMan from "../../../../public/assets/om.jpeg"
+import OldLady from "../../../../public/assets/ow.jpeg"
+import Doctor from "../../../../public/assets/bw2.jpeg"
 
 
 const Testimonial = () => {
