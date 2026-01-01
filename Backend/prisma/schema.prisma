@@ -1,0 +1,134 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  // url      = env("DATABASE_URL")
+}
+enum ROLE {
+  ADMIN
+  CUSTOMER 
+
+}
+enum Category {
+  NUMERLOGY 
+  TAROT
+  REIKI_HEALING
+  CRYSTAL
+}
+enum STATUS {
+  ACTIVE
+  INACTIVE 
+}
+enum Pay {
+  CARD
+  COD 
+  PHONEPAY 
+  EMI 
+}
+enum OrderStatus {
+  DELIVERED 
+  ON_THE_WAY
+  CANCELLED
+}
+enum PayStatus {
+  FAILED
+  SUCCESS
+}
+
+enum ISSUE {
+  RESOLVED
+  IN_PROGRESS
+}
+
+
+
+model User {
+  id Int @id @default(autoincrement())
+  name String
+  password String
+  email String @unique
+  phoneNumber String
+  role ROLE
+  createdAt DateTime @default(now())
+  order Order[]
+  cart Cart?
+}
+
+model Product {
+  id Int @id @default(autoincrement()) 
+  productName String 
+  description String
+  price Int 
+  stock Int 
+  status STATUS @default(ACTIVE)
+  productCategory Category
+  createdAt DateTime @default(now())
+  cartItem CartItem[]
+  orderItem OrderItem[]
+}
+model Order {
+  id Int @id @default(autoincrement())
+  userId Int 
+  totalPrice Int
+  status OrderStatus @default(ON_THE_WAY)
+  payStatus PayStatus @default(FAILED)
+  createdAt DateTime @default(now())
+  user User @relation(fields: [userId], references: [id])
+  items         OrderItem[]
+  payment       Payment?
+
+}
+
+model Payment {
+  id Int @id @default(autoincrement())
+  orderId Int @unique
+  payStatus PayStatus @default(FAILED)
+  payMethod Pay
+  createdAt DateTime @default(now())
+order         Order     @relation(fields: [orderId], references: [id])
+}
+model Cart {
+  id Int @id @default(autoincrement())
+  userId Int @unique
+  createdAt DateTime @default(now())
+  items CartItem[]
+  user User @relation(fields: [userId], references: [id])
+  
+}
+model CartItem {
+  id Int @id @default(autoincrement())
+  cartId Int 
+  productId Int 
+  quantity Int 
+  cart     Cart    @relation(fields: [cartId], references: [id])
+  product  Product @relation(fields: [productId], references: [id])
+}
+model OrderItem {
+  id Int @id @default(autoincrement())
+  orderId Int 
+  productId    Int
+  productName String
+  productPrice Int 
+  quantity Int 
+  order        Order @relation(fields: [orderId], references: [id])
+  product      Product @relation(fields: [productId], references: [id])
+  // products Product[]
+}
+model Feedback {
+  id Int @id @default(autoincrement())
+  name String
+  email String 
+  phone String
+  message String
+  createdAt DateTime @default(now())
+  status ISSUE @default(IN_PROGRESS)
+}

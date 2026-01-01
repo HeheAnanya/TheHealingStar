@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1",
+        "src": "/assets/reiki/healings.jpg",
+        "alt": "Reiki Energy Balancing Session",
+        "name": "Reiki Energy Balancing Session",
+        "price": "\u20B9500",
+        "des": "This Reiki energy balancing session helps restore harmony to your mind, body, and spirit by gently realigning your energy flow. It supports inner stability, calmness, and a renewed sense of balance from within.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "2",
+        "src": "/assets/reiki/distanceChakra.webp",
+        "alt": "Reiki Distance Chakra Balancing Session",
+        "name":"Reiki Distance Chakra Balancing Session",
+        "price": "\u20B9500",
+        "des": "This distance Reiki chakra balancing session gently aligns and clears your energy centers, restoring natural flow and harmony. It supports emotional balance, inner calm, and overall energetic well-being, no matter where you are.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "/assets/reiki/distance.webp",
+        "alt": "Reiki Distance Balancing Session",
+        "name":"Reiki Distance Balancing Session",
+        "price": "\u20B9500",
+        "des": "This distance Reiki session helps balance your energy regardless of physical location. It supports emotional harmony, mental calm, and energetic alignment, allowing healing and peace to flow to you wherever you are.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "/assets/reiki/healings.jpg",
+        "alt": "Reiki Emotional Release Session",
+        "name":"Reiki Emotional Release Session",
+        "price": "\u20B9500",
+        "des": "This soothing Reiki session is designed to gently release emotional stress and inner blockages. It helps calm the mind, balance your energy, and create a sense of emotional clarity, peace, and deep inner healing.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "/assets/reiki/distance.webp",
+        "alt": "Reiki Physical Healing Session",
+        "name":"Reiki Physical Healing Session",
+        "price": "\u20B9500",
+        "des": "Experience a deeply calming Reiki session crafted to release stress and restore physical balance. This luxurious healing journey gently aligns your energy, soothes the body, and promotes overall harmony and renewal.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

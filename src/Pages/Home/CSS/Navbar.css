@@ -43,7 +43,8 @@ body{
 
 .nav-main {
   width: 100%;
-  background-color: rgb(249, 216, 196); 
+  /* background-color: rgb(249, 216, 196);  */
+  background-color: rgba(249, 248, 244, 0.95);
   padding: 8px 28px;   /* smaller height */
   display: flex;
   justify-content: center;

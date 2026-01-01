@@ -1,58 +1,90 @@
 [
-        {
-            "id":"1",
-            "src":"../../../assets/bracelet1.png",
-            "alt":"Lapis Lazuli crystal Bracelet",
-            "price":"\u20B9500",
-            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
-        },
-        {
-            "id":"2",
-            "src":"../../../assets/bracelet2.png",
-            "alt":"bracelet2",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"3",
-            "src":"../../../assets/bracelet3.png",
-            "alt":"bracelet3",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"4",
-            "src":"../../../assets/bracelet4.png",
-            "alt":"bracelet4",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"5",
-            "src":"../../../assets/bracelet5.png",
-            "alt":"bracelet5",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"6",
-            "src":"../../../assets/bracelet6.png",
-            "alt":"bracelet6",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"7",
-            "src":"../../../assets/bracelet7.png",
-            "alt":"bracelet7",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"8",
-            "src":"../../../assets/bracelet8.png",
-            "alt":"bracelet8",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    ]
+  {
+    "id": "1",
+    "src": "../../../assets/ball/amethyst.jpg",
+    "name": "Amethyst Crystal Ball",
+    "alt": "Amethyst Crystal Ball",
+    "price": "₹500",
+    "des": "Enhances spiritual awareness, calmness, and inner peace. Ideal for meditation, intuition, and energy balancing.",
+    "size": "",
+    "material": "Natural Amethyst Crystal",
+    "origin": "Brazil / Uruguay"
+  },
+  {
+    "id": "2",
+    "src": "../../../assets/ball/black.jpg",
+    "name": "Black Agate Crystal Ball",
+    "alt": "Black Agate Crystal Ball",
+    "price": "₹500",
+    "des": "Provides grounding and protective energy while absorbing negativity. Supports emotional strength and stability.",
+    "size": "",
+    "material": "Natural Black Agate",
+    "origin": "India"
+  },
+  {
+    "id": "3",
+    "src": "../../../assets/ball/bluelaceagetate.jpg",
+    "name": "Blue Lace Agate Crystal Ball",
+    "alt": "Blue Lace Agate Crystal Ball",
+    "price": "₹500",
+    "des": "Promotes calm communication and emotional relaxation. Encourages peace, clarity, and gentle healing energy.",
+    "size": "",
+    "material": "Natural Blue Lace Agate",
+    "origin": "Namibia"
+  },
+  {
+    "id": "4",
+    "src": "../../../assets/ball/clearQ.jpg",
+    "name": "Clear Quartz Crystal Ball",
+    "alt": "Clear Quartz Crystal Ball",
+    "price": "₹500",
+    "des": "Amplifies positive energy and spiritual focus. Known as a master healer for clarity and balance.",
+    "size": "",
+    "material": "Natural Clear Quartz",
+    "origin": "Brazil"
+  },
+  {
+    "id": "5",
+    "src": "../../../assets/ball/orangeCalcite.jpg",
+    "name": "Orange Calcite Crystal Ball",
+    "alt": "Orange Calcite Crystal Ball",
+    "price": "₹500",
+    "des": "Boosts creativity, confidence, and joyful energy. Supports emotional upliftment and motivation.",
+    "size": "",
+    "material": "Natural Orange Calcite",
+    "origin": "Mexico"
+  },
+  {
+    "id": "6",
+    "src": "../../../assets/ball/roseq.jpg",
+    "name": "Rose Quartz Crystal Ball",
+    "alt": "Rose Quartz Crystal Ball",
+    "price": "₹500",
+    "des": "Radiates love, compassion, and emotional healing energy. Encourages harmony and heart balance.",
+    "size": "",
+    "material": "Natural Rose Quartz",
+    "origin": "Madagascar"
+  },
+  {
+    "id": "7",
+    "src": "../../../assets/ball/sodalite.jpg",
+    "name": "Sodalite Crystal Ball",
+    "alt": "Sodalite Crystal Ball",
+    "price": "₹500",
+    "des": "Enhances mental clarity, intuition, and self-expression. Supports emotional balance and inner truth.",
+    "size": "",
+    "material": "Natural Sodalite",
+    "origin": "Brazil"
+  },
+  {
+    "id": "8",
+    "src": "../../../assets/ball/mahogany.jpg",
+    "name": "Mahogany Crystal Ball",
+    "alt": "Mahogany Crystal Ball",
+    "price": "₹500",
+    "des": "Provides grounding, protection, and emotional strength. Helps restore balance and stability.",
+    "size": "",
+    "material": "Natural Mahogany Obsidian",
+    "origin": "Mexico"
+  }
+]

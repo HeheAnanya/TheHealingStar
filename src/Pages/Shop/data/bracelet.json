@@ -1,58 +1,90 @@
 [
-        {
-            "id":"1",
-            "src":"/assets/bracelet1.png",
-            "alt":"Lapis Lazuli crystal Bracelet",
-            "price":"\u20B9500",
-            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
-        },
-        {
-            "id":"2",
-            "src":"/assets/bracelet2.png",
-            "alt":"bracelet2",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"3",
-            "src":"/assets/bracelet3.png",
-            "alt":"bracelet3",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"4",
-            "src":"/assets/bracelet4.png",
-            "alt":"bracelet4",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"5",
-            "src":"/assets/bracelet5.png",
-            "alt":"bracelet5",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"6",
-            "src":"/assets/bracelet6.png",
-            "alt":"bracelet6",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"7",
-            "src":"/assets/bracelet7.png",
-            "alt":"bracelet7",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"8",
-            "src":"/assets/bracelet8.png",
-            "alt":"bracelet8",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    ]
+    {
+        "id": "1",
+        "src": "/assets/bracelet1.png",
+        "alt": "Amethyst Crystal Bracelet",
+        "name": "Amethyst Crystal Bracelet",
+        "price": "\u20B9500",
+        "des": "A calming crystal known for soothing the mind and easing emotional stress. Helps enhance intuition, clarity, and inner peace.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "2",
+        "src": "/assets/bracelet2.png",
+        "alt": "Crystal Bracelet for Education",
+        "name": "Crystal Bracelet for Education",
+        "price": "\u20B9500",
+        "des": "Designed to improve focus, concentration, and memory. Supports mental clarity and confidence during studies and learning.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "/assets/bracelet3.png",
+        "alt": "Tiger's Eye Crystel Bracelet",
+        "name": "Tiger's Eye Crystel Bracelet",
+        "price": "\u20B9500",
+        "des": "A powerful stone of courage, confidence, and strength. Helps attract success while protecting against negative energies.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "/assets/bracelet4.png",
+        "alt": "Howlite Crystel Bracelet",
+        "name": "Howlite Crystel Bracelet",
+        "price": "\u20B9500",
+        "des": "Known for its deeply calming and stress-relieving energy. Encourages patience, emotional healing, and peaceful sleep.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "/assets/bracelet5.png",
+        "alt": "Good Luck Crystel Bracelet",
+        "name": "Good Luck Crystel Bracelet",
+        "price": "\u20B9500",
+        "des": "Crafted to attract positive energy, opportunities, and abundance. Supports confidence and keeps negativity away.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "6",
+        "src": "/assets/bracelet6.png",
+        "alt": "Rose Quartz Crystal Bracelet",
+        "name": "Rose Quartz Crystal Bracelet",
+        "price": "\u20B9500",
+        "des": "The stone of love, compassion, and emotional healing. Opens the heart chakra and promotes self-love and harmony.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "7",
+        "src": "/assets/bracelet7.png",
+        "alt": "Lapis Lazuli Crystal Bracelet",
+        "name": "Lapis Lazuli Crystal Bracelet",
+        "price": "\u20B9500",
+        "des": "Enhances wisdom, truth, and spiritual awareness. Encourages self-expression and inner balance.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "8",
+        "src": "/assets/bracelet8.png",
+        "alt": "Red Jasper Crystal Bracelet",
+        "name": "Red Jasper Crystal Bracelet",
+        "price": "\u20B9500",
+        "des": "A grounding stone that boosts strength and physical energy. Helps stabilize emotions and increase endurance.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1",
+        "src": "/assets/tarrot/love.jpg",
+        "alt": "Personalized Love Life Tarot Reading",
+        "name": "Perosnalized Love Life Tarot Reading",
+        "price": "\u20B9500",
+        "des": "Gain clarity about your love life through a personalized tarot reading designed to reveal emotions, intentions, and future possibilities.",
+        "size": "-",
+        "material": "-",
+        "origin": "-"
+    },
+    {
+        "id": "2",
+        "src": "/assets/tarrot/finance.png",
+        "alt": "Personalized Financial Guidance Tarot Reading",
+        "name":"Personalized Financial Guidance Tarot Reading",
+        "price": "\u20B9500",
+        "des": "This customized financial tarot reading reveals hidden influences, upcoming opportunities, and guidance to make wiser money choices.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "/assets/tarrot/health.png",
+        "alt": "Personalized Health Guidance Tarot Reading",
+        "name":"Personalized Health Guidance Tarot Reading",
+        "price": "\u20B9500",
+        "des": "This customized health tarot reading provides intuitive guidance on wellness, healing energies, and emotional alignment for overall balance.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "/assets/tarrot/yesno.png",
+        "alt": "Binary Tarot Reading",
+        "name":"Binary Tarot Reading",
+        "price": "\u20B9500",
+        "des": "This binary tarot reading offers straightforward Yes/No answers to help you make confident decisions with spiritual guidance.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "/assets/tarrot/future.png",
+        "alt": "Perosnalized Future Guidance Tarot Reading",
+        "name":"Perosnalized Future Guidance Tarot Reading",
+        "price": "\u20B9500",
+        "des": "Gain insight into your future through a personalized tarot reading that reveals upcoming energies, opportunities, and challenges guiding your path ahead.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

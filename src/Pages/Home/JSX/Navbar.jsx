@@ -37,8 +37,8 @@ const Navbar = () => {
                 <li ref={shopRef} className="shop-item">
         <span onClick={() => setShopMenu(!shopMenu)}>
           Shop ▾
-        </span></li>
-        {shopMenu && (
+        </span>
+          {shopMenu && (
           <ul className="shop-dropdown">
               <li onClick={()=>(navigate("/shop/bracelets"))}>Bracelets</li>
               <li onClick={()=>(navigate("/shop/pendant"))}>Pendants</li>
@@ -50,6 +50,8 @@ const Navbar = () => {
               <li onClick={()=>(navigate("/shop/evileye"))}>Evil Eye</li>
             </ul>
         )}
+        </li>
+
             <li onClick={() => (navigate("/",{state:{scrollTo:"services"}}))}>Services</li>
             <li onClick={() => (navigate("/about"))}>About</li>
             <li onClick={() => (navigate("/contact"))}>Contact</li>

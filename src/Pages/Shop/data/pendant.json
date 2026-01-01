@@ -1,58 +1,90 @@
 [
-        {
-            "id":"1",
-            "src":"/assets/Pendant/angelite.jpeg",
-            "alt":"Lapis Lazuli crystal Bracelet",
-            "price":"\u20B9500",
-            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
-        },
-        {
-            "id":"2",
-            "src":"../../../assets/Pendant/bloodstone.jpeg",
-            "alt":"bracelet2",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"3",
-            "src":"../../../assets/Pendant/goldstoneblue.jpg",
-            "alt":"bracelet3",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"4",
-            "src":"../../../assets/Pendant/rainbow.jpg",
-            "alt":"bracelet4",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"5",
-            "src":"../../../assets/Pendant/rose.jpg",
-            "alt":"bracelet5",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"6",
-            "src":"../../../assets/Pendant/sodalite.jpg",
-            "alt":"bracelet6",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"7",
-            "src":"../../../assets/Pendant/tiger.jpg",
-            "alt":"bracelet7",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"8",
-            "src":"../../../assets/Pendant/vessonite.jpg",
-            "alt":"bracelet8",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    ]
+    {
+        "id": "1",
+        "src": "/assets/Pendant/angelite.jpeg",
+        "alt": "Angelite Crystal Ring",
+        "name":"Angelite Crystal Ring",
+        "price": "\u20B9500",
+        "des": "Promotes peace, calmness, and gentle emotional healing. Helps enhance spiritual awareness and inner balance.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "2",
+        "src": "../../../assets/Pendant/bloodstone.jpeg",
+        "name":"Bloodstone Crystal Ring",
+        "alt": "Bloodstone Crystal Ring",
+        "price": "\u20B9500",
+        "des": "Known for boosting strength, courage, and vitality. Supports physical energy and grounding protection.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "../../../assets/Pendant/goldstoneblue.jpg",
+        "name":"Goldstoneblue Crystal Ring",
+        "alt": "Goldstoneblue Crystal Ring",
+        "price": "\u20B9500",
+        "des": "A stone of ambition and positive motivation. Encourages confidence, focus, and success energy.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "../../../assets/Pendant/rainbow.jpg",
+        "name":"Rainbow Crystal Ring",
+        "alt": "Rainbow Crystal Ring",
+        "price": "\u20B9500",
+        "des": "Balances emotions and uplifts overall energy. Brings harmony, positivity, and joyful vibrations.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "../../../assets/Pendant/rose.jpg",
+        "name":"Rose Crystal Ring",
+        "alt": "Rose Crystal Ring",
+        "price": "\u20B9500",
+        "des": "The crystal of love and emotional healing. Encourages compassion, self-love, and heart harmony.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "6",
+        "src": "../../../assets/Pendant/sodalite.jpg",
+        "name":"Sodalite Crystal Ring",
+        "alt": "Sodalite Crystal Ring",
+        "price": "\u20B9500",
+        "des": "Enhances clarity, logic, and emotional balance. Supports communication and inner calm.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "7",
+        "src": "../../../assets/Pendant/tiger.jpg",
+        "name":"Tiger Crystal Ring",
+        "alt": "Tiger Crystal Ring",
+        "price": "\u20B9500",
+        "des": "A powerful stone for courage and self-confidence. Attracts protection, strength, and success energy.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "8",
+        "src": "../../../assets/Pendant/vessonite.jpg",
+        "name":"Vessonite Crystal Ring",
+        "alt": "Vessonite Crystal Ring",
+        "price": "\u20B9500",
+        "des": "Encourages emotional strength and stability. Supports grounding while enhancing positive flow.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

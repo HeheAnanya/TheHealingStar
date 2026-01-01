@@ -1,58 +1,90 @@
 [
-        {
-            "id":"1",
-            "src":"../../../assets/bracelet1.png",
-            "alt":"Lapis Lazuli crystal Bracelet",
-            "price":"\u20B9500",
-            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
-        },
-        {
-            "id":"2",
-            "src":"../../../assets/bracelet2.png",
-            "alt":"bracelet2",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"3",
-            "src":"../../../assets/bracelet3.png",
-            "alt":"bracelet3",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"4",
-            "src":"../../../assets/bracelet4.png",
-            "alt":"bracelet4",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"5",
-            "src":"../../../assets/bracelet5.png",
-            "alt":"bracelet5",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"6",
-            "src":"../../../assets/bracelet6.png",
-            "alt":"bracelet6",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"7",
-            "src":"../../../assets/bracelet7.png",
-            "alt":"bracelet7",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"8",
-            "src":"../../../assets/bracelet8.png",
-            "alt":"bracelet8",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    ]
+    {
+        "id": "1",
+        "src": "../../../assets/ring/amethyst.jpg",
+        "alt": "amethyst Crystal Rings",
+        "name": "amethyst Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "2",
+        "src": "../../../assets/ring/carnelian.jpg",
+        "alt": "Carnelian Crystal Rings",
+        "name": "Carnelian Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "../../../assets/ring/citrine.jpg",
+        "alt": "Citrine Crystal Rings",
+        "name": "Citrine Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "../../../assets/ring/clearq.jpg",
+        "alt": "Clear Quartz Cryatl Rings",
+        "name": "Clear Quartz Cryatl Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "../../../assets/ring/greenonyx.jpg",
+        "alt": "Green Onyx Crystal Rings",
+        "name": "Green Onyx Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "6",
+        "src": "../../../assets/ring/lapiz.jpg",
+        "alt": "Lapiz Crystal Rings",
+        "name": "Lapiz Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "7",
+        "src": "../../../assets/ring/ruby.jpg",
+        "alt": "Ruby Crystal Rings",
+        "name": "Ruby Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "8",
+        "src": "../../../assets/ring/tigereye.jpg",
+        "alt": "Tiger Eye Crystal Rings",
+        "name": "Tiger Eye Crystal Rings",
+        "price": "\u20B9500",
+        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

@@ -1,14 +1,18 @@
 .shop-hero {
   height: 70vh;
-  background: url("../../../../public/assets/crystals.jpg") center/cover no-repeat;
+  /* background: url("../../../../public/assets/crystals.jpg") center/cover no-repeat; */
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
   padding: 0 20px;
+  /* object-fit: cover; */
 }
-
+.shop-hero-content{
+  color:rgb(46, 46, 47);
+  font-weight: 600;
+}
 .shop-hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;

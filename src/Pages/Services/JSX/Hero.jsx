@@ -23,17 +23,17 @@ const Hero = () => {
                 "Decision Making",
                 "Future Insights",
             ],
-            navi:"tarrot"
+            navi:"tarot"
         },
         {
             id: "2",
             src: Numerology, 
             text: "NUMEROLOGY",
             items: [
+                "Mobile Number compatibility",
+                "Name Number compatibility",
+                "Marriage Match making compatibility",
                 "Life Path Reading",
-                "Destiny Number",
-                "Soul Urge Number",
-                "Personality Number",
                 "Yearly Forecasts",
             ],
             navi:"numerology"
@@ -47,22 +47,25 @@ const Hero = () => {
                 "Stress Reduction",
                 "Emotional Release",
                 "Physical Healing",
-                "Chakra Alignment",
+                "Distance Chakra Healing",
             ],
             navi:"reiki"
         },
         {
             id: "4",
             src: Crystal,
-            text: "CRYSTAL HEALING",
+            text: "CRYSTAL PRODUCTS",
             items: [
-                "Aura Cleansing",
-                "Chakra Balancing",
-                "Energy Amplification",
-                "Emotional Support",
-                "Spiritual Connection",
+                "Bracelets",
+                "Pendants",
+                "Balls/Sphere",
+                "Salt Lamp",
+                "Rings",
+                "Earrings",
+                "Trees",
+                "Evil Eye"
             ],
-            navi:"crystal"
+            navi:"bracelets"
         },
 
     ];
@@ -82,7 +85,7 @@ const Hero = () => {
                         src={e.src}
                         text={e.text}
                         items={e.items}
-                        onClick = {()=>(navigate(`${e.navi}`))}
+                        onClick = {()=>(navigate(`/shop/${e.navi}`))}
                     />
                 ))}
             </div>

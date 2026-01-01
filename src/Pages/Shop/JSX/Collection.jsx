@@ -14,8 +14,8 @@ const Collection = ({category}) => {
     <>
      <div className="shop-hero" style={{background: `url(${data.bgImage}) center/cover no-repeat`}}>
   <div className="shop-hero-content">
-    <h1>{data.title}</h1>
-    <p>{data.subtitle}</p>
+    {/* <h1>{data.title}</h1>
+    <p>{data.subtitle}</p> */}
     <button onClick={() => window.scrollTo({top:data.scrollTo,behavior:'smooth'})}>Explore Collection</button>
   </div>
 </div>

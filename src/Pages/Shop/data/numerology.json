@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "src": "/assets/numerlogy/mobile.webp",
+        "alt": "Check your mobile number compatibility",
+        "name": "Check your mobile number compatibility",
+        "price": "\u20B9500",
+        "des": "Analyze the numerological vibration of your mobile number to see how well it aligns with your personal energy and daily life",
+        "size": "-",
+        "material": "-",
+        "origin": "-"
+    },
+    {
+        "id": "2",
+        "src": "/assets/numerlogy/name.webp",
+        "alt": "Check your name number compatibility",
+        "name":"Check your name number compatibility",
+        "price": "\u20B9500",
+        "des": "Your name carries a unique vibration.This check reveals how well your name number supports success, balance, and personal growth",
+        "size": "-",
+        "material": "-",
+        "origin": "-"
+    },
+    {
+        "id": "3",
+        "src": "/assets/numerlogy/shaadi.webp",
+        "alt": "Check for marriage match making compatibility",
+        "name":"Check for marriage match making compatibility",
+        "price": "\u20B9500",
+        "des": "Using numerology, we assess how your energies align as a couple highlighting strengths, challenges, and the flow of your relationship before marriage",
+        "size": "-",
+        "material": "-",
+        "origin": "-"
+    }
+]

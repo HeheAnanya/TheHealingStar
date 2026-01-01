@@ -6,6 +6,9 @@ import trees from "./tree.json"
 import sphere from "./sphere.json"
 import earring from "./earring.json"
 import pendant from "./pendant.json"
+import numerology from "./numerology.json"
+import reiki from "./reiki.json"
+import tarot from "./tarot.json"
 // import pic from "../../../assets/Pendant"
 
 const productData = {
@@ -16,7 +19,11 @@ const productData = {
   pendant,
   salt,
   sphere,
-  earring
+  earring,
+  numerology,
+  tarot,
+  reiki
+
 };
 
 export default productData;

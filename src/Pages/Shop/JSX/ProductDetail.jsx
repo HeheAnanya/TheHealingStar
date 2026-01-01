@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import details from './ProuctDetail.json'
 import productData from '../data';
 import Navbar from '../../Home/JSX/Navbar';
 import { useParams } from "react-router-dom";
@@ -33,11 +32,11 @@ const ProductDetail = () => {
             {product &&
                 <div className='product-main'>
                     <div className='pro-img'>
-                        <img src={product.images} alt={product.name} />
+                        <img src={product.src} alt={product.name} />
                     </div>
                     <div className='product'>
                         <p className='pname'>{product.name}</p>
-                        <p className='pprice'><strong>MRP: </strong>₹{product.price}</p>
+                        <p className='pprice'><strong>MRP: </strong>{product.price}</p>
                         <p className='pdes'><strong>Description: </strong>{product.description}</p>
                         <p className='psize'><strong>Size: </strong>{product.size}</p>
                         <p className='pmaterial'><strong>Material: </strong>{product.material}</p>

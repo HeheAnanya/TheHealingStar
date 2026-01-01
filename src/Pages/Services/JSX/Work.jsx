@@ -3,7 +3,7 @@ import "../CSS/Work.css";
 
 const Work = (prop) => {
   return (
-    <div className='work-card'>
+    <div className='work-card' onClick={prop.onClick}>
         <img src={prop.src} alt={prop.text} className="work-icon"/>
         <h2 className="work-title">{prop.text}</h2> 
         <ul className="work-items"> 

@@ -1,58 +1,57 @@
 [
-        {
-            "id":"1",
-            "src":"../../../assets/bracelet1.png",
-            "alt":"Lapis Lazuli crystal Bracelet",
-            "price":"\u20B9500",
-            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
-        },
-        {
-            "id":"2",
-            "src":"../../../assets/bracelet2.png",
-            "alt":"bracelet2",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"3",
-            "src":"../../../assets/bracelet3.png",
-            "alt":"bracelet3",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"4",
-            "src":"../../../assets/bracelet4.png",
-            "alt":"bracelet4",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"5",
-            "src":"../../../assets/bracelet5.png",
-            "alt":"bracelet5",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"6",
-            "src":"../../../assets/bracelet6.png",
-            "alt":"bracelet6",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"7",
-            "src":"../../../assets/bracelet7.png",
-            "alt":"bracelet7",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"8",
-            "src":"../../../assets/bracelet8.png",
-            "alt":"bracelet8",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    ]
+    {
+        "id": "1",
+        "src": "../../../assets/salt/buddha.jpg",
+        "alt": "Buddha Himalayan Rock Salt Lamp",
+        "name":"Buddha Himalayan Rock Salt Lamp",
+        "price": "\u20B9500",
+        "des": "Creates a calm, meditative ambiance while gently purifying surrounding energy. Ideal for relaxation, mindfulness, and spiritual spaces.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "2",
+        "src": "../../../assets/salt/fire.jpg",
+        "name":"Fire Bowl Salt Lamp",
+        "alt": "Fire Bowl Salt Lamp",
+        "price": "\u20B9500",
+        "des": "Emits a warm, soothing glow that helps ease stress and promote emotional balance. Perfect for creating a cozy and peaceful atmosphere.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "../../../assets/salt/himalayan.jpg",
+        "name":"Himalayan Rock Salt Lamp",
+        "alt": "Himalayan Rock Salt Lamp",
+        "price": "\u20B9500",
+        "des": "Supports relaxation and positive energy by cleansing the environment naturally. Ideal for homes, offices, and healing spaces.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "../../../assets/salt/plugrock.jpg",
+        "name":"Natural Plug Salt Lamp",
+        "alt": "Natural Plug Salt Lamp",
+        "price": "\u20B9500",
+        "des": "Provides soft ambient lighting with grounding, calming energy. Helps improve focus while maintaining a peaceful vibe.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "../../../assets/salt/woodenbasket.jpg",
+        "name":"Wooden Basket Himalayan Rock Salt Lamp",
+        "alt": "Wooden Basket Himalayan Rock Salt Lamp",
+        "price": "\u20B9500",
+        "des": "Blends natural beauty with calming energy to uplift any space. Encourages warmth, balance, and serene surroundings.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

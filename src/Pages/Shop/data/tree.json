@@ -1,58 +1,90 @@
 [
-        {
-            "id":"1",
-            "src":"../../../assets/Tree/amethyst.jpg",
-            "alt":"Lapis Lazuli crystal Bracelet",
-            "price":"\u20B9500",
-            "des":"Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth"
-        },
-        {
-            "id":"2",
-            "src":"../../../assets/Tree/carnelian.jpg",
-            "alt":"bracelet2",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"3",
-            "src":"../../../assets/Tree/clearquartz.jpg",
-            "alt":"bracelet3",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"4",
-            "src":"../../../assets/Tree/lapis.jpg",
-            "alt":"bracelet4",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"5",
-            "src":"/assets/Tree/mds.jpg",
-            "alt":"bracelet5",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"6",
-            "src":"/assets/Tree/money.jpg",
-            "alt":"bracelet6",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"7",
-            "src":"/assets/Tree/redJasper.jpg",
-            "alt":"bracelet7",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        },
-        {
-            "id":"8",
-            "src":"/assets/Tree/rose.jpg",
-            "alt":"bracelet8",
-            "price":"\u20B9500",
-            "des":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        }
-    ]
+    {
+        "id": "1",
+        "src": "../../../assets/Tree/amethyst.jpg",
+        "name":"Amethyst Crystal Tree",
+        "alt": "Amethyst Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Promotes calmness, mental clarity, and spiritual growth. Helps create a peaceful and balanced environment.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "2",
+        "src": "../../../assets/Tree/carnelian.jpg",
+        "name":"Carnelian Crystal Tree",
+        "alt": "Carnelian Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Energizes creativity, motivation, and inner strength. Supports confidence and positive life energy.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "3",
+        "src": "../../../assets/Tree/clearquartz.jpg",
+        "name":"Clear Quartz Crystal Tree",
+        "alt": "Clear Quartz Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Known as the master healer for energy amplification. Enhances clarity, focus, and overall harmony.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "4",
+        "src": "../../../assets/Tree/lapis.jpg",
+        "name":"Lapis Lazuli Crystal Tree",
+        "alt": "Lapis Lazuli Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Encourages wisdom, truth, and emotional balance. Supports communication and inner awareness.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "5",
+        "src": "/assets/Tree/mds.jpg",
+        "name":"Seven Chakra Crystal Tree",
+        "alt": "Seven Chakra Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Balances and aligns all seven energy centers. Promotes harmony, positivity, and holistic well-being.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "6",
+        "src": "/assets/Tree/money.jpg",
+        "name":"Money Crystal Tree",
+        "alt": "Money Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Attracts abundance, prosperity, and financial growth. Enhances positive energy for success and stability.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "7",
+        "src": "/assets/Tree/redJasper.jpg",
+        "name":"Red Jasper Crystal Tree",
+        "alt": "Red Jasper Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Provides grounding, strength, and emotional stability. Supports courage, endurance, and protective energy.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    },
+    {
+        "id": "8",
+        "src": "/assets/Tree/rose.jpg",
+        "name":"Rose Crystal Tree",
+        "alt": "Rose Crystal Tree",
+        "price": "\u20B9500",
+        "des": "Radiates love, compassion, and emotional healing. Creates a soothing and harmonious atmosphere.",
+        "size": "",
+        "material": "",
+        "origin": ""
+    }
+]

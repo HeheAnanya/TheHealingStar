@@ -8,6 +8,7 @@ const TarrotCard = () => {
     <div>
         <Navbar/>
         
+        
     </div>
   )
 }
