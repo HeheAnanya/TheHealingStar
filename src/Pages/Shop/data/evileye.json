@@ -2,81 +2,89 @@
     {
         "id": "1",
         "src": "../../../assets/evil/12b.jpg",
-        "alt": "Lapis Lazuli crystal Bracelet",
-        "price": "\u20B9500",
-        "des": "Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "12 beads Evil Bracelet",
+        "name": "12 Beads Evil Eye Bracelet",
+        "price": "₹500",
+        "des": "A traditional protective charm designed to ward off 'Nazar' and bring good luck to the wearer.",
+        "size": "Stretchable",
+        "material": "Glass Beads & Elastic",
+        "origin": "Turkey"
     },
     {
         "id": "2",
         "src": "../../../assets/evil/candle.webp",
-        "alt": "bracelet2",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Evil Eye Candle Stand",
+        "name": "Evil Eye Candle Stand",
+        "price": "₹500",
+        "des": "Adds a protective aura to your space while creating a soothing ambiance with candlelight.",
+        "size": "Standard",
+        "material": "Ceramic / Metal",
+        "origin": "India"
     },
     {
         "id": "3",
         "src": "../../../assets/evil/car.jpg",
-        "alt": "bracelet3",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Evil Eye Car Hanging",
+        "name": "Evil Eye Car Hanging",
+        "price": "₹500",
+        "des": "Protects you and your vehicle during travels. Wards off negative energy on the road.",
+        "size": "Universal Fit",
+        "material": "Glass & Blue Threads",
+        "origin": "Turkey"
     },
     {
         "id": "4",
         "src": "../../../assets/evil/earring.jpg",
-        "alt": "bracelet4",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Evil Eye Earring",
+        "name": "Evil Eye Earrings",
+        "price": "₹500",
+        "des": "Elegant protective jewelry that combines style with ancient symbolism to guard against negativity.",
+        "size": "Standard",
+        "material": "Silver/Alloy with Glass",
+        "origin": "India"
     },
     {
         "id": "5",
         "src": "../../../assets/evil/hang.jpg",
-        "alt": "bracelet5",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Evil Eye Nazar Battu Wall Hanging",
+        "name": "Nazar Battu Wall Hanging",
+        "price": "₹500",
+        "des": "Perfect for home entrances to block negative vibes and ensure harmony within the household.",
+        "size": "Medium",
+        "material": "Glass & Macrame",
+        "origin": "Turkey"
     },
     {
         "id": "6",
         "src": "../../../assets/evil/pendant.jpg",
-        "alt": "bracelet6",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Evil Eye Pendant",
+        "name": "Classic Evil Eye Pendant",
+        "price": "₹500",
+        "des": "A minimalist pendant designed for daily protection and spiritual alignment.",
+        "size": "18-inch Chain",
+        "material": "Stainless Steel / Glass",
+        "origin": "India"
     },
     {
         "id": "7",
         "src": "../../../assets/evil/pendantMoon.jpg",
-        "alt": "bracelet7",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Moon Charm Evil Eye Pendant Necklace",
+        "name": "Moon Charm Evil Eye Necklace",
+        "price": "₹500",
+        "des": "Combines lunar energy with the protective power of the evil eye for emotional balance.",
+        "size": "Adjustable Chain",
+        "material": "Alloy & Glass",
+        "origin": "India"
     },
     {
         "id": "8",
         "src": "../../../assets/evil/tree.jpg",
-        "alt": "bracelet8",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Evil Eye Tree for Protection",
+        "name": "Evil Eye Protection Tree",
+        "price": "₹500",
+        "des": "A beautiful decor piece that acts as a shield for your office or living room, attracting prosperity.",
+        "size": "6-8 Inches",
+        "material": "Wire & Glass Beads",
+        "origin": "India"
     }
 ]

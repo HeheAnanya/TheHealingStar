@@ -2,89 +2,89 @@
     {
         "id": "1",
         "src": "../../../assets/ring/amethyst.jpg",
-        "alt": "amethyst Crystal Rings",
-        "name": "amethyst Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lapis Lazuli Crystal Bracelet for Emotional Healing and Spritual Growth",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Amethyst Crystal Rings",
+        "name": "Amethyst Crystal Rings",
+        "price": "₹500",
+        "des": "Enhances spiritual awareness and provides a sense of calm. Perfect for stress relief and deep meditation.",
+        "size": "Adjustable",
+        "material": "Natural Amethyst Crystal",
+        "origin": "Brazil"
     },
     {
         "id": "2",
         "src": "../../../assets/ring/carnelian.jpg",
         "alt": "Carnelian Crystal Rings",
         "name": "Carnelian Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "price": "₹500",
+        "des": "Boosts motivation, endurance, and leadership qualities. Known for stimulating creativity and courage.",
+        "size": "Adjustable",
+        "material": "Natural Carnelian",
+        "origin": "India"
     },
     {
         "id": "3",
         "src": "../../../assets/ring/citrine.jpg",
         "alt": "Citrine Crystal Rings",
         "name": "Citrine Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "price": "₹500",
+        "des": "The stone of manifestation and wealth. Brings solar energy for joy, success, and abundance.",
+        "size": "Adjustable",
+        "material": "Natural Citrine",
+        "origin": "Brazil"
     },
     {
         "id": "4",
         "src": "../../../assets/ring/clearq.jpg",
-        "alt": "Clear Quartz Cryatl Rings",
-        "name": "Clear Quartz Cryatl Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Clear Quartz Crystal Rings",
+        "name": "Clear Quartz Crystal Rings",
+        "price": "₹500",
+        "des": "A master healer that amplifies energy and thought. Improves mental clarity and balances the body.",
+        "size": "Adjustable",
+        "material": "Natural Clear Quartz",
+        "origin": "Madagascar"
     },
     {
         "id": "5",
         "src": "../../../assets/ring/greenonyx.jpg",
         "alt": "Green Onyx Crystal Rings",
         "name": "Green Onyx Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "price": "₹500",
+        "des": "Promotes purity, restfulness, and relieves stress. Helps in building physical and emotional stamina.",
+        "size": "Adjustable",
+        "material": "Natural Green Onyx",
+        "origin": "India / Pakistan"
     },
     {
         "id": "6",
         "src": "../../../assets/ring/lapiz.jpg",
-        "alt": "Lapiz Crystal Rings",
-        "name": "Lapiz Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "alt": "Lapis Crystal Rings",
+        "name": "Lapis Crystal Rings",
+        "price": "₹500",
+        "des": "Promotes wisdom, truth, and intellectual ability. Encourages self-awareness and reveals inner truth.",
+        "size": "Adjustable",
+        "material": "Natural Lapis Lazuli",
+        "origin": "Afghanistan"
     },
     {
         "id": "7",
         "src": "../../../assets/ring/ruby.jpg",
         "alt": "Ruby Crystal Rings",
         "name": "Ruby Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "price": "₹500",
+        "des": "Symbolizes passion, protection, and prosperity. Helps in boosting energy levels and confidence.",
+        "size": "Adjustable",
+        "material": "Natural Ruby (Raw/Tumbled)",
+        "origin": "Burma / India"
     },
     {
         "id": "8",
         "src": "../../../assets/ring/tigereye.jpg",
         "alt": "Tiger Eye Crystal Rings",
         "name": "Tiger Eye Crystal Rings",
-        "price": "\u20B9500",
-        "des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "size": "",
-        "material": "",
-        "origin": ""
+        "price": "₹500",
+        "des": "A powerful grounding stone that provides courage and protection. Enhances focus and willpower.",
+        "size": "Adjustable",
+        "material": "Natural Tiger Eye",
+        "origin": "South Africa"
     }
 ]

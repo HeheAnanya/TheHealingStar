@@ -4,7 +4,10 @@ import Navbar from '../../Home/JSX/Navbar';
 import { useParams } from "react-router-dom";
 import "../CSS/ProductDetail.css"
 import Footer  from '../../Home/JSX/Footer';
+import {api} from "../../../api/axios"
+import { useNavigate } from 'react-router-dom';
 const ProductDetail = () => {
+    const navigate = useNavigate()
     let [count, setCount] = useState(1)
     function increment() {
         setCount(prev => prev + 1)
@@ -21,6 +24,32 @@ const ProductDetail = () => {
     if (!product) {
         alert("Out of Stock! Check Back Later🥺")
         return null
+    }
+    async function addToCart(){
+        try{
+            await api.post("/cart/add",{
+                productId:product.id,
+                quantity:count
+            })
+             alert("✅ Added to cart")
+        }
+        catch(err){
+            console.log(err)
+            alert(err.response?.data?.message || "Add to cart failed");
+        }
+    }
+    async function buyNow(){
+        try{
+            await api.post("/cart/add",{
+        productId: product.id,
+        quantity: count
+      });
+      navigate("/cart")
+        }
+        catch(err){
+            console.log(err)
+            alert(err.response?.data?.message || "Buy Now failed");
+        }
     }
 
     return (
@@ -48,8 +77,8 @@ const ProductDetail = () => {
                                 <button onClick={increment}>+</button>
                             </div>
                             <div className='buttons'>
-                                <button className='cart'>Add to Cart</button>
-                                <button className='buy'>Buy Now</button>
+                                <button className='cart' onClick={addToCart}>Add to Cart</button>
+                                <button className='buy' onClick={buyNow}>Buy Now</button>
                             </div>
                         </div>
                     </div>

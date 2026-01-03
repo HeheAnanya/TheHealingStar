@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const AuthService = require("../services/authService")
 
 async function signup(req, res) {

@@ -6,39 +6,43 @@
 
 generator client {
   provider = "prisma-client-js"
-  // output   = "../generated/prisma"
 }
 
 datasource db {
   provider = "mysql"
-  // url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
+
 enum ROLE {
   ADMIN
-  CUSTOMER 
-
+  CUSTOMER
 }
+
 enum Category {
-  NUMERLOGY 
+  NUMEROLOGY
   TAROT
   REIKI_HEALING
   CRYSTAL
 }
+
 enum STATUS {
   ACTIVE
-  INACTIVE 
+  INACTIVE
 }
+
 enum Pay {
   CARD
-  COD 
-  PHONEPAY 
-  EMI 
+  COD
+  PHONEPAY
+  EMI
 }
+
 enum OrderStatus {
-  DELIVERED 
+  DELIVERED
   ON_THE_WAY
   CANCELLED
 }
+
 enum PayStatus {
   FAILED
   SUCCESS
@@ -49,86 +53,86 @@ enum ISSUE {
   IN_PROGRESS
 }
 
-
-
 model User {
-  id Int @id @default(autoincrement())
-  name String
-  password String
-  email String @unique
+  id          Int      @id @default(autoincrement())
+  name        String
+  password    String
+  email       String   @unique
   phoneNumber String
-  role ROLE
-  createdAt DateTime @default(now())
-  order Order[]
-  cart Cart?
+  role        ROLE
+  createdAt   DateTime @default(now())
+  order       Order[]
+  cart        Cart?
 }
 
 model Product {
-  id Int @id @default(autoincrement()) 
-  productName String 
-  description String
-  price Int 
-  stock Int 
-  status STATUS @default(ACTIVE)
+  id              Int       @id @default(autoincrement())
+  productName     String
+  description     String
+  price           Int
+  stock           Int
+  status          STATUS    @default(ACTIVE)
   productCategory Category
-  createdAt DateTime @default(now())
-  cartItem CartItem[]
-  orderItem OrderItem[]
+  createdAt       DateTime  @default(now())
+  cartItem        CartItem[]
+  orderItem       OrderItem[]
 }
-model Order {
-  id Int @id @default(autoincrement())
-  userId Int 
-  totalPrice Int
-  status OrderStatus @default(ON_THE_WAY)
-  payStatus PayStatus @default(FAILED)
-  createdAt DateTime @default(now())
-  user User @relation(fields: [userId], references: [id])
-  items         OrderItem[]
-  payment       Payment?
 
+model Order {
+  id         Int          @id @default(autoincrement())
+  userId     Int
+  totalPrice Int
+  status     OrderStatus @default(ON_THE_WAY)
+  payStatus  PayStatus   @default(FAILED)
+  createdAt  DateTime    @default(now())
+  user       User        @relation(fields: [userId], references: [id])
+  items      OrderItem[]
+  payment    Payment?
 }
 
 model Payment {
-  id Int @id @default(autoincrement())
-  orderId Int @unique
+  id        Int      @id @default(autoincrement())
+  orderId   Int      @unique
   payStatus PayStatus @default(FAILED)
   payMethod Pay
   createdAt DateTime @default(now())
-order         Order     @relation(fields: [orderId], references: [id])
+  order     Order    @relation(fields: [orderId], references: [id])
 }
+
 model Cart {
-  id Int @id @default(autoincrement())
-  userId Int @unique
+  id        Int      @id @default(autoincrement())
+  userId    Int      @unique
   createdAt DateTime @default(now())
-  items CartItem[]
-  user User @relation(fields: [userId], references: [id])
-  
+  items     CartItem[]
+  user      User     @relation(fields: [userId], references: [id])
 }
+
 model CartItem {
-  id Int @id @default(autoincrement())
-  cartId Int 
-  productId Int 
-  quantity Int 
+  id        Int     @id @default(autoincrement())
+  cartId   Int
+  productId Int
+  quantity Int
   cart     Cart    @relation(fields: [cartId], references: [id])
   product  Product @relation(fields: [productId], references: [id])
 }
+
 model OrderItem {
-  id Int @id @default(autoincrement())
-  orderId Int 
+  id           Int     @id @default(autoincrement())
+  orderId      Int
   productId    Int
-  productName String
-  productPrice Int 
-  quantity Int 
-  order        Order @relation(fields: [orderId], references: [id])
+  productName  String
+  productPrice Int
+  quantity     Int
+  order        Order   @relation(fields: [orderId], references: [id])
   product      Product @relation(fields: [productId], references: [id])
-  // products Product[]
 }
+
 model Feedback {
-  id Int @id @default(autoincrement())
-  name String
-  email String 
-  phone String
-  message String
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String
+  message   String
   createdAt DateTime @default(now())
-  status ISSUE @default(IN_PROGRESS)
+  status    ISSUE    @default(IN_PROGRESS)
 }

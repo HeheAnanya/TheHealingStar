@@ -74,6 +74,7 @@ CREATE TABLE `CartItem` (
 CREATE TABLE `OrderItem` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `orderId` INTEGER NOT NULL,
+    `productId` INTEGER NOT NULL,
     `productName` VARCHAR(191) NOT NULL,
     `productPrice` INTEGER NOT NULL,
     `quantity` INTEGER NOT NULL,
@@ -92,15 +93,6 @@ CREATE TABLE `Feedback` (
     `status` ENUM('RESOLVED', 'IN_PROGRESS') NOT NULL DEFAULT 'IN_PROGRESS',
 
     PRIMARY KEY (`id`)
-) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
--- CreateTable
-CREATE TABLE `_OrderItemToProduct` (
-    `A` INTEGER NOT NULL,
-    `B` INTEGER NOT NULL,
-
-    UNIQUE INDEX `_OrderItemToProduct_AB_unique`(`A`, `B`),
-    INDEX `_OrderItemToProduct_B_index`(`B`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
@@ -122,7 +114,4 @@ ALTER TABLE `CartItem` ADD CONSTRAINT `CartItem_productId_fkey` FOREIGN KEY (`pr
 ALTER TABLE `OrderItem` ADD CONSTRAINT `OrderItem_orderId_fkey` FOREIGN KEY (`orderId`) REFERENCES `Order`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `_OrderItemToProduct` ADD CONSTRAINT `_OrderItemToProduct_A_fkey` FOREIGN KEY (`A`) REFERENCES `OrderItem`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE `_OrderItemToProduct` ADD CONSTRAINT `_OrderItemToProduct_B_fkey` FOREIGN KEY (`B`) REFERENCES `Product`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `OrderItem` ADD CONSTRAINT `OrderItem_productId_fkey` FOREIGN KEY (`productId`) REFERENCES `Product`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

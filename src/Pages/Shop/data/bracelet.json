@@ -24,8 +24,8 @@
     {
         "id": "3",
         "src": "/assets/bracelet3.png",
-        "alt": "Tiger's Eye Crystel Bracelet",
-        "name": "Tiger's Eye Crystel Bracelet",
+        "alt": "Tiger's Eye Crystal Bracelet",
+        "name": "Tiger's Eye Crystal Bracelet",
         "price": "\u20B9500",
         "des": "A powerful stone of courage, confidence, and strength. Helps attract success while protecting against negative energies.",
         "size": "",
@@ -35,8 +35,8 @@
     {
         "id": "4",
         "src": "/assets/bracelet4.png",
-        "alt": "Howlite Crystel Bracelet",
-        "name": "Howlite Crystel Bracelet",
+        "alt": "Howlite Crystal Bracelet",
+        "name": "Howlite Crystal Bracelet",
         "price": "\u20B9500",
         "des": "Known for its deeply calming and stress-relieving energy. Encourages patience, emotional healing, and peaceful sleep.",
         "size": "",
@@ -46,8 +46,8 @@
     {
         "id": "5",
         "src": "/assets/bracelet5.png",
-        "alt": "Good Luck Crystel Bracelet",
-        "name": "Good Luck Crystel Bracelet",
+        "alt": "Good Luck Crystal Bracelet",
+        "name": "Good Luck Crystal Bracelet",
         "price": "\u20B9500",
         "des": "Crafted to attract positive energy, opportunities, and abundance. Supports confidence and keeps negativity away.",
         "size": "",
