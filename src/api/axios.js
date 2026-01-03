@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL:"https://the-healing-star-2leexg3sp-heheananyas-projects.vercel.app",
+    // baseURL: "http://localhost:3000",
     withCredentials: true
     // headers: {
     //     Authorization: `Bearer ${localStorage.getItem("token")?.replace(/"/g, "")}`
