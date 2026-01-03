@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL:"https://the-healing-star-2leexg3sp-heheananyas-projects.vercel.app",
+    baseURL:"https://thehealingstar.onrender.com",
     // baseURL: "http://localhost:3000",
     withCredentials: true
     // headers: {
