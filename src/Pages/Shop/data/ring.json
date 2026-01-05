@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": "46",
         "src": "../../../assets/ring/amethyst.jpg",
         "alt": "Amethyst Crystal Rings",
         "name": "Amethyst Crystal Rings",
@@ -11,7 +11,7 @@
         "origin": "Brazil"
     },
     {
-        "id": "2",
+        "id": "47",
         "src": "../../../assets/ring/carnelian.jpg",
         "alt": "Carnelian Crystal Rings",
         "name": "Carnelian Crystal Rings",
@@ -22,7 +22,7 @@
         "origin": "India"
     },
     {
-        "id": "3",
+        "id": "48",
         "src": "../../../assets/ring/citrine.jpg",
         "alt": "Citrine Crystal Rings",
         "name": "Citrine Crystal Rings",
@@ -33,7 +33,7 @@
         "origin": "Brazil"
     },
     {
-        "id": "4",
+        "id": "49",
         "src": "../../../assets/ring/clearq.jpg",
         "alt": "Clear Quartz Crystal Rings",
         "name": "Clear Quartz Crystal Rings",
@@ -44,7 +44,7 @@
         "origin": "Madagascar"
     },
     {
-        "id": "5",
+        "id": "50",
         "src": "../../../assets/ring/greenonyx.jpg",
         "alt": "Green Onyx Crystal Rings",
         "name": "Green Onyx Crystal Rings",
@@ -55,7 +55,7 @@
         "origin": "India / Pakistan"
     },
     {
-        "id": "6",
+        "id": "51",
         "src": "../../../assets/ring/lapiz.jpg",
         "alt": "Lapis Crystal Rings",
         "name": "Lapis Crystal Rings",
@@ -66,7 +66,7 @@
         "origin": "Afghanistan"
     },
     {
-        "id": "7",
+        "id": "52",
         "src": "../../../assets/ring/ruby.jpg",
         "alt": "Ruby Crystal Rings",
         "name": "Ruby Crystal Rings",
@@ -77,7 +77,7 @@
         "origin": "Burma / India"
     },
     {
-        "id": "8",
+        "id": "53",
         "src": "../../../assets/ring/tigereye.jpg",
         "alt": "Tiger Eye Crystal Rings",
         "name": "Tiger Eye Crystal Rings",

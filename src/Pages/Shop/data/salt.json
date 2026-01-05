@@ -1,6 +1,6 @@
 [
     {
-        "id": "1",
+        "id": "25",
         "src": "../../../assets/salt/buddha.jpg",
         "alt": "Buddha Himalayan Rock Salt Lamp",
         "name":"Buddha Himalayan Rock Salt Lamp",
@@ -11,7 +11,7 @@
         "origin": ""
     },
     {
-        "id": "2",
+        "id": "26",
         "src": "../../../assets/salt/fire.jpg",
         "name":"Fire Bowl Salt Lamp",
         "alt": "Fire Bowl Salt Lamp",
@@ -22,7 +22,7 @@
         "origin": ""
     },
     {
-        "id": "3",
+        "id": "27",
         "src": "../../../assets/salt/himalayan.jpg",
         "name":"Himalayan Rock Salt Lamp",
         "alt": "Himalayan Rock Salt Lamp",
@@ -33,7 +33,7 @@
         "origin": ""
     },
     {
-        "id": "4",
+        "id": "28",
         "src": "../../../assets/salt/plugrock.jpg",
         "name":"Natural Plug Salt Lamp",
         "alt": "Natural Plug Salt Lamp",
@@ -44,7 +44,7 @@
         "origin": ""
     },
     {
-        "id": "5",
+        "id": "29",
         "src": "../../../assets/salt/woodenbasket.jpg",
         "name":"Wooden Basket Himalayan Rock Salt Lamp",
         "alt": "Wooden Basket Himalayan Rock Salt Lamp",

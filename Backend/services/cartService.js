@@ -103,20 +103,4 @@ async function removeProduct(userId, productId) {
     }
   })
 }
-
-async function getName(name) {
-  try {
-    const result = await prisma.product.findFirst({
-      where: {
-        productName: name
-      }
-    })
-    return result
-  }
-  catch (err) {
-    throw new Error(err)
-  }
-
-}
-
-module.exports = { addToCart, getCart, updateProduct, removeProduct,getName }
+module.exports = { addToCart, getCart, updateProduct, removeProduct }
