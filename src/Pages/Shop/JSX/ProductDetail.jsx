@@ -94,8 +94,8 @@ const ProductDetail = () => {
                                     <button onClick={increment}>+</button>
                                 </div>
                                 <div className='buttons'>
-                                    <button className='cart' onClick={addToCart}>Add to Cart</button>
-                                    <button className='buy' onClick={buyNow}>Buy Now</button>
+                                    <button className='cart' onClick={addToCart} disabled={!dbProduct}>Add to Cart</button>
+                                    <button className='buy' onClick={buyNow} disabled={!dbProduct}>Buy Now</button>
                                 </div>
                             </div>
                         </div>
