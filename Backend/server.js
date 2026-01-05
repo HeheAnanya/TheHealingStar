@@ -12,7 +12,7 @@ const adminOrder = require("./routes/adminOrder")
 const app = express()
 app.use(express.json())
 app.use(cors)
-app.options("*", cors)
+// app.options("*", cors)
 
 
 
