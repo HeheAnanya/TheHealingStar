@@ -56,5 +56,15 @@ async function removeProduct(req, res) {
         return res.status(500).json({ message: err.message })
     }
 }
-
-module.exports = { getCart, updateProduct, addProduct, removeProduct }
+async function getName(req,res) {
+    try{
+        let {name} = req.params
+        let result = await cart.getName(name)
+        return res.status(200).json(result)
+    }
+    catch(err){
+        return res.status(500).json({ message: err.message })
+    }
+    
+}
+module.exports = { getCart, updateProduct, addProduct, removeProduct,getName }

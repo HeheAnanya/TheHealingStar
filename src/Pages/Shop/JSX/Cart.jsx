@@ -25,7 +25,7 @@ const Cart = () => {
 
   async function clearCart() {
     for (let i of cart.items) {
-      await api.delete(`/cart/remove/${i.productId}`)
+      await api.delete(`/cart/remove/${i.product.id}`)
     }
     fetchCart()
 
@@ -69,7 +69,7 @@ const Cart = () => {
               </div>
               <button
                 className="remove-btn"
-                onClick={() => removeFromCart(item.productId)}
+                onClick={() => removeFromCart(item.product.id)}
               >
                 Remove
               </button>

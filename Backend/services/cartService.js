@@ -1,7 +1,7 @@
 // Add item to cart
 const prisma = require("../prisma/client")
 async function addToCart(userId, productId, quantity) {
-    quantity = Number(quantity)
+  quantity = Number(quantity)
 
   if (!productId || quantity <= 0) {
     throw new Error("Invalid product or quantity")
@@ -49,22 +49,22 @@ async function addToCart(userId, productId, quantity) {
       productId: product.id,
       quantity
     }
-  })    
+  })
 }
 async function getCart(userId) {
-let order_list =  await prisma.cart.findUnique({
-    where:{
-        userId:Number(userId)
+  let order_list = await prisma.cart.findUnique({
+    where: {
+      userId: Number(userId)
     },
-    include:{
-        items:{
-            include:{
-                product:true
-            }
+    include: {
+      items: {
+        include: {
+          product: true
         }
+      }
     }
-})
-return order_list
+  })
+  return order_list
 }
 async function updateProduct(userId, productId, quantity) {
   quantity = Number(quantity)
@@ -104,5 +104,19 @@ async function removeProduct(userId, productId) {
   })
 }
 
+async function getName(name) {
+  try {
+    const result = await prisma.product.findFirst({
+      where: {
+        productName: name
+      }
+    })
+    return result
+  }
+  catch (err) {
+    throw new Error(err)
+  }
 
-module.exports = {addToCart,getCart,updateProduct,removeProduct}
+}
+
+module.exports = { addToCart, getCart, updateProduct, removeProduct,getName }
