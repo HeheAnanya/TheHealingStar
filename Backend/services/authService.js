@@ -72,4 +72,31 @@ async function login(detail) {
     }
 
 }
-module.exports = { signup, login }
+
+async function forgotPassword(email,newPassword) {
+    try{
+        let user = await prisma.user.findUnique({
+            where:{
+                email:email
+            }
+        })
+        if (!user){
+            throw new Error ("User Not Found! Create an account first.")
+        }
+        let newHash = await bcrypt.hash(newPassword,10)
+        let account = await prisma.user.update({
+            where:{
+                email:email
+            },
+            data:{
+                password:newHash
+            }
+        })
+        return {message:"Password Updated Successfully"}
+    }
+     catch (err) {
+        throw new Error(err.message)
+    }
+    
+}
+module.exports = { signup, login,forgotPassword }

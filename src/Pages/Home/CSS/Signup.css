@@ -1,0 +1,150 @@
+
+.singup {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDFBF7;
+    /* Cream/Off-white */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 2rem 0;
+}
+
+.signCard {
+    background: #FFFFFF;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.15);
+    /* Soft gold shadow */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.signHeader h1 {
+    font-size: 2.2rem;
+    color: #2C2C2C;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.signHeader p {
+    color: #8C8C8C;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.signHorm {
+    /* Typo from JSX preserved */
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.detail label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.detail input {
+    padding: 12px 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+    color: #333;
+}
+
+.detail input:focus {
+    border-color: #D4AF37;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+}
+
+.signbtn {
+    margin-top: 1.5rem;
+    padding: 16px;
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.signbtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #E5C048 0%, #D4AF37 100%);
+}
+
+.switch {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.switch span {
+    color: #9B8EA9;
+    /* Muted Amethyst */
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: color 0.3s;
+}
+.switch span:hover {
+    text-decoration: underline;
+    color: #7A6E8A;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .singup {
+        align-items: flex-start;
+        padding: 0;
+        min-height: 100vh;
+        background-color: #fff;
+    }
+
+    .signCard {
+        padding: 2rem 1.5rem;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .signHeader h1 {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+}

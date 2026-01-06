@@ -53,7 +53,7 @@ const Cart = () => {
   function image(name){
     const src = allProducts.find((p) => p.name?.toLowerCase() === name?.toLowerCase() || p.alt?.toLowerCase() === name?.toLowerCase()
   )
-    return src.src|| ""
+    return src?.src|| ""
   }
   return (
 

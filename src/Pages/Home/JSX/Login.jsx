@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { api } from "../../../api/axios"
 import { useNavigate } from 'react-router-dom'
+import "../CSS/Login.css"
 
 const Login = () => {
     const navigate = useNavigate()
@@ -80,7 +81,7 @@ const Login = () => {
                 <span onClick={() => navigate("/signup")}> Sign Up</span>
             </p>
 
-            <p className="forgot" onClick={() => navigate("/forgot-password")}>
+            <p className="forgot" onClick={() => navigate("/forgotPassword")}>
                 Forgot Password?
             </p>
 

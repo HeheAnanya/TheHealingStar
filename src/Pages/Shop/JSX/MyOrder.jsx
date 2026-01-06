@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Navbar from "../../Home/JSX/Navbar"
 import Footer from "../../Home/JSX/Footer"
 import { api } from "../../../api/axios"
+import "../CSS/MyOrder.css"
 
 const MyOrder = () => {
     const [orders, setOrder] = useState([])

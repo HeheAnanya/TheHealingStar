@@ -2,6 +2,7 @@ import React, { useState } from "react"
 // import "../css/auth.css"
 import { api } from "../../../api/axios"
 import { useNavigate } from "react-router-dom"
+import "../CSS/Signup.css"
 
 const Signup = () => {
   const navigate = useNavigate()

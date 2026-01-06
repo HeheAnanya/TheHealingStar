@@ -12,6 +12,7 @@ import Login from './Pages/Home/JSX/Login';
 import Signup from './Pages/Home/JSX/Signup';
 import Cart from './Pages/Shop/JSX/Cart';
 import MyOrder from './Pages/Shop/JSX/MyOrder';
+import ForgotPassword from './Pages/Home/JSX/ForgotPassword';
 
 // import a from "./Pages/S"
 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element = {<Signup/>}/>
+        <Route path='/forgotPassword' element={<ForgotPassword/>}/>
         
         <Route path="/services" element={<Services />} />
         <Route path="/shop/:category" element={<Shop />} />

@@ -1,4 +1,4 @@
- *{
+ /* *{
     margin: 0;
     padding: 0;
 }
@@ -138,4 +138,202 @@
   .pdes, .psize, .pmaterial, .porigin {
     font-size: 0.9rem;
   }
-} 
+}  */
+
+/* Product Detail Page - Premium Spiritual Theme */
+.productDetail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: #FDFBF7;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 80vh;
+}
+
+.product-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Section */
+.pro-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  /* Soft shadow */
+}
+
+/* Details Section */
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pname {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #2C2C2C;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.pprice {
+  font-size: 1.5rem;
+  color: #D4AF37;
+  /* Gold */
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #EEE;
+}
+
+.pdes,
+.psize,
+.pmaterial,
+.porigin {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+}
+
+.pdes strong,
+.psize strong,
+.pmaterial strong,
+.porigin strong {
+  color: #222;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Quantity Control */
+.checkout {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quantity button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #DDD;
+  background: white;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity button:hover {
+  border-color: #D4AF37;
+  color: #D4AF37;
+}
+
+.quantity span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Action Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.cart,
+.buy {
+  flex: 1;
+  padding: 16px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cart {
+  background-color: #4A4A4A;
+  color: white;
+}
+
+.cart:hover {
+  background-color: #2C2C2C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buy {
+  background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.buy:hover {
+  background: linear-gradient(135deg, #E5C048 0%, #D4AF37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .product-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productDetail {
+    padding: 2rem 1rem;
+  }
+
+  .product-main {
+    padding: 1.5rem;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .pname {
+    font-size: 2rem;
+  }
+}

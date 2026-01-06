@@ -24,5 +24,19 @@ async function login(req, res) {
     }
 
 }
+async function forgotPassword(req,res) {
+    try{
+        const {email,newPassword} = req.body 
+        if (!email || !newPassword){
+            return res.status(400).json({ message: "Email and password required" })
+        }
+        let newPass = await AuthService.forgotPassword({email,newPassword})
+        return res.status(200).json(newPass)
+    }
+     catch (err) {
+        console.log(err)
+        return res.status(401).json({ "Error": err.message })
+    }
+}
 
-module.exports = { signup, login }
+module.exports = { signup, login,forgotPassword }
