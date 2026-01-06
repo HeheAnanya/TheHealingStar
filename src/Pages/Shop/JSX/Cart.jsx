@@ -3,9 +3,11 @@ import Navbar from "../../Home/JSX/Navbar";
 import Footer from "../../Home/JSX/Footer";
 import { api } from "../../../api/axios"
 import "../CSS/Cart.css";
+import productData from  "../data/index"
 
 const Cart = () => {
   const [cart, setCart] = useState(null)
+  let allProducts = Object.values(productData).flat()
 
   async function fetchCart() {
     try {
@@ -48,6 +50,11 @@ const Cart = () => {
       </>
     )
   }
+  function image(name){
+    const src = allProducts.find((p) => p.name?.toLowerCase() === name?.toLowerCase() || p.alt?.toLowerCase() === name?.toLowerCase()
+  )
+    return src.src|| ""
+  }
   return (
 
     <div>
@@ -57,7 +64,7 @@ const Cart = () => {
         <div className="cart-items">
           {cart.items.map((item) => (
             <div className="cart-item" key={item.id}>
-              <img src={item.product.image || ""} alt={item.product.productName} />
+              <img src={image(item.product.productName)} alt={item.product.productName} />
               <div className="cart-details">
                 <p className="cart-name">{item.product.productName}</p>
                 <p className="cart-price">
@@ -67,12 +74,7 @@ const Cart = () => {
                   Subtotal: ₹{item.product.price * item.quantity}
                 </p>
               </div>
-              <button
-                className="remove-btn"
-                onClick={() => removeFromCart(item.product.id)}
-              >
-                Remove
-              </button>
+              <button className="remove-btn"onClick={() => removeFromCart(item.product.id)}>Remove</button>
             </div>
           ))}
         </div>
