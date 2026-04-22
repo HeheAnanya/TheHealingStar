@@ -57,8 +57,8 @@ const MyOrder = () => {
                                 {item.items.map((i, idx) => {
                                     return (
                                         <div className="orderItem" key={idx}>
-                                            <p className="productNames">{i.product.productName}</p>
-                                            <p className="productQuantity">₹{i.product.price} *{i.quantity}</p>
+                                            <p className="productNames">{i.productName}</p>
+                                            <p className="productQuantity">₹{i.price} *{i.quantity}</p>
                                         </div>
                                     )
                                 })}

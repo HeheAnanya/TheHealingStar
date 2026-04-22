@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const RazorPay = require("razorpay")
 const crypto = require("crypto")
 const prisma = require('../prisma/client')

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const prisma = require("../prisma/client")
 
 async function orderCreate(userId) {
