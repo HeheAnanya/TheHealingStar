@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 const AuthService = require("../services/authService")
+const { verifyToken, jwtToken } = require("../utils/jwtutil")
 
 async function signup(req, res) {
     try {
@@ -30,7 +31,7 @@ async function forgotPassword(req,res) {
         if (!email || !newPassword){
             return res.status(400).json({ message: "Email and password required" })
         }
-        let newPass = await AuthService.forgotPassword({email,newPassword})
+        let newPass = await AuthService.forgotPassword(email,newPassword)
         return res.status(200).json(newPass)
     }
      catch (err) {
@@ -39,4 +40,17 @@ async function forgotPassword(req,res) {
     }
 }
 
-module.exports = { signup, login,forgotPassword }
+async function refreshTokenHandler(req, res) {
+    const { refreshToken } = req.body
+    if (!refreshToken) return res.status(401).json({ message: "Missing token" })
+    try {
+        const decoded = verifyToken(refreshToken)
+        const newAccess = jwtToken({ userId: decoded.userId }, "1h")
+        return res.status(200).json({ accessToken: newAccess })
+    } catch (err) {
+        console.log(err)
+        return res.status(401).json({ "Error": err.message })
+    }
+}
+
+module.exports = { signup, login,forgotPassword, refreshTokenHandler}

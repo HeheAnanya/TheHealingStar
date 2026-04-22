@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 const jwt = require("jsonwebtoken")
 
-function jwtToken(payload) {
+function jwtToken(payload,expiresIn="1h") {
 
-    let token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "1h" })
+    let token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn })
     return token
 
 

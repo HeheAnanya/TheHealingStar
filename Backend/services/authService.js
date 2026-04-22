@@ -40,6 +40,7 @@ async function signup(detail) {
 
 async function login(detail) {
     let { email, password } = detail
+    
     if (!password || !email) {
         throw new Error("Invalid or Missing Credentials")
     }
@@ -60,11 +61,12 @@ async function login(detail) {
             userId: user.id,
             email:user.email,
             role: user.role
-        })
-
+        },"1h")
+        const refreshToken = jwtToken({ userId: user.id }, "7d")
         return {
             message: "Login successful",
-            token
+            token,
+            refreshToken
         }
     }
     catch (err) {

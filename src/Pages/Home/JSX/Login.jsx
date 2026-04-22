@@ -20,9 +20,10 @@ const Login = () => {
                 email: form.email,
                 password: form.password
             });
-            const { token } = res.data
+            const { token , refreshToken} = res.data
 
             localStorage.setItem("token", JSON.stringify(token))
+    localStorage.setItem("refreshToken", JSON.stringify(refreshToken))
 
             alert("✅ Login successful")
 

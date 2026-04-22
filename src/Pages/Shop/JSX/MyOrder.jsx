@@ -17,7 +17,7 @@ const MyOrder = () => {
              
              console.log("MY ORDERS RESPONSE 👉", res.data)
 
-            setOrder(res.data || [])
+            setOrder(res.data.found || [])
         }
         catch (err) {
             console.log(err)

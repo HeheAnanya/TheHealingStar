@@ -1,4 +1,4 @@
-.cart-container {
+/* .cart-container {
   max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
@@ -110,8 +110,6 @@ h2 {
 .clear-btn:hover {
   background: #aaa;
 }
-
-/* ✅ Responsive */
 @media (max-width: 768px) {
   .cart-item {
     flex-direction: column;
@@ -125,5 +123,189 @@ h2 {
 
   .cart-summary {
     text-align: center;
+  }
+} */
+/* Cart Page - Premium Spiritual Theme */
+
+.cart-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 60vh;
+  background-color: #FDFBF7;
+  /* Cream/Off-white background */
+}
+
+.cart-container h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #2C2C2C;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #8C8C8C;
+  padding: 4rem;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  /* Image | Details | Remove */
+  align-items: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #F0F0F0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.1);
+  /* Subtle gold glow */
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #F9F9F9;
+}
+
+.cart-details {
+  padding: 0 1.5rem;
+}
+
+.cart-name {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.cart-price {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.cart-total {
+  font-size: 1rem;
+  color: #D4AF37;
+  /* Gold */
+  font-weight: 600;
+}
+
+.remove-btn {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #FFCDD2;
+  color: #D32F2F;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #FFEBEE;
+  border-color: #EF9A9A;
+}
+
+.cart-summary {
+  margin-top: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: right;
+  border-top: 3px solid #D4AF37;
+}
+
+.cart-summary h3 {
+  font-size: 1.8rem;
+  color: #2C2C2C;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.checkout-btn {
+  padding: 14px 28px;
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.checkout-btn:hover {
+  background-color: #C5A028;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.clear-btn {
+  padding: 14px 28px;
+  background-color: transparent;
+  color: #888;
+  border: 1px solid #CCC;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.clear-btn:hover {
+  border-color: #999;
+  color: #555;
+  background-color: #F5F5F5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .cart-item img {
+    margin-right: 0;
+  }
+
+  .cart-details {
+    padding: 0;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+
+  .checkout-btn,
+  .clear-btn {
+    width: 100%;
+    margin: 0.5rem 0;
   }
 }

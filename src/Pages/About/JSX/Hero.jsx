@@ -67,7 +67,7 @@ const Hero = () => {
                     <h3>Our Core values</h3>
                     <div className='values'>
                         {values.map((e) => {
-                            return (<div className='value-card'>
+                            return (<div className='value-card' key={e.id}>
                                 <img src={e.src} />
                                 <h3>{e.head}</h3>
                                 <h5>{e.value}</h5>

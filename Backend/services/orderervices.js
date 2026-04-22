@@ -77,7 +77,10 @@ async function myOrder(userId) {
         let found = await prisma.order.findMany({
             where: {
                 userId: userId
-            }
+            },
+            include: {
+        items: true  
+    }
         })
         if (found) {
             return { found }

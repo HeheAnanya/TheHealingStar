@@ -75,6 +75,7 @@ const Testimonial = () => {
                 name={e.name}
                 des={e.des}
                 star={e.star}
+                key={e.id}
             />
 )
 

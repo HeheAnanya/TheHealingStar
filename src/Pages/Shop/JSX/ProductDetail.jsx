@@ -66,7 +66,7 @@ const ProductDetail = () => {
                     <div className='product'>
                         <p className='pname'>{product.name}</p>
                         <p className='pprice'><strong>MRP: </strong>{product.price}</p>
-                        <p className='pdes'><strong>Description: </strong>{product.description}</p>
+                        <p className='pdes'><strong>Description: </strong>{product.des}</p>
                         <p className='psize'><strong>Size: </strong>{product.size}</p>
                         <p className='pmaterial'><strong>Material: </strong>{product.material}</p>
                         <p className='porigin'><strong>Origin: </strong>{product.origin}</p>
