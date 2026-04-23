@@ -39,5 +39,17 @@ async function myOrder(req,res) {
         
     
 }
+async function deleteOrder(req,res) {
+    let userId = req.user.userId
+    let {orderId}=req.params
+        try{
+            let orders = await order.deleteOrderHistory(userId,orderId)
+            return res.status(200).json(orders)
+    
+        }
+    catch(err){
+        console.log(err)
+    }
+}
 
-module.exports = {orderCreate,totalOrder,myOrder}
+module.exports = {orderCreate,totalOrder,myOrder,deleteOrder}

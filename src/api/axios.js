@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL:"https://thehealingstar.onrender.com",
-    // baseURL: "http://localhost:3000",
+    // baseURL:"https://thehealingstar.onrender.com",
+    baseURL: "http://localhost:3000",
     withCredentials: true
     // headers: {
     //     Authorization: `Bearer ${localStorage.getItem("token")?.replace(/"/g, "")}`

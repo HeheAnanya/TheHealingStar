@@ -13,9 +13,9 @@ import Signup from './Pages/Home/JSX/Signup';
 import Cart from './Pages/Shop/JSX/Cart';
 import MyOrder from './Pages/Shop/JSX/MyOrder';
 import ForgotPassword from './Pages/Home/JSX/ForgotPassword';
+import Checkout from './Pages/Shop/JSX/Checkout'
 
 // import a from "./Pages/S"
-
 
 const App = () => {
   return (
@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/shop/:category" element={<Shop />} />
         <Route path="/products/:category/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/order/my" element={<MyOrder />} />
        <Route path="/about" element={<AboutPage />} />
        <Route path="/contact" element={<ContactPage />} />

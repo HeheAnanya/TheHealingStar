@@ -9,6 +9,7 @@ const cart = require("./routes/cartRoute")
 const order = require("./routes/orderRoute")
 const adminOrder = require("./routes/adminOrder")
 const payment = require("./routes/payment.route.js")
+const address = require("./routes/addressRoute.js")
 
 const app = express()
 app.use(express.json())
@@ -19,6 +20,7 @@ app.use("/order",order)
 app.use("/admin",adminOrder)
 app.use("/admin", adminRoute)
 app.use("/payment", payment);
+app.use("/address",address)
 
 
 app.get("/",(req,res)=>(

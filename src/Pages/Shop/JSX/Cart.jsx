@@ -6,74 +6,14 @@ import { useNavigate } from 'react-router-dom'
 import "../CSS/Cart.css";
 import productData from "../data/index"
 
+
 const Cart = () => {
   const navigate = useNavigate()
   const [cart, setCart] = useState(null)
   let allProducts = Object.values(productData).flat()
 
   async function handleCheckout() {
-    try {
-      const orderRes = await api.post("/order/create")
-      const { orderId } = orderRes.data
-      const paymentRes = await api.post("/payment/create", { orderId })
-      const razorpayOrder = paymentRes.data
-      const options = {
-        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-        amount: razorpayOrder.amount,
-        currency: "INR",
-        name: "The Healing Star",
-        // description: "Crystal Products",
-        order_id: razorpayOrder.id,
-        config: {
-    display: {
-      blocks: {
-        upi: {
-          name: "Pay via UPI",
-          instruments: [
-            {
-              method: "upi"
-            }
-          ]
-        }
-      },
-      sequence: ["block.upi", "block.card", "block.netbanking"],
-      preferences: {
-        show_default_blocks: true
-      }
-    }
-  },
-        // method: {
-        //   upi: true,
-        //   card: true,
-        //   netbanking: true,
-        //   wallet: true
-        // },
-
-        handler: async function (response) {
-          await api.post("/payment/verify", {
-            order_id: response.razorpay_order_id,
-            payment_id: response.razorpay_payment_id,
-            raxorpay_sig: response.razorpay_signature,  // keep your spelling from paymentService
-            orderId: orderId
-          })
-          alert("✅ Payment successful!")
-          navigate("/order/my")
-        },
-        prefill: {
-          name: "",
-          email: "",
-        },
-        theme: {
-          color: "#D4AF37"
-        }
-      }
-
-      const rzp = new window.Razorpay(options)
-      rzp.open()
-
-    } catch (err) {
-      alert(err.response?.data?.message || "Checkout failed")
-    }
+    navigate("/checkout")
   }
   async function fetchCart() {
     try {

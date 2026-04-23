@@ -30,7 +30,6 @@ async function orderCreate(userId) {
             data: {
                 userId: userId,
                 totalPrice: totalPrice,
-                status: "ON_THE_WAY",
                 payStatus: "FAILED"
 
             }
@@ -77,7 +76,8 @@ async function myOrder(userId) {
     try {
         let found = await prisma.order.findMany({
             where: {
-                userId: userId
+                userId: userId,
+                payStatus:"SUCCESS"
             },
             include: {
         items: true  
@@ -95,5 +95,38 @@ async function myOrder(userId) {
     }
 
 }
+async function deleteOrderHistory(userId,orderId) {
+        userId = Number(userId)
+        orderId= Number(orderId)
+    try {
+        let found = await prisma.order.findUnique({
+            where: {
+                id: orderId,
+                userId: userId
+            }
+        })
+        if (found) {
+            await prisma.orderItem.deleteMany({ where: { orderId: orderId } })
+            await prisma.payment.deleteMany({ where: { orderId: orderId } })
+            await prisma.order.delete({
+                where:{
+                    id:orderId,
+                    
+                }
+            }
+            )
+            return { message: "Order deleted" }
+        }
+        else {
+            return { message: "Your Order List is empty" }
+        }
+    }
+    catch (err) {
+        throw new Error(err.message)
+    }
 
-module.exports = { orderCreate, myOrder }
+
+    
+}
+
+module.exports = { orderCreate, myOrder,deleteOrderHistory }

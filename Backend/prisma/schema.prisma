@@ -1,21 +1,27 @@
 generator client {
   provider = "prisma-client-js"
 }
+
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
 model User {
   id          Int      @id @default(autoincrement())
   name        String
   password    String
   email       String   @unique
   phoneNumber String
-  role        ROLE @default(CUSTOMER)
+  role        ROLE     @default(CUSTOMER)
   createdAt   DateTime @default(now())
+
   cart        Cart?
+  profile   Profile?
   order       Order[]
+  
 }
+
 model Product {
   id              Int         @id @default(autoincrement())
   productName     String
@@ -28,6 +34,7 @@ model Product {
   cartItem        CartItem[]
   orderItem       OrderItem[]
 }
+
 model Order {
   id         Int         @id @default(autoincrement())
   userId     Int
@@ -41,6 +48,7 @@ model Order {
 
   @@index([userId], map: "Order_userId_fkey")
 }
+
 model Payment {
   id        Int       @id @default(autoincrement())
   orderId   Int       @unique
@@ -49,6 +57,7 @@ model Payment {
   createdAt DateTime  @default(now())
   order     Order     @relation(fields: [orderId], references: [id])
 }
+
 model Cart {
   id        Int        @id @default(autoincrement())
   userId    Int        @unique
@@ -56,6 +65,7 @@ model Cart {
   user      User       @relation(fields: [userId], references: [id])
   items     CartItem[]
 }
+
 model CartItem {
   id        Int     @id @default(autoincrement())
   cartId    Int
@@ -67,6 +77,7 @@ model CartItem {
   @@index([cartId], map: "CartItem_cartId_fkey")
   @@index([productId], map: "CartItem_productId_fkey")
 }
+
 model OrderItem {
   id           Int     @id @default(autoincrement())
   orderId      Int
@@ -91,6 +102,19 @@ model Feedback {
   status    ISSUE    @default(IN_PROGRESS)
 }
 
+model Profile {
+  id        Int     @id @default(autoincrement())  
+  name      String
+  phone     String
+  address   String
+  city      String
+  state     String
+  pincode   String
+  isDefault Boolean     @default(true)
+  userId    Int     @unique                          
+  user      User    @relation(fields: [userId], references: [id])  
+}
+
 enum ROLE {
   ADMIN
   CUSTOMER
@@ -110,9 +134,11 @@ enum STATUS {
 
 enum Pay {
   CARD
-  COD
-  PHONEPAY
+  UPI
+  NETBANKING
+  WALLET
   EMI
+  PAYLATER
 }
 
 enum OrderStatus {

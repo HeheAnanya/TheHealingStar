@@ -26,18 +26,24 @@ async function paymentGateway(orderId) {
     
 }
 async function verifyPayment(data) {
-    let {order_id,payment_id,raxorpay_sig,orderId}=data
-    let body = order_id+"|"+payment_id
-    const expectedSig = crypto.createHmac("sha256",process.env.RAZORPAY_KEY_SECRET).update(body).digest("hex")
-    if (expectedSig!= raxorpay_sig){
+    let { order_id, payment_id, raxorpay_sig } = data
+    let body = order_id + "|" + payment_id
+    const expectedSig = crypto
+        .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
+        .update(body)
+        .digest("hex")
+
+    if (expectedSig != raxorpay_sig) {
         throw new Error("Payment Verification Failed")
     }
+    const paymentDetails = await payment.payments.fetch(payment_id)
+
     await prisma.payment.create(
         {
             data:{
                 orderId:Number(orderId),
                 payStatus:"SUCCESS",
-                payMethod:"CARD"
+                payMethod:paymentDetails.method.toUpperCase()
             }
         }
     )
