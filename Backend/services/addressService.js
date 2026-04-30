@@ -20,22 +20,16 @@ async function getAddresses(userId) {
 async function  addAddress(userId, data) {
     userId = Number(userId)
     try{
-        let found = await prisma.profile.findUnique({
-            where:{
-                userId:userId
-            }
-        })
-        if (found){
+
+        
             let profile = await prisma.profile.upsert({
             where: { userId: userId },
             update: { ...data },
             create: { userId: userId, ...data }
         })
         return profile
-        }
-        else{
-            return "Create an account first"
-        }
+        
+                
     }
     catch (err) {
         throw new Error(err.message)
