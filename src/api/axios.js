@@ -9,6 +9,16 @@ export const api = axios.create({
     // }
 });
 
+api.interceptors.request.use((config) => {
+    const token = localStorage.getItem("token")
+    if (token) {
+        config.headers.Authorization = `Bearer ${JSON.parse(token)}`
+    }
+    return config
+},
+(error) => {
+    return Promise.reject(error)
+}) 
 
 api.interceptors.response.use(
     (response) => response,
@@ -17,7 +27,7 @@ api.interceptors.response.use(
             const refreshToken = localStorage.getItem("refreshToken")
             if (refreshToken) {
                 try {
-                    const res = await axios.post("http://localhost:3000/auth/refresh", {
+                    const res = await axios.post("https://thehealingstar.onrender.com/auth/refresh", {
                         refreshToken: JSON.parse(refreshToken)
                     })
                     localStorage.setItem("token", JSON.stringify(res.data.accessToken))
