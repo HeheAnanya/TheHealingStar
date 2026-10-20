@@ -8,18 +8,18 @@ datasource db {
 }
 
 model User {
-  id          Int      @id @default(autoincrement())
-  name        String
-  password    String
-  email       String   @unique
-  phoneNumber String
-  role        ROLE     @default(CUSTOMER)
-  createdAt   DateTime @default(now())
+  id                   Int       @id @default(autoincrement())
+  name                 String
+  password             String?
+  email                String    @unique
+  role                 ROLE      @default(CUSTOMER)
+  createdAt            DateTime  @default(now())
+  resetPasswordToken   String?   @unique
+  resetPasswordExpires DateTime?
 
-  cart        Cart?
-  profile   Profile?
-  order       Order[]
-  
+  cart    Cart?
+  profile Profile?
+  order   Order[]
 }
 
 model Product {
@@ -103,16 +103,16 @@ model Feedback {
 }
 
 model Profile {
-  id        Int     @id @default(autoincrement())  
+  id        Int     @id @default(autoincrement())
   name      String
   phone     String
   address   String
   city      String
   state     String
   pincode   String
-  isDefault Boolean     @default(true)
-  userId    Int     @unique                          
-  user      User    @relation(fields: [userId], references: [id])  
+  isDefault Boolean @default(true)
+  userId    Int     @unique
+  user      User    @relation(fields: [userId], references: [id])
 }
 
 enum ROLE {

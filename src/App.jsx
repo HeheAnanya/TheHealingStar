@@ -14,6 +14,8 @@ import Cart from './Pages/Shop/JSX/Cart';
 import MyOrder from './Pages/Shop/JSX/MyOrder';
 import ForgotPassword from './Pages/Home/JSX/ForgotPassword';
 import Checkout from './Pages/Shop/JSX/Checkout'
+import AuthCallback from "./Pages/Home/JSX/AuthCallback.jsx";
+import ResetPassword from "./Pages/Home/JSX/ResetPassword.jsx";
 
 // import a from "./Pages/S"
 
@@ -25,7 +27,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element = {<Signup/>}/>
+        <Route path="/auth/callback" element={<AuthCallback />} />
         <Route path='/forgotPassword' element={<ForgotPassword/>}/>
+        <Route path="/resetPassword" element={<ResetPassword />} /> 
         
         <Route path="/services" element={<Services />} />
         <Route path="/shop/:category" element={<Shop />} />

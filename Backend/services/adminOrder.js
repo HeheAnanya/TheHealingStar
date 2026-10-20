@@ -10,7 +10,7 @@ async function allOrder() {
                     id: true,
                     name: true,
                     email: true,
-                    phoneNumber: true
+                    // phoneNumber: true
                 }
 
             },

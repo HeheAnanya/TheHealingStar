@@ -10,9 +10,11 @@ const order = require("./routes/orderRoute")
 const adminOrder = require("./routes/adminOrder")
 const payment = require("./routes/payment.route.js")
 const address = require("./routes/addressRoute.js")
+const cookieParser = require("cookie-parser");
 
 const app = express()
 app.use(express.json())
+app.use(cookieParser())
 app.use(cors)
 app.use("/auth",authRoute)
 app.use("/cart", cart)

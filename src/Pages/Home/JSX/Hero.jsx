@@ -4,9 +4,15 @@ import "../CSS/Hero.css"
 
 const Hero = () => {
   return (
-    <div>
-        <img src= {hero} alt='hero'/>
-    </div>
+    <section className="hero-section">
+      <div className="hero-image-wrapper">
+        <img
+          className="hero-image"
+          src={hero}
+          alt="The Healing Star"
+        />
+      </div>
+    </section>
   )
 }
 
