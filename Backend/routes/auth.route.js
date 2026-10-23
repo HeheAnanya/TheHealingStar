@@ -24,7 +24,9 @@ const {
   forgotPassword,
   resetPassword,
   refreshTokenHandler,
-  googleCallback
+  googleCallback,
+  currentUser,
+  logout
 } = require("../controller/auth.controller");
 
 router.post("/signup", signup);
@@ -32,6 +34,8 @@ router.post("/login", login);
 router.put("/forgotPassword", forgotPassword);
 router.post("/refresh", refreshTokenHandler);
 router.post("/resetPassword", resetPassword);
+router.get("/me", require("../middlewares/authMiddle").authMiddleware, currentUser);
+router.post("/logout", logout);
 
 // Start Google OAuth
 router.get(

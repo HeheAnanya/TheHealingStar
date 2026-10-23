@@ -214,4 +214,19 @@ async function googleCallback(req, res) {
     }
 }
 
-module.exports = { signup, login,forgotPassword, refreshTokenHandler,googleCallback,resetPassword}
+async function currentUser(req, res) {
+    try {
+        const prisma = require("../prisma/client");
+        const user = await prisma.user.findUnique({ where: { id: Number(req.user.userId) }, select: { id: true, name: true, email: true, role: true, createdAt: true } });
+        if (!user) return res.status(404).json({ message: "Account not found" });
+        return res.status(200).json({ user });
+    } catch (err) { return res.status(500).json({ message: "Could not load account" }); }
+}
+function logout(req, res) {
+    const options = { path: "/", sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", secure: process.env.NODE_ENV === "production" };
+    res.clearCookie("token", options);
+    res.clearCookie("refreshToken", options);
+    return res.status(200).json({ message: "Logged out" });
+}
+
+module.exports = { signup, login, forgotPassword, refreshTokenHandler, googleCallback, resetPassword, currentUser, logout };
