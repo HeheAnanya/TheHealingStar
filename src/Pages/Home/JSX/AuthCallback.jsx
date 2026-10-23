@@ -5,10 +5,10 @@ const AuthCallback = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/", { replace: true });
+    navigate("/profile", { replace: true });
   }, [navigate]);
 
-  return <p>Completing your sign-in...</p>;
+  return <p className="auth-callback-message">Completing your sign-in…</p>;
 };
 
 export default AuthCallback;

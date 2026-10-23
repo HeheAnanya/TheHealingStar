@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* =========================
+   Account Page
+========================= */
+
+.account-page {
+  min-height: 100vh;
+  background: #faf6ef;
+  color: #49372e;
+  font-family: 'Raleway', sans-serif;
+}
+
+.account-wrap {
+  box-sizing: border-box;
+  max-width: 1120px;
+  min-height: 58vh;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+/* =========================
+   Page Heading
+========================= */
+
+.account-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.account-heading > span,
+.account-welcome > div:nth-child(2) > span {
+  color: #9c824d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.account-heading h1 {
+  margin: 10px 0;
+  color: #594438;
+  font: 500 40px 'Playfair Display', serif;
+}
+
+.account-heading p,
+.account-card p {
+  color: #827064;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   General Account Cards
+========================= */
+
+.account-card {
+  margin-bottom: 18px;
+  padding: 26px;
+  border: 1px solid #e8dccd;
+  border-radius: 16px;
+  background: #fffefa;
+  box-shadow: 0 10px 28px rgba(83, 59, 43, 0.045);
+}
+
+.account-card > h2 {
+  margin: 0 0 16px;
+  color: #594438;
+  font: 500 22px 'Playfair Display', serif;
+}
+
+/* =========================
+   Welcome Card
+========================= */
+
+.account-welcome {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 32px;
+  background: linear-gradient(
+    115deg,
+    #fffdf8 0%,
+    #f3eadf 100%
+  );
+}
+
+.account-avatar {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #e8d8c5;
+  color: #665044;
+}
+
+.account-welcome h2 {
+  margin: 5px 0;
+  color: #594438;
+  font: 500 24px 'Playfair Display', serif;
+  overflow-wrap: anywhere;
+}
+
+.account-welcome p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   Logout Button
+========================= */
+
+.account-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-left: auto;
+  padding: 10px 12px;
+  border: 1px solid #dfd0bf;
+  border-radius: 9px;
+  background: transparent;
+  color: #795d4b;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.account-logout:hover {
+  background: #f2e8dc;
+  border-color: #c9ad8c;
+}
+
+/* =========================
+   Account Shortcuts
+========================= */
+
+.account-shortcuts {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  margin-bottom: 18px;
+  padding: 2px 2px 12px;
+  scroll-snap-type: x mandatory;
+}
+
+.account-shortcuts button {
+  display: flex;
+  flex: 1 0 245px;
+  align-items: center;
+  gap: 14px;
+  min-height: 105px;
+  padding: 24px;
+  border: 1px solid #e8dccd;
+  border-radius: 16px;
+  background: #fffdf9;
+  color: #795d4b;
+  text-align: left;
+  cursor: pointer;
+  scroll-snap-align: start;
+  box-shadow: 0 8px 20px rgba(83, 59, 43, 0.035);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.account-shortcuts button:hover {
+  transform: translateY(-2px);
+  border-color: #b99a5b;
+  box-shadow: 0 12px 25px rgba(83, 59, 43, 0.08);
+}
+
+.account-shortcuts button span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.account-shortcuts strong {
+  color: #594438;
+  font-size: 14px;
+}
+
+.account-shortcuts small {
+  color: #827064;
+  font-size: 12px;
+}
+
+/* =========================
+   Personal Details
+========================= */
+
+.account-detail {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0e8df;
+  font-size: 13px;
+}
+
+.account-detail:last-child {
+  border-bottom: 0;
+}
+
+.account-detail span {
+  color: #827064;
+}
+
+.account-detail strong {
+  color: #49372e;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   Error / Empty State
+========================= */
+
+.account-message {
+  text-align: center;
+}
+
+.account-message > svg {
+  color: #795d4b;
+}
+
+.account-message button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: #344b36;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.account-message button:hover {
+  background: #293b2d;
+}
+
+.account-loading {
+  padding: 50px 0;
+  color: #827064;
+  text-align: center;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 560px) {
+  .account-wrap {
+    padding: 34px 15px 48px;
+  }
+
+  .account-heading h1 {
+    font-size: 33px;
+  }
+
+  .account-heading p {
+    font-size: 13px;
+  }
+
+  .account-card {
+    padding: 19px;
+  }
+
+  .account-welcome {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 22px;
+  }
+
+  .account-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .account-welcome h2 {
+    font-size: 21px;
+  }
+
+  .account-logout {
+    margin-left: 0;
+  }
+
+  .account-shortcuts {
+    gap: 12px;
+  }
+
+  .account-shortcuts button {
+    flex-basis: 220px;
+    min-height: 95px;
+    padding: 20px;
+  }
+
+  .account-detail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .account-detail strong {
+    text-align: left;
+  }
+}
+
+/* =========================
+   Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .account-logout,
+  .account-shortcuts button,
+  .account-message button {
+    transition: none;
+  }
+
+  .account-shortcuts button:hover {
+    transform: none;
+  }
+}

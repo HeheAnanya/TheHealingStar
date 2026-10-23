@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap');
 /* Login page / modal overlay */
 .login {
     width: 100%;
@@ -7,7 +8,7 @@
     align-items: center;
     padding: 24px;
     background: #FDFBF7;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 
@@ -46,8 +47,9 @@
 }
 
 .loginCard h2 {
+    font-family: 'Playfair Display', serif;
     margin: 0 0 10px;
-    color: #293B2D;
+    color: #594438;
     font-size: 30px;
     font-weight: 500;
     letter-spacing: -0.7px;
@@ -72,7 +74,7 @@
     border: 0;
     border-radius: 50%;
     background: #F3F0E8;
-    color: #394536;
+    color: #594438;
     cursor: pointer;
     transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -138,7 +140,7 @@
 
 .email-login-form label {
     margin-top: 5px;
-    color: #4A5145;
+    color: #594438;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.3px;
@@ -175,7 +177,7 @@
 }
 
 .forgot-password-link a {
-    color: #647A58;
+    color: #795d4b;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
@@ -189,12 +191,12 @@
 .email-login-btn {
     margin-top: 4px;
     border: 1px solid #344B36;
-    background: #344B36;
+    background: #665044;
     color: #FFFFFF;
 }
 
 .email-login-btn:hover {
-    background: #263A29;
+    background: #49372e;
     box-shadow: 0 5px 15px rgba(52, 75, 54, 0.18);
     transform: translateY(-1px);
 }
@@ -226,13 +228,13 @@
 
 .switch span {
     margin-left: 4px;
-    color: #536D49;
+    color: #795d4b;
     font-weight: 700;
     cursor: pointer;
 }
 
 .switch span:hover {
-    color: #293B2D;
+    color: #594438;
     text-decoration: underline;
 }
 
@@ -277,6 +279,7 @@
     }
 
     .loginCard h2 {
+    font-family: 'Playfair Display', serif;
         font-size: 26px;
     }
 
@@ -298,3 +301,7 @@
         transition: none;
     }
 }
+.signup-card h2 { font-family: 'Playfair Display', serif; color: #594438; }
+.signup-card .switch a { color: #795d4b; font-weight: 700; text-decoration: none; }
+.signup-card .switch a:hover { text-decoration: underline; }
+.signup-success { margin: 0; color: #526d4c; font-size: 13px; }

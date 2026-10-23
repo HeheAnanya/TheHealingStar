@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 import "../CSS/Login.css";
 import { api } from "../../../api/axios";
 
-const Login = ({ isModal = false, onClose }) => {
+const Login = ({ isModal = false, onClose,onSignupClick }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +19,9 @@ const Login = ({ isModal = false, onClose }) => {
 
     try {
       await api.post("/auth/login", { email, password });
-      navigate("/");
+      window.dispatchEvent(new Event("auth-changed"));
+      if (isModal) onClose?.();
+      navigate("/profile");
     } catch (err) {
       setError(
         err.response?.data?.message || "Login failed. Check your email and password."
@@ -119,12 +121,23 @@ return (
         Secure sign-in · Your account, your journey
       </p>
 
-      {!isModal && (
-        <p className="switch">
-          Don't have an account?{" "}
-          <span onClick={() => navigate("/signup")}>Sign Up</span>
-        </p>
-      )}
+      <p className="switch">
+        Don't have an account?{" "}
+        {/* <span onClick={() => { onSignupClick }}>Sign Up</span> */}
+
+<span
+  role="button"
+  tabIndex={0}
+  onClick={onSignupClick}
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onSignupClick?.();
+    }
+  }}
+>
+  Sign Up
+</span>      </p>
     </div>
   </div>
 );};

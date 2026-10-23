@@ -2,13 +2,28 @@ import React, { useState, useRef, useEffect } from "react";
 import "../CSS/Navbar.css";
 import logo from "../../../../public/assets/logo.png";
 import { useNavigate } from "react-router-dom";
-import { UserRound, Menu, X } from "lucide-react";
+import { UserRound, Menu, X, ShoppingBag } from "lucide-react";
+import { api } from "../../../api/axios";
 import Login from "./Login";
+import Signup from "./Signup";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const token = localStorage.getItem("token");
+  const [user, setUser] = useState(null);
+  const [cartCount, setCartCount] = useState(0);
+  const [showSignup, setShowSignup] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    const refreshSession = () => {
+      api.get("/auth/me").then((res) => { if (active) setUser(res.data.user); }).catch(() => { if (active) setUser(null); });
+      api.get("/cart").then((res) => { if (active) setCartCount((res.data?.items || []).reduce((sum, item) => sum + item.quantity, 0)); }).catch(() => { if (active) setCartCount(0); });
+    };
+    refreshSession();
+    window.addEventListener("auth-changed", refreshSession);
+    return () => { active = false; window.removeEventListener("auth-changed", refreshSession); };
+  }, []);
 
   const [hamburgerStatus, setHamburgerStatus] = useState(false);
   const [shopMenu, setShopMenu] = useState(false);
@@ -50,7 +65,9 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
+    api.post("/auth/logout").catch(() => { });
     localStorage.removeItem("token");
+    setUser(null);
     setHamburgerStatus(false);
     setShopMenu(false);
     navigate("/");
@@ -138,24 +155,25 @@ const Navbar = () => {
 
             <li onClick={() => handleNavigate("/contact")}>Contact</li>
 
-            {!token ? (
-              <li className="profile-item">
-                <button
-                  type="button"
-                  className="profile-icon-btn"
-                  aria-label="Login to your account"
-                  onClick={handleLoginOpen}
-                >
-                  <UserRound size={23} strokeWidth={1.6} />
-                  <span className="profile-login-text">Login</span>
-                </button>
-              </li>
-            ) : (
-              <>
-                <li onClick={() => handleNavigate("/order/my")}>
-                  My Orders
-                </li>
+            <li className="nav-cart-item"><span role="link" tabIndex={0} className="nav-cart-link" aria-label="Open cart" onClick={() => handleNavigate("/cart")} onKeyDown={(e) => e.key === "Enter" && handleNavigate("/cart")}><ShoppingBag size={19} />{cartCount > 0 && <span className="nav-cart-count">{cartCount}</span>}</span></li>
 
+            <li className="profile-item">
+              <span
+                role="link"
+                tabIndex={0}
+                className="profile-icon-link"
+                aria-label={user ? "Open your profile" : "Login to your account"}
+                onClick={() => user ? handleNavigate("/profile") : handleLoginOpen()}
+                onKeyDown={(e) => e.key === "Enter" && (user ? handleNavigate("/profile") : handleLoginOpen())}
+              >
+                <UserRound size={21} strokeWidth={1.6} />
+                {/* <span className="profile-login-text">{user}</span> */}
+              </span>
+            </li>
+
+            {user && (
+              <>
+                <li onClick={() => handleNavigate("/order/my")}>My Orders</li>
                 <li onClick={handleLogout}>Logout</li>
               </>
             )}
@@ -167,6 +185,22 @@ const Navbar = () => {
         <Login
           isModal={true}
           onClose={() => setShowLogin(false)}
+          onSignupClick={() => {
+            setShowLogin(false);
+            setShowSignup(true);
+          }}
+
+
+        />
+      )}
+      {showSignup && (
+        <Signup
+          isModal={true}
+          onClose={() => setShowSignup(false)}
+          onLoginClick={() => {
+            setShowSignup(false);
+            setShowLogin(true);
+          }}
         />
       )}
     </>
