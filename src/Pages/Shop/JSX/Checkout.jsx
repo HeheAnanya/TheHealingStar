@@ -23,7 +23,7 @@
 //             key: import.meta.env.VITE_RAZORPAY_KEY_ID,
 //             amount: razorpayOrder.amount,
 //             currency: "INR",
-//             name: "The Healing Star",
+//             name: "Healing Star",
 //             // description: "Crystal Products",
 //             order_id: razorpayOrder.id,
 //             config: {
@@ -143,7 +143,7 @@ const Checkout = () => {
                 key: import.meta.env.VITE_RAZORPAY_KEY_ID,
                 amount: razorpayOrder.amount,
                 currency: "INR",
-                name: "The Healing Star",
+                name: "Healing Star",
                 order_id: razorpayOrder.id,
                 handler: async function (response) {
                     await api.post("/payment/verify", {

@@ -6,6 +6,7 @@ import { UserRound, Menu, X, ShoppingBag } from "lucide-react";
 import { api } from "../../../api/axios";
 import Login from "./Login";
 import Signup from "./Signup";
+import CartDrawer from "../../Shop/JSX/CartDrawer"
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const [cartCount, setCartCount] = useState(0);
   const [showSignup, setShowSignup] = useState(false);
+  const [showCartDrawer, setShowCartDrawer] = useState(false);
 
   useEffect(() => {
     let active = true;
@@ -22,7 +24,13 @@ const Navbar = () => {
     };
     refreshSession();
     window.addEventListener("auth-changed", refreshSession);
-    return () => { active = false; window.removeEventListener("auth-changed", refreshSession); };
+    window.addEventListener("cart-changed", refreshSession);
+
+    return () => {
+       active = false
+        window.removeEventListener("auth-changed", refreshSession)
+        window.removeEventListener("cart-changed", refreshSession);
+ };
   }, []);
 
   const [hamburgerStatus, setHamburgerStatus] = useState(false);
@@ -85,7 +93,7 @@ const Navbar = () => {
         <nav className="navbar">
           <img
             src={logo}
-            alt="The Healing Star Logo"
+            alt="Healing Star Logo"
             className="logo"
             onClick={() => handleNavigate("/")}
           />
@@ -155,7 +163,12 @@ const Navbar = () => {
 
             <li onClick={() => handleNavigate("/contact")}>Contact</li>
 
-            <li className="nav-cart-item"><span role="link" tabIndex={0} className="nav-cart-link" aria-label="Open cart" onClick={() => handleNavigate("/cart")} onKeyDown={(e) => e.key === "Enter" && handleNavigate("/cart")}><ShoppingBag size={19} />{cartCount > 0 && <span className="nav-cart-count">{cartCount}</span>}</span></li>
+            <li className="nav-cart-item"><span role="link" tabIndex={0} className="nav-cart-link" aria-label="Open cart"
+              onClick={() => {
+                setHamburgerStatus(false);
+                setShopMenu(false);
+                setShowCartDrawer(true);
+              }} onKeyDown={(e) => e.key === "Enter" && handleNavigate("/cart")}><ShoppingBag size={19} />{cartCount > 0 && <span className="nav-cart-count">{cartCount}</span>}</span></li>
 
             <li className="profile-item">
               <span
@@ -202,6 +215,23 @@ const Navbar = () => {
             setShowLogin(true);
           }}
         />
+      )}
+      {showCartDrawer && (
+        <CartDrawer
+  onClose={() => setShowCartDrawer(false)}
+  onLogin={() => {
+    setShowCartDrawer(false);
+    setShowLogin(true);
+  }}
+  onContinueShopping={() => {
+    setShowCartDrawer(false);
+    handleNavigate("/", { state: { scrollTo: "services" } });
+  }}
+  onViewCart={() => {
+    setShowCartDrawer(false);
+    handleNavigate("/cart");
+  }}
+/>
       )}
     </>
   );

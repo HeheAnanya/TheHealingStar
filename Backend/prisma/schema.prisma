@@ -25,8 +25,8 @@ model User {
 model Product {
   id              Int         @id @default(autoincrement())
   productName     String
-  description     String
-  price           Int
+description String @db.LongText 
+ price           Int
   stock           Int
   status          STATUS      @default(ACTIVE)
   productCategory Category

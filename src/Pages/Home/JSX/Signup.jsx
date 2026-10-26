@@ -46,7 +46,7 @@ window.setTimeout(() => {
       <div className="loginCard signup-card" role="dialog" aria-modal={isModal ? "true" : undefined}>
         {isModal && <button type="button" className="close-btn" onClick={onClose} aria-label="Close signup"><X size={22} /></button>}
         <h2>Create Your Account</h2>
-        <p>Begin your journey with The Healing Star</p>
+        <p>Begin your journey with Healing Star</p>
         <button type="button" className="google-login-btn" onClick={handleGoogleSignup}>Continue with Google</button>
         <div className="login-divider"><span>OR SIGN UP WITH EMAIL</span></div>
         <form onSubmit={handleSubmit} className="email-login-form">

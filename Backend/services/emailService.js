@@ -14,7 +14,7 @@ async function sendPasswordResetEmail(email, resetUrl) {
     return transporter.sendMail({
         from: process.env.SMTP_FROM || process.env.SMTP_USER,
         to: email,
-        subject: "Reset your password — The Healing Star",
+        subject: "Reset your password — Healing Star",
         text: `We received a request to reset your password.
 
 Open this link to choose a new password:
@@ -23,7 +23,7 @@ ${resetUrl}
 This link expires in 15 minutes. If you did not request a reset, you can ignore this email.`,
         html: `
             <div style="font-family: Georgia, serif; color: #342d26; line-height: 1.6;">
-                <h2>The Healing Star</h2>
+                <h2>Healing Star</h2>
                 <p>We received a request to reset your password.</p>
                 <p>
                     <a href="${resetUrl}"
