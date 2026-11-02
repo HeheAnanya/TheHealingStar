@@ -31,7 +31,7 @@ const Hero = () => {
       form.reset();
       setStatus({
         type: "success",
-        message: "Thank you! Your message has been received. We’ll get back to you soon.",
+        message: result.message || "Your message has been received.",
       });
     } catch (error) {
       setStatus({
