@@ -67,7 +67,7 @@
   --home-gold: #a67c45;
   --home-border: #e9e1d5;
 
-  overflow: hidden;
+  overflow: visible;
   background: var(--home-white);
   color: var(--home-brown);
 }
