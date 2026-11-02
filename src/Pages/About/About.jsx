@@ -70,10 +70,22 @@ const About = () => {
           "The Healing Star | Crystals, Tarot & Spiritual Wellness"
         );
       document.head
+        .querySelector('meta[property="og:description"]')
+        ?.setAttribute(
+          "content",
+          "Explore crystal jewellery, meaningful gifts and spiritual wellness services at The Healing Star."
+        );
+      document.head
         .querySelector('meta[name="twitter:title"]')
         ?.setAttribute(
           "content",
           "The Healing Star | Crystals, Tarot & Spiritual Wellness"
+        );
+      document.head
+        .querySelector('meta[name="twitter:description"]')
+        ?.setAttribute(
+          "content",
+          "Explore crystal jewellery, meaningful gifts and spiritual wellness services at The Healing Star."
         );
     };
   }, []);
