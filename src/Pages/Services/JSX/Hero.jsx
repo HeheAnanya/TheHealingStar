@@ -8,37 +8,58 @@ import Numerology from "../../../../public/assets/numerlogy.png";
 import Reiki from "../../../../public/assets/reiki.png";
 import Crystal from "../../../../public/assets/crystal.png";
 
+
 const work = [
   {
     id: "1",
     src: Tarot,
-    text: "TAROT CARD READING",
-    subtitle: "Find clarity in the cards",
-    items: ["Love & Relationships", "Career Guidance", "Spiritual Growth"],
+    text: "Tarot Card Reading",
+    description:
+      "Discover clarity and meaningful insights through tarot readings. Explore guidance for relationships, career choices and your personal journey.",
+    items: [
+      "Love & Relationships",
+      "Career Guidance",
+      "Life Guidance",
+    ],
     navi: "tarot",
   },
   {
     id: "2",
     src: Numerology,
-    text: "NUMEROLOGY",
-    subtitle: "Discover the meaning of your numbers",
-    items: ["Life Path Number", "Destiny Number", "Personal Year"],
+    text: "Numerology",
+    description:
+      "Explore the significance of numbers in your life. Understand your personal numbers and discover insights into your life path and future.",
+    items: [
+      "Life Path Number",
+      "Destiny Number",
+      "Personal Year",
+    ],
     navi: "numerology",
   },
   {
     id: "3",
     src: Reiki,
-    text: "REIKI HEALING",
-    subtitle: "Reconnect with a sense of balance",
-    items: ["Energy Healing", "Stress Relief", "Chakra Balancing"],
+    text: "Reiki Healing",
+    description:
+      "Experience a mindful healing practice focused on relaxation, balance and emotional well-being through Reiki energy sessions.",
+    items: [
+      "Energy Healing",
+      "Stress Relief",
+      "Chakra Balancing",
+    ],
     navi: "reiki",
   },
   {
     id: "4",
     src: Crystal,
-    text: "CRYSTAL COLLECTION",
-    subtitle: "Find meaningful pieces for your rituals",
-    items: ["Crystal Bracelets", "Tumbled Stones", "Raw & Healing Crystals"],
+    text: "Crystal Collection",
+    description:
+      "Explore thoughtfully selected crystals and crystal jewellery. Find meaningful pieces for your collection, rituals and everyday life.",
+    items: [
+      "Crystal Bracelets",
+      "Tumbled Stones",
+      "Healing Crystals",
+    ],
     navi: "bracelets",
   },
 ];
@@ -57,21 +78,21 @@ const Hero = () => (
       </p>
     </div>
 
-    <div className="container">
-      <div className="service-card">
-        {work.map((item, index) => (
-          <Work
-            key={item.id}
-            src={item.src}
-            text={item.text}
-            subtitle={item.subtitle}
-            items={item.items}
-            number={`0${index + 1}`}
-            to={`/shop/${item.navi}`}
-          />
-        ))}
-      </div>
-    </div>
+
+<div className="container">
+  <div className="service-card">
+    {work.map((item) => (
+      <Work
+        key={item.id}
+        src={item.src}
+        text={item.text}
+        description={item.description}
+        items={item.items}
+        to={`/shop/${item.navi}`}
+      />
+    ))}
+  </div>
+</div>
   </section>
 );
 

@@ -1,37 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:wght@400;500;600;700&display=swap');
 
 .work-card {
-  position: relative;
   display: flex;
-  height: 100%;
-  min-width: 0;
-  min-height: 405px;
   flex-direction: column;
-  padding: 23px 25px 24px;
+  width: 100%;
+  min-width: 0;
   overflow: hidden;
-  border: 1px solid #e8dece;
-  border-radius: 7px;
-  background: #fffefa;
+
+  background: #fff;
+  border: 1px solid #eee5d8;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(50, 40, 30, 0.07);
+
   color: #49382d;
-  text-align: left;
   text-decoration: none;
-  box-shadow: 0 3px 12px rgba(73, 56, 45, 0.035);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  -webkit-tap-highlight-color: transparent;
+
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .work-card:link,
 .work-card:visited,
 .work-card:hover,
 .work-card:active {
-  color: inherit;
+  color: #49382d;
   text-decoration: none;
 }
 
 .work-card:hover {
   transform: translateY(-4px);
-  border-color: #d4bc98;
-  box-shadow: 0 15px 30px rgba(73, 56, 45, 0.09);
+  box-shadow: 0 12px 25px rgba(50, 40, 30, 0.12);
 }
 
 .work-card:focus-visible {
@@ -39,165 +35,125 @@
   outline-offset: 4px;
 }
 
-.work-card-topline {
+/* Image area */
+
+.work-card-image {
   display: flex;
-  flex: 0 0 34px;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+
   width: 100%;
+  height: 230px;
+  padding: 15px;
+  box-sizing: border-box;
+
+  background: #f3ebdf;
 }
 
-.work-card-number {
-  color: #a67c45;
-  font-family: "Raleway", sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.work-card-arrow {
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border: 1px solid #e8dece;
-  border-radius: 50%;
-  color: #a67c45;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
-}
-
-.work-card:hover .work-card-arrow {
-  transform: translate(2px, -2px);
-  background: #a67c45;
-  color: #fffefa;
-}
-
-.work-card-image-wrap {
-  display: grid;
-  flex: 0 0 165px;
+.work-card-image img {
   width: 100%;
-  margin: 5px 0 10px;
-  place-items: center;
-}
-
-.work-icon {
-  display: block;
-  width: 100%;
-  max-width: 190px;
-  height: 165px;
+  height: 100%;
   object-fit: contain;
   object-position: center;
-  transition: transform 0.35s ease;
 }
 
-.work-card:hover .work-icon {
-  transform: scale(1.035);
-}
+/* Content area */
 
 .work-card-content {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+
+  flex: 1;
+  padding: 24px 25px 25px;
 }
 
 .work-title {
-  min-height: 32px;
   margin: 0;
+
   color: #49382d;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: 25px;
   font-weight: 500;
   line-height: 1.35;
+  text-transform: capitalize;
 }
 
-.work-subtitle {
-  min-height: 21px;
-  margin: 5px 0 14px;
+.work-description {
+  min-height: 65px;
+  margin: 12px 0 18px;
+
   color: #82766b;
   font-family: "Raleway", sans-serif;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.75;
 }
+
+/* Service features */
 
 .work-items {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 7px;
-  width: 100%;
-  min-height: 34px;
+  gap: 8px;
+
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .work-items li {
-  padding: 7px 9px;
-  border: 1px solid #eee5d8;
-  border-radius: 20px;
-  background: #faf1e2;
+  padding: 7px 11px;
+
+  border-radius: 3px;
+  background: #f7f1e8;
+
   color: #74675b;
   font-family: "Raleway", sans-serif;
-  font-size: 10px;
-  line-height: 1.2;
+  font-size: 11px;
 }
+
+/* Learn more */
 
 .work-card-cta {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  margin-top: auto;
-  padding-top: 19px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #c8ad86;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 22px;
+  padding: 10px 17px;
+
+  border: 1px solid #b18a57;
+  border-radius: 30px;
+
   color: #8b673e;
   font-family: "Raleway", sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 1.1px;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.work-card:hover .work-card-cta {
+  background: #a67c45;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
-  .work-card {
-    min-height: 390px;
-    padding: 21px;
+  .work-card-image {
+    height: 200px;
   }
 
-  .work-card-image-wrap {
-    flex-basis: 145px;
-  }
-
-  .work-icon {
-    height: 145px;
+  .work-card-content {
+    padding: 20px;
   }
 
   .work-title {
     font-size: 22px;
   }
-}
 
-@media (max-width: 420px) {
-  .work-card {
-    min-height: 370px;
-    padding: 19px;
-  }
-
-  .work-card-image-wrap {
-    flex-basis: 135px;
-  }
-
-  .work-icon {
-    height: 135px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .work-card,
-  .work-card-arrow,
-  .work-icon {
-    transition: none;
+  .work-description {
+    min-height: auto;
   }
 }
