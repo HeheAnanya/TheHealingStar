@@ -5,9 +5,9 @@ import Footer from "../Home/JSX/Footer";
 
 const Contact = () => {
   useEffect(() => {
-    const title = "Contact The Healing Star | We're Here to Help";
+    const title = "Contact The Healing Star | Get in Touch";
     const description =
-      "Have a question about crystal jewellery, tarot, numerology or Reiki? Get in touch with The Healing Star. We'd love to hear from you.";
+      "Contact The Healing Star for crystal jewellery, tarot, numerology, Reiki and order support.";
     const canonicalUrl = "https://the-healing-star.vercel.app/contact";
 
     document.title = title;
@@ -38,22 +38,6 @@ const Contact = () => {
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", canonicalUrl);
-
-    return () => {
-      document.title = "The Healing Star | Crystals, Tarot & Spiritual Wellness";
-      document.head.querySelector('meta[name="description"]')?.setAttribute(
-        "content",
-        "Explore crystal jewellery, meaningful gifts and spiritual wellness services at The Healing Star."
-      );
-      document.head.querySelector('link[rel="canonical"]')?.setAttribute(
-        "href",
-        "https://the-healing-star.vercel.app/"
-      );
-      document.head.querySelector('meta[property="og:url"]')?.setAttribute(
-        "content",
-        "https://the-healing-star.vercel.app/"
-      );
-    };
   }, []);
 
   return (
