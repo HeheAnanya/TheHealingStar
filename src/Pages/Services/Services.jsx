@@ -1,12 +1,16 @@
-import React from 'react'
-import Hero from "./JSX/Hero"
+import React from "react";
+import Navbar from "../Home/JSX/Navbar";
+import Footer from "../Home/JSX/Footer";
+import Hero from "./JSX/Hero";
 
-const Services = () => {
-  return (
-    <div>
-        <Hero/>
-    </div>
-  )
-}
+const Services = () => (
+  <div className="services-page">
+    <Navbar />
+    <main>
+      <Hero />
+    </main>
+    <Footer />
+  </div>
+);
 
-export default Services
+export default Services;
