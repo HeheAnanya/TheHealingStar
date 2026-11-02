@@ -1,18 +1,21 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 import "../CSS/Work.css";
 
-const Work = (prop) => {
+const Work = ({ src, text, subtitle, items, to }) => {
   return (
-    <div className='work-card' onClick={prop.onClick}>
-        <img src={prop.src} alt={prop.text} className="work-icon"/>
-        <h2 className="work-title">{prop.text}</h2> 
-        <ul className="work-items"> 
-          {prop.items && prop.items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
+    <Link className="work-card" to={to} aria-label={`Explore ${text}`}>
+      <img src={src} alt={text} className="work-icon" loading="lazy" />
+      <h2 className="work-title">{text}</h2>
+      {subtitle && <p className="work-subtitle">{subtitle}</p>}
+      {items?.length > 0 && (
+        <ul className="work-items">
+          {items.map((item) => <li key={item}>{item}</li>)}
         </ul>
-    </div>
+      )}
+      <span className="work-card-cta">Explore {text.toLowerCase()}</span>
+    </Link>
   );
-}
+};
 
 export default Work;
