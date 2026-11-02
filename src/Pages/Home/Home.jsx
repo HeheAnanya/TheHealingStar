@@ -75,7 +75,7 @@
 
 // // export default Home;
 
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowRight, Sparkles } from "lucide-react";
 
@@ -85,7 +85,6 @@ import Testimonial from "./JSX/Testimonial";
 import Hero from "./JSX/Hero";
 import Services from "../Services/Services";
 import productData from "../Shop/data";
-import ProductCard from "../Shop/JSX/ProductCard";
 
 import "./Home.css";
 
@@ -103,14 +102,6 @@ const categories = [
 const Home = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
-  const featuredProducts = useMemo(() => {
-    return Object.entries(productData)
-      .flatMap(([category, items]) =>
-        (items || []).map((product) => ({ ...product, category }))
-      )
-      .slice(0, 8);
-  }, []);
 
   useEffect(() => {
     if (location.state?.scrollTo === "services") {
@@ -216,43 +207,6 @@ const Home = () => {
 
         <div className="home-services-content">
           <Services />
-        </div>
-      </section>
-
-      <section className="home-section home-featured">
-        <div className="home-section-heading">
-          <span className="home-section-eyebrow">SELECTED WITH CARE</span>
-          <h2>Customer Favourites</h2>
-          <p>Discover special pieces from The Healing Star.</p>
-        </div>
-
-        <div className="home-featured-grid">
-          {featuredProducts.map((product) => (
-            <ProductCard
-              key={`${product.category}-${product.id}`}
-              productId={product.id}
-              src={product.src}
-              alt={product.alt}
-              name={product.name}
-              des={product.des}
-              size={product.size}
-              price={product.price}
-              stock={product.stock}
-              onClick={() =>
-                navigate(`/products/${product.category}/${product.id}`)
-              }
-            />
-          ))}
-        </div>
-
-        <div className="home-section-action">
-          <button
-            type="button"
-            className="home-button home-button-primary"
-            onClick={() => navigate("/shop/bracelets")}
-          >
-            Shop the Collection <ArrowRight size={17} />
-          </button>
         </div>
       </section>
 
