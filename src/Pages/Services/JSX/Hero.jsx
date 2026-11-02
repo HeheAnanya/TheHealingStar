@@ -98,7 +98,6 @@
 // export default Hero;
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import Work from "./Work";
 import "../CSS/Hero.css";
 import "../CSS/Work.css";
@@ -170,7 +169,6 @@ const work = [
 ];
 
 const Hero = () => {
-  const navigate = useNavigate();
 
   return (
     <section className="main" id="services">
@@ -198,7 +196,7 @@ const Hero = () => {
               subtitle={item.subtitle}
               items={item.items}
               number={`0${index + 1}`}
-              onClick={() => navigate(`/shop/${item.navi}`)}
+              to={`/shop/${item.navi}`}
             />
           ))}
         </div>
