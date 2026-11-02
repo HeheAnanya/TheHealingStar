@@ -1,18 +1,33 @@
-import React from 'react';
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import "../CSS/Work.css";
 
-const Work = (prop) => {
-  return (
-    <div className='work-card' onClick={prop.onClick}>
-        <img src={prop.src} alt={prop.text} className="work-icon"/>
-        <h2 className="work-title">{prop.text}</h2> 
-        <ul className="work-items"> 
-          {prop.items && prop.items.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>
+const Work = ({ src, text, description, items, to }) => (
+  <Link to={to} className="work-card" aria-label={`Learn more about ${text}`}>
+
+    <div className="work-card-image">
+      <img src={src} alt={text} loading="lazy" />
     </div>
-  );
-}
+
+    <div className="work-card-content">
+      <h2 className="work-title">{text}</h2>
+
+      <p className="work-description">{description}</p>
+
+      <ul className="work-items">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+
+      <span className="work-card-cta">
+        Learn More <ArrowRight size={16} />
+      </span>
+    </div>
+
+  </Link>
+);
 
 export default Work;

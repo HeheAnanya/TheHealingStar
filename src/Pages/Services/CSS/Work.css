@@ -1,117 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@1,100..900&family=Liter&family=Petit+Formal+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-
-
-.work-items{
-    list-style: none;
-      padding: 0;
-  margin: 0;
-  text-align: center; /* Center text within list */
-  /* flex-grow: 1; Allows the list to take up available vertical space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center list items vertically if space allows */
-
-}
-.work-items li {
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
 
 .work-card {
-  /* width: 300px;  */
-  /* max-width: 90vw;  */
-  min-height: 380px;
-  padding: 30px 25px;
-  background-color: #fefcf9; 
-  border-radius: 16px; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
-  text-align: center; 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between; 
-  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #eee5d8;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(50, 40, 30, 0.07);
+
+  color: #49382d;
+  text-decoration: none;
+
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
+
+.work-card:link,
+.work-card:visited,
+.work-card:hover,
+.work-card:active {
+  color: #49382d;
+  text-decoration: none;
+}
+
 .work-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(50, 40, 30, 0.12);
 }
 
-.work-icon {
-  width: 120px; 
-  height: 120px;
-  object-fit: contain; 
-  /* margin-bottom: 25px; */
+.work-card:focus-visible {
+  outline: 2px solid #a67c45;
+  outline-offset: 4px;
+}
 
+/* Image area */
+
+.work-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 230px;
+  padding: 15px;
+  box-sizing: border-box;
+
+  background: #f3ebdf;
+}
+
+.work-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Content area */
+
+.work-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  flex: 1;
+  padding: 24px 25px 25px;
 }
 
 .work-title {
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
-  /* margin-bottom: 20px; */
+  margin: 0;
 
+  color: #49382d;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-transform: capitalize;
 }
 
+.work-description {
+  min-height: 65px;
+  margin: 12px 0 18px;
 
-@media (max-width: 1024px) {
-  .service-heading1 {
-    font-size: 2.2rem;
-  }
-  .work-card {
-    width: 280px;
-    min-height: 420px;
-    padding: 25px 20px;
-  }
-  .work-icon {
-    width: 60px;
-    height: 60px;
-  }
+  color: #82766b;
+  font-family: "Raleway", sans-serif;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* Service features */
+
+.work-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-items li {
+  padding: 7px 11px;
+
+  border-radius: 3px;
+  background: #f7f1e8;
+
+  color: #74675b;
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+}
+
+/* Learn more */
+
+.work-card-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 22px;
+  padding: 10px 17px;
+
+  border: 1px solid #b18a57;
+  border-radius: 30px;
+
+  color: #8b673e;
+  font-family: "Raleway", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.work-card:hover .work-card-cta {
+  background: #a67c45;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
-  .service-main {
-    padding: 60px 15px;
+  .work-card-image {
+    height: 200px;
   }
-  .service-heading1 {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
-  .work-card {
-    width: 90vw;
-    max-width: 350px; 
-    min-height: 380px; 
+
+  .work-card-content {
     padding: 20px;
   }
-  .work-title {
-    font-size: 1.3rem;
-  }
-  .work-items li {
-    font-size: 0.95rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .service-heading1 {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-  }
-  .work-card {
-    min-height: 350px;
-  }
-  .work-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-  }
   .work-title {
-    font-size: 1.2rem;
+    font-size: 22px;
   }
-  .work-items li {
-    font-size: 0.9rem;}
+
+  .work-description {
+    min-height: auto;
+  }
 }

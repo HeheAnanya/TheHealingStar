@@ -376,7 +376,7 @@ const ProductDetail = () => {
                     className="related-product-card"
                     key={item.id}
                     onClick={() =>
-                      navigate(`/product/${category}/${item.id}`)
+                      navigate(`/products/${category}/${item.id}`)
                     }
                   >
                     <div className="related-product-image">

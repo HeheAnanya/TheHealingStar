@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /signup
+Disallow: /forgotPassword
+Disallow: /resetPassword
+Disallow: /auth/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /order/
+Disallow: /profile
+
+Sitemap: https://the-healing-star.vercel.app/sitemap.xml
