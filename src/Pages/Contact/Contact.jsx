@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../Home/JSX/Navbar";
 import Hero from "./JSX/Hero";
-import Footer from "../Home/JSX/Footer";
 
 const Contact = () => {
   useEffect(() => {
@@ -44,7 +43,6 @@ const Contact = () => {
     <>
       <Navbar />
       <Hero />
-      <Footer />
     </>
   );
 };
