@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://the-healing-star.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/contact</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/bracelets</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/rings</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/earring</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/pendant</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/salt</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/sphere</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/trees</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/evileye</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/tarot</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/numerology</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://the-healing-star.vercel.app/shop/reiki</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
