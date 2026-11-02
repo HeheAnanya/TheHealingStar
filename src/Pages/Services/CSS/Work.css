@@ -3,13 +3,14 @@
 .work-card {
   position: relative;
   display: flex;
+  height: 100%;
   min-width: 0;
-  min-height: 100%;
+  min-height: 405px;
   flex-direction: column;
-  padding: 25px 27px 27px;
+  padding: 23px 25px 24px;
   overflow: hidden;
   border: 1px solid #e8dece;
-  border-radius: 5px;
+  border-radius: 7px;
   background: #fffefa;
   color: #49382d;
   text-align: left;
@@ -28,7 +29,7 @@
 }
 
 .work-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   border-color: #d4bc98;
   box-shadow: 0 15px 30px rgba(73, 56, 45, 0.09);
 }
@@ -40,6 +41,7 @@
 
 .work-card-topline {
   display: flex;
+  flex: 0 0 34px;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -72,21 +74,24 @@
 
 .work-card-image-wrap {
   display: grid;
-  min-height: 150px;
-  margin: 2px 0 9px;
+  flex: 0 0 165px;
+  width: 100%;
+  margin: 5px 0 10px;
   place-items: center;
 }
 
 .work-icon {
   display: block;
-  width: 145px;
-  height: 145px;
+  width: 100%;
+  max-width: 190px;
+  height: 165px;
   object-fit: contain;
+  object-position: center;
   transition: transform 0.35s ease;
 }
 
 .work-card:hover .work-icon {
-  transform: scale(1.045);
+  transform: scale(1.035);
 }
 
 .work-card-content {
@@ -98,6 +103,7 @@
 }
 
 .work-title {
+  min-height: 32px;
   margin: 0;
   color: #49382d;
   font-family: "Playfair Display", Georgia, serif;
@@ -107,7 +113,8 @@
 }
 
 .work-subtitle {
-  margin: 8px 0 17px;
+  min-height: 21px;
+  margin: 5px 0 14px;
   color: #82766b;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
@@ -117,8 +124,10 @@
 .work-items {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   gap: 7px;
   width: 100%;
+  min-height: 34px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -127,8 +136,8 @@
 .work-items li {
   padding: 7px 9px;
   border: 1px solid #eee5d8;
-  border-radius: 2px;
-  background: #faf6ef;
+  border-radius: 20px;
+  background: #faf1e2;
   color: #74675b;
   font-family: "Raleway", sans-serif;
   font-size: 10px;
@@ -139,7 +148,8 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 23px;
+  margin-top: auto;
+  padding-top: 19px;
   padding-bottom: 4px;
   border-bottom: 1px solid #c8ad86;
   color: #8b673e;
@@ -152,16 +162,16 @@
 
 @media (max-width: 768px) {
   .work-card {
-    padding: 22px;
+    min-height: 390px;
+    padding: 21px;
   }
 
   .work-card-image-wrap {
-    min-height: 125px;
+    flex-basis: 145px;
   }
 
   .work-icon {
-    width: 125px;
-    height: 125px;
+    height: 145px;
   }
 
   .work-title {
@@ -171,16 +181,16 @@
 
 @media (max-width: 420px) {
   .work-card {
+    min-height: 370px;
     padding: 19px;
   }
 
   .work-card-image-wrap {
-    min-height: 115px;
+    flex-basis: 135px;
   }
 
   .work-icon {
-    width: 115px;
-    height: 115px;
+    height: 135px;
   }
 }
 
