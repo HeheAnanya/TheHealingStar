@@ -352,6 +352,14 @@ html {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#discover {
+  scroll-margin-top: 90px;
+}
+
 #discover {
   scroll-margin-top: 90px;
 }
