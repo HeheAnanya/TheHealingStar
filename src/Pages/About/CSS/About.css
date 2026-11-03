@@ -348,6 +348,9 @@
   margin: 0 auto;
   color: rgba(255, 248, 238, 0.82);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 html {
   scroll-behavior: smooth;
@@ -357,6 +360,9 @@ html {
   scroll-margin-top: 90px;
 }
 
+#discover {
+  scroll-margin-top: 90px;
+}
 @media (max-width: 900px) {
   .about-hero {
     grid-template-columns: 1fr 0.9fr;
