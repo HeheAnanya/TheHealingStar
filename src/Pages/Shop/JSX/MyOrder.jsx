@@ -126,6 +126,25 @@ const MyOrder = () => {
                     <div className="orders-count">
                         <strong>{orders.length}</strong>
                         <span>{orders.length === 1 ? "Order" : "Orders"}</span>
+                    <div className="order-card-body">
+                      <div className="order-items-list">
+                        {(order.items || []).map((item, index) => (
+                          <div className="order-line-item" key={item.id || index}>
+                            <div className="order-item-placeholder"><Package size={22} /></div>
+                            <div className="order-item-name"><strong>{item.productName}</strong><span>Quantity: {item.quantity || 1}</span></div>
+                          </div>
+                        ))}
+                      </div>
+                      <div className="order-card-total"><span>Order total</span><strong>₹{Number(order.totalPrice || 0).toLocaleString("en-IN")}</strong></div>
+                      {(order.deliveryName || order.deliveryStreet) && (
+                        <div className="order-delivery-snapshot">
+                          <strong>Delivery address on this order</strong>
+                          <span>{order.deliveryName}</span>
+                          <span>{order.deliveryStreet}</span>
+                          <span>{[order.deliveryCity, order.deliveryState, order.deliveryPincode].filter(Boolean).join(", ")}</span>
+                          {order.deliveryPhone && <span>Phone: {order.deliveryPhone}</span>}
+                        </div>
+                      )}
                     </div>
                 </header>
 

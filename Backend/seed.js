@@ -65,7 +65,7 @@ async function seedProducts() {
       await prisma.product.create({
         data: {
           productName,
-          description: item.des || "",
+description: String(item.des || "").slice(0, 150),
           price: Math.round(price),
           stock: 20,
           status: "ACTIVE",

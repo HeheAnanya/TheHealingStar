@@ -42,6 +42,12 @@ model Order {
   status     OrderStatus @default(ON_THE_WAY)
   payStatus  PayStatus   @default(FAILED)
   createdAt  DateTime    @default(now())
+  deliveryName    String?
+  deliveryPhone   String?
+  deliveryStreet  String?
+  deliveryCity    String?
+  deliveryState   String?
+  deliveryPincode String?
   user       User        @relation(fields: [userId], references: [id])
   items      OrderItem[]
   payment    Payment?

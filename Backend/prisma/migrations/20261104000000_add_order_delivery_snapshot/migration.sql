@@ -1,0 +1,7 @@
+ALTER TABLE `Order`
+  ADD COLUMN `deliveryName` VARCHAR(191) NULL,
+  ADD COLUMN `deliveryPhone` VARCHAR(191) NULL,
+  ADD COLUMN `deliveryStreet` VARCHAR(191) NULL,
+  ADD COLUMN `deliveryCity` VARCHAR(191) NULL,
+  ADD COLUMN `deliveryState` VARCHAR(191) NULL,
+  ADD COLUMN `deliveryPincode` VARCHAR(191) NULL;

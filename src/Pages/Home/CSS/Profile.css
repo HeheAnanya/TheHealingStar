@@ -327,3 +327,20 @@
     transform: none;
   }
 }
+
+/* Saved delivery address */
+.account-address-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.account-address-heading h2{margin:0 0 7px;color:#594438;font:500 22px 'Playfair Display',serif}
+.account-address-heading p{margin:0 0 18px}
+.account-address-edit,.account-address-actions button{border:1px solid #b99a5b;background:#795d4b;color:#fff;padding:10px 17px;font:600 12px 'Raleway',sans-serif;cursor:pointer}
+.account-saved-address{display:flex;flex-direction:column;gap:8px;color:#6d594b;font-size:14px;line-height:1.5}
+.account-saved-address strong{color:#49372e}
+.account-address-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.account-address-form label{display:flex;flex-direction:column;gap:7px;color:#6d594b;font-size:12px;font-weight:700}
+.account-address-form input{box-sizing:border-box;width:100%;padding:12px;border:1px solid #dfd0bf;background:#fffefa;color:#49372e;font:14px 'Raleway',sans-serif;outline-color:#b99a5b}
+.account-address-full{grid-column:1/-1}
+.account-address-actions{grid-column:1/-1;display:flex;gap:10px}
+.account-address-actions button:disabled{opacity:.6;cursor:wait}
+.account-address-actions .account-address-cancel{background:transparent;color:#795d4b}
+.account-address-message{margin:14px 0 0;color:#795d4b;font-size:13px}
+@media(max-width:560px){.account-address-heading{flex-direction:column}.account-address-form{grid-template-columns:1fr}.account-address-full,.account-address-actions{grid-column:auto}}
