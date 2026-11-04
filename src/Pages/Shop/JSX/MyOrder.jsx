@@ -92,6 +92,15 @@ const MyOrder = () => {
                         ))}
                       </div>
                       <div className="order-card-total"><span>Order total</span><strong>₹{Number(order.totalPrice || 0).toLocaleString("en-IN")}</strong></div>
+                      {(order.deliveryName || order.deliveryStreet) && (
+                        <div className="order-delivery-snapshot">
+                          <strong>Delivery address on this order</strong>
+                          <span>{order.deliveryName}</span>
+                          <span>{order.deliveryStreet}</span>
+                          <span>{[order.deliveryCity, order.deliveryState, order.deliveryPincode].filter(Boolean).join(", ")}</span>
+                          {order.deliveryPhone && <span>Phone: {order.deliveryPhone}</span>}
+                        </div>
+                      )}
                     </div>
                     <div className="order-card-footer">
                       <span className="order-footer-note">Thank you for choosing Healing Star.</span>
