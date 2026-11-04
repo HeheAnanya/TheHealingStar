@@ -291,39 +291,69 @@ const MyOrder = () => {
 
                         <section className="order-invoice-print" aria-label="Invoice">
                             <header className="invoice-heading">
-                                <div>
-                                    <p className="invoice-brand">THE HEALING STAR</p>
-                                    <p className="invoice-tagline">A little more balance, a little more you.</p>
-                                </div>
+                                <img className="invoice-logo" src="/logo.png" alt="Healing Star logo" />
                                 <div className="invoice-title">
                                     <h1>INVOICE</h1>
-                                    <strong>#HS{String(selectedOrder.id).padStart(6, "0")}</strong>
+                                    <strong>INV-HS{String(selectedOrder.id).padStart(6, "0")}</strong>
                                 </div>
                             </header>
-                            <div className="invoice-meta">
-                                <div><span>Invoice date</span><strong>{placedDate(selectedOrder.createdAt)}</strong></div>
-                                <div><span>Order status</span><strong>{statusLabel(selectedOrder.status)}</strong></div>
-                                <div><span>Payment status</span><strong>{statusLabel(selectedOrder.payStatus)}</strong></div>
+
+                            <div className="invoice-parties">
+                                <div className="invoice-billed">
+                                    <h2>BILLED TO:</h2>
+                                    <strong>{selectedOrder.user?.name || "Customer"}</strong>
+                                    {selectedOrder.user?.profile ? (
+                                        <>
+                                            <span>{selectedOrder.user.profile.address}</span>
+                                            <span>{[selectedOrder.user.profile.city, selectedOrder.user.profile.state, selectedOrder.user.profile.pincode].filter(Boolean).join(", ")}</span>
+                                            {selectedOrder.user.profile.phone && <span>Phone: {selectedOrder.user.profile.phone}</span>}
+                                        </>
+                                    ) : (
+                                        <span>{selectedOrder.user?.email || "Customer address not available"}</span>
+                                    )}
+                                </div>
+                                <div className="invoice-reference">
+                                    <p><span>Invoice No.</span><strong>INV-HS{String(selectedOrder.id).padStart(6, "0")}</strong></p>
+                                    <p><span>Order No.</span><strong>#HS{String(selectedOrder.id).padStart(6, "0")}</strong></p>
+                                    <p><span>Invoice Date</span><strong>{placedDate(selectedOrder.createdAt)}</strong></p>
+                                </div>
                             </div>
-                            <h2>Order items</h2>
+
                             <table className="invoice-table">
-                                <thead><tr><th>Item</th><th>Unit price</th><th>Qty</th><th>Amount</th></tr></thead>
+                                <thead>
+                                    <tr><th>Item</th><th>Quantity</th><th>Unit Price</th><th>Total</th></tr>
+                                </thead>
                                 <tbody>
                                     {selectedOrder.items?.map((item) => (
                                         <tr key={item.id}>
                                             <td>{item.productName}</td>
-                                            <td>{money(item.productPrice)}</td>
                                             <td>{item.quantity}</td>
+                                            <td>{money(item.productPrice)}</td>
                                             <td>{money(item.productPrice * item.quantity)}</td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
-                            <div className="invoice-total">
-                                <span>Order total</span>
-                                <strong>{money(selectedOrder.totalPrice)}</strong>
+
+                            <div className="invoice-totals">
+                                <p><span>Subtotal</span><strong>{money(selectedOrder.totalPrice)}</strong></p>
+                                <p><span>Tax</span><strong>{money(0)}</strong></p>
+                                <p className="invoice-grand-total"><span>Total</span><strong>{money(selectedOrder.totalPrice)}</strong></p>
                             </div>
-                            <p className="invoice-note">Thank you for shopping with The Healing Star.</p>
+
+                            <div className="invoice-bottom">
+                                <div className="invoice-payment">
+                                    <h2>PAYMENT INFORMATION</h2>
+                                    <p><span>Payment</span><strong>{selectedOrder.payStatus === "SUCCESS" ? "SUCCESS" : statusLabel(selectedOrder.payStatus)}</strong></p>
+                                </div>
+                                <div className="invoice-signature">
+                                    <span className="invoice-ceo-name">CEO Name</span>
+                                    <div></div>
+                                    <strong>CEO</strong>
+                                    <span>HEALING STAR</span>
+                                </div>
+                            </div>
+                            <p className="invoice-thank-you">Thank you!</p>
                         </section>
                     </section>
                 </div>
