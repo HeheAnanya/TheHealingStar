@@ -4,6 +4,10 @@ const prisma = require("../prisma/client")
 async function orderCreate(userId) {
     userId = Number(userId)
     try {
+        const profile = await prisma.profile.findUnique({ where: { userId } });
+        if (!profile) {
+            throw new Error("Please save your delivery address in My Account before checkout.");
+        }
         let cart = await prisma.cart.findUnique({
             where: {
                 userId: userId
@@ -30,8 +34,13 @@ async function orderCreate(userId) {
             data: {
                 userId: userId,
                 totalPrice: totalPrice,
-                payStatus: "FAILED"
-
+                payStatus: "FAILED",
+                deliveryName: profile.name,
+                deliveryPhone: profile.phone,
+                deliveryStreet: profile.address,
+                deliveryCity: profile.city,
+                deliveryState: profile.state,
+                deliveryPincode: profile.pincode
             }
         })
         for (let i of cart.items) {
