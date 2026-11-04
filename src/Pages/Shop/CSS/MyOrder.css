@@ -333,33 +333,62 @@
 .order-invoice-print { display: none; }
 
 @media print {
-    @page { size: A4; margin: 18mm; }
+    @page { size: A4; margin: 16mm; }
     body * { visibility: hidden !important; }
     .order-invoice-print, .order-invoice-print * { visibility: visible !important; }
     .order-invoice-print {
         display: block !important;
         position: absolute;
-        inset: 0;
+        left: 0;
+        top: 0;
         width: 100%;
-        color: #302015;
-        background: #fff;
-        font-family: Arial, sans-serif;
+        min-height: 260mm;
+        box-sizing: border-box;
+        padding: 8mm 4mm;
+        color: #21170F;
+        background: #FBF8F1 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
     }
-    .invoice-heading { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 22px; border-bottom: 2px solid #9A6B2D; }
-    .invoice-brand { margin: 0; font: bold 20px Georgia, serif; letter-spacing: 1px; color: #4A2D18; }
-    .invoice-tagline { margin: 7px 0 0; color: #786756; font-size: 10px; }
+    .invoice-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 18mm;
+        border-bottom: 1px solid #A58A62;
+    }
+    .invoice-logo { display: block; width: 54mm; max-height: 30mm; object-fit: contain; object-position: left center; }
     .invoice-title { text-align: right; }
-    .invoice-title h1 { margin: 0 0 5px; font: bold 24px Georgia, serif; }
-    .invoice-title strong { font-size: 12px; }
-    .invoice-meta { display: flex; justify-content: space-between; gap: 15px; margin: 25px 0 35px; }
-    .invoice-meta div { display: flex; flex-direction: column; gap: 6px; }
-    .invoice-meta span { color: #897968; font-size: 10px; }
-    .invoice-meta strong { font-size: 12px; }
-    .order-invoice-print h2 { margin: 0 0 12px; font: bold 16px Georgia, serif; }
-    .invoice-table { width: 100%; border-collapse: collapse; font-size: 11px; }
-    .invoice-table th { background: #F5EBDD; color: #4A2D18; text-align: left; }
-    .invoice-table th, .invoice-table td { padding: 12px 10px; border-bottom: 1px solid #E8DED2; }
+    .invoice-title h1 { margin: 0 0 4mm; color: #20150E; font: 400 30pt Georgia, "Times New Roman", serif; letter-spacing: 1px; }
+    .invoice-title strong { color: #6D4B26; font-size: 10pt; }
+    .invoice-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 15mm; padding: 13mm 0 14mm; }
+    .invoice-billed { display: flex; flex-direction: column; gap: 2mm; line-height: 1.45; }
+    .invoice-billed h2, .invoice-payment h2 { margin: 0 0 3mm; color: #67451F; font-size: 10pt; letter-spacing: .5px; }
+    .invoice-billed > strong { font-size: 12pt; }
+    .invoice-billed span { font-size: 9.5pt; }
+    .invoice-reference { border-left: 1px solid #C7B18F; padding-left: 10mm; align-self: center; }
+    .invoice-reference p { display: flex; justify-content: space-between; gap: 5mm; margin: 0 0 4mm; font-size: 9.5pt; }
+    .invoice-reference p:last-child { margin-bottom: 0; }
+    .invoice-reference span { color: #796B5B; }
+    .invoice-reference strong { text-align: right; }
+    .invoice-table { width: 100%; border-collapse: collapse; margin: 0; font-size: 9.5pt; }
+    .invoice-table th { padding: 4mm 3mm; background: #F1E6D5 !important; color: #342315; text-align: left; font-weight: 700; }
+    .invoice-table td { padding: 4mm 3mm; border-bottom: 1px solid #D9CBB7; }
     .invoice-table th:not(:first-child), .invoice-table td:not(:first-child) { text-align: right; }
-    .invoice-total { display: flex; justify-content: flex-end; gap: 35px; padding: 18px 10px; margin-top: 10px; background: #F7EBD8; font-size: 14px; font-weight: bold; }
-    .invoice-note { margin-top: 55px; padding-top: 15px; border-top: 1px solid #E8DED2; color: #786756; font-size: 11px; text-align: center; }
+    .invoice-totals { width: 48%; margin: 6mm 0 0 auto; }
+    .invoice-totals p { display: flex; justify-content: space-between; margin: 0; padding: 3mm; font-size: 9.5pt; }
+    .invoice-grand-total { margin-top: 2mm !important; background: #F1E2CC !important; font-size: 13pt !important; font-weight: 700; }
+    .invoice-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm; margin-top: 20mm; padding-top: 7mm; }
+    .invoice-payment { border-right: 1px solid #C7B18F; }
+    .invoice-payment p { display: flex; gap: 6mm; font-size: 10pt; }
+    .invoice-payment p span { color: #796B5B; }
+    .invoice-payment p strong { color: #47613A; }
+    .invoice-signature { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 2mm; text-align: center; }
+    .invoice-ceo-name { color: #51341F; font: italic 22pt "Brush Script MT", "Segoe Script", cursive; }
+    .invoice-signature div { width: 75%; border-top: 1px solid #8B7354; margin: 2mm 0; }
+    .invoice-signature strong { font-size: 10pt; }
+    .invoice-signature > span:last-child { font-size: 9pt; letter-spacing: 2px; }
+    .invoice-thank-you { margin: 16mm 0 0; color: #533820; font: italic 22pt Georgia, serif; }
 }
