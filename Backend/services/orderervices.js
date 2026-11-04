@@ -44,21 +44,7 @@ async function orderCreate(userId) {
                     quantity: i.quantity
                 }
             })
-            await prisma.product.update({
-                where: { id: i.product.id },
-                data: {
-                    stock: {
-                        decrement: i.quantity
-                    }
-                }
-            })
-
         }
-        await prisma.cartItem.deleteMany({
-            where: {
-                cartId: cart.id
-            }
-        })
         return {
             message: "Order placed successfully",
             orderId: order.id,
