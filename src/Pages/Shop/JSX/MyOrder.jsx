@@ -107,6 +107,10 @@ const MyOrder = () => {
         ? 3
         : selectedOrder?.status === "CANCELLED" ? -1 : 2
 
+    function downloadInvoice() {
+        window.print()
+    }
+
     return (
         <div className="my-orders-page">
             <Navbar />
@@ -276,11 +280,51 @@ const MyOrder = () => {
 
                         <div className="order-modal-footer">
                             <span>Need help with this order?</span>
+                            <button type="button" className="order-invoice-btn" onClick={downloadInvoice}>
+                                ↓ Download Invoice
+                            </button>
                             <button type="button" className="order-close-text" onClick={() => setSelectedOrder(null)}>Close details</button>
                             <button type="button" className="order-remove-btn" disabled={deleting} onClick={() => deleteOrder(selectedOrder.id)}>
                                 {deleting ? "Removing..." : "Remove from history"}
                             </button>
                         </div>
+
+                        <section className="order-invoice-print" aria-label="Invoice">
+                            <header className="invoice-heading">
+                                <div>
+                                    <p className="invoice-brand">THE HEALING STAR</p>
+                                    <p className="invoice-tagline">A little more balance, a little more you.</p>
+                                </div>
+                                <div className="invoice-title">
+                                    <h1>INVOICE</h1>
+                                    <strong>#HS{String(selectedOrder.id).padStart(6, "0")}</strong>
+                                </div>
+                            </header>
+                            <div className="invoice-meta">
+                                <div><span>Invoice date</span><strong>{placedDate(selectedOrder.createdAt)}</strong></div>
+                                <div><span>Order status</span><strong>{statusLabel(selectedOrder.status)}</strong></div>
+                                <div><span>Payment status</span><strong>{statusLabel(selectedOrder.payStatus)}</strong></div>
+                            </div>
+                            <h2>Order items</h2>
+                            <table className="invoice-table">
+                                <thead><tr><th>Item</th><th>Unit price</th><th>Qty</th><th>Amount</th></tr></thead>
+                                <tbody>
+                                    {selectedOrder.items?.map((item) => (
+                                        <tr key={item.id}>
+                                            <td>{item.productName}</td>
+                                            <td>{money(item.productPrice)}</td>
+                                            <td>{item.quantity}</td>
+                                            <td>{money(item.productPrice * item.quantity)}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                            <div className="invoice-total">
+                                <span>Order total</span>
+                                <strong>{money(selectedOrder.totalPrice)}</strong>
+                            </div>
+                            <p className="invoice-note">Thank you for shopping with The Healing Star.</p>
+                        </section>
                     </section>
                 </div>
             )}
