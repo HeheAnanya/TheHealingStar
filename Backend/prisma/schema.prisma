@@ -20,6 +20,7 @@ model User {
   cart    Cart?
   profile Profile?
   order   Order[]
+  appointments Appointment[]
 }
 
 model Product {
@@ -93,6 +94,7 @@ model OrderItem {
   quantity     Int
   order        Order   @relation(fields: [orderId], references: [id])
   product      Product @relation(fields: [productId], references: [id])
+  appointment  Appointment?
 
   @@index([orderId], map: "OrderItem_orderId_fkey")
   @@index([productId], map: "OrderItem_productId_fkey")
@@ -161,4 +163,38 @@ enum PayStatus {
 enum ISSUE {
   RESOLVED
   IN_PROGRESS
+}
+
+
+model AvailabilitySlot {
+  id        Int       @id @default(autoincrement())
+  startsAt  DateTime
+  endsAt    DateTime
+  timezone  String    @default("Asia/Kolkata")
+  isActive  Boolean   @default(true)
+  createdAt DateTime  @default(now())
+  appointment Appointment?
+
+  @@index([startsAt, isActive])
+}
+
+model Appointment {
+  id           Int               @id @default(autoincrement())
+  userId       Int
+  orderItemId  Int               @unique
+  slotId       Int               @unique
+  serviceName  String
+  status       AppointmentStatus @default(BOOKED)
+  bookedAt     DateTime          @default(now())
+  user         User              @relation(fields: [userId], references: [id])
+  orderItem    OrderItem         @relation(fields: [orderItemId], references: [id])
+  slot         AvailabilitySlot  @relation(fields: [slotId], references: [id])
+
+  @@index([userId, status])
+}
+
+enum AppointmentStatus {
+  BOOKED
+  CANCELLED
+  COMPLETED
 }
