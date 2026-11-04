@@ -6,6 +6,8 @@ async function createPayment(req,res) {
         return res.status(200).json(payment)
     }
     catch(err){
+            console.error("RAZORPAY CREATE ERROR:", err);
+
         return res.status(400).json({message:err.message})
 
     }
@@ -17,6 +19,8 @@ async function verifyPayment(req,res) {
         return res.status(200).json(result)
     }
     catch(err){
+            console.error("RAZORPAY CREATE ERROR:", err);
+
         return res.status(400).json({message:err.message})
 
     }    

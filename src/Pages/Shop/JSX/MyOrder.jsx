@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react"
 import Navbar from "../../Home/JSX/Navbar"
 import Footer from "../../Home/JSX/Footer"
 import { api } from "../../../api/axios"
+import logo from "../../../../public/assets/logo.png"
 import "../CSS/MyOrder.css"
 
 const statusLabel = (status = "") => {
@@ -291,7 +292,7 @@ const MyOrder = () => {
 
                         <section className="order-invoice-print" aria-label="Invoice">
                             <header className="invoice-heading">
-                                <img className="invoice-logo" src="/logo.png" alt="Healing Star logo" />
+                                <img className="invoice-logo" src={logo} alt="Healing Star logo" />
                                 <div className="invoice-title">
                                     <h1>INVOICE</h1>
                                     <strong>INV-HS{String(selectedOrder.id).padStart(6, "0")}</strong>
