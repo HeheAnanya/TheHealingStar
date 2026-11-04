@@ -66,8 +66,16 @@ async function myOrder(userId) {
                 payStatus:"SUCCESS"
             },
             include: {
-        items: true  
-    }
+                items: true,
+                payment: true,
+                user: {
+                    select: {
+                        name: true,
+                        email: true,
+                        profile: true
+                    }
+                }
+            }
         })
         if (found) {
             return { found }
