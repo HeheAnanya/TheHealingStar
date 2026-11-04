@@ -148,9 +148,9 @@ const MyOrder = () => {
                 ? -1
                 : 2;
 
-    function downloadInvoice() {
-        window.print();
-    }
+function downloadInvoice() {
+    window.print();
+}
 
     // Use the address saved with the order.
     // Older orders fall back to the customer's profile address.
