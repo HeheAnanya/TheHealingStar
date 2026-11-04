@@ -277,11 +277,9 @@ const MyOrder = () => {
                         <div className="order-modal-footer">
                             <span>Need help with this order?</span>
                             <button type="button" className="order-close-text" onClick={() => setSelectedOrder(null)}>Close details</button>
-                            {selectedOrder.status === "CANCELLED" && (
-                                <button type="button" className="order-remove-btn" disabled={deleting} onClick={() => deleteOrder(selectedOrder.id)}>
-                                    {deleting ? "Removing..." : "Remove from history"}
-                                </button>
-                            )}
+                            <button type="button" className="order-remove-btn" disabled={deleting} onClick={() => deleteOrder(selectedOrder.id)}>
+                                {deleting ? "Removing..." : "Remove from history"}
+                            </button>
                         </div>
                     </section>
                 </div>
