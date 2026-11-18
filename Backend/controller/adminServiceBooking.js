@@ -5,6 +5,11 @@ async function serviceBookings(req, res) {
     const bookings = await prisma.appointment.findMany({
       include: {
         user: { select: { id: true, name: true, email: true } },
+        serviceOrder: {
+          include: {
+            package: { select: { name: true, category: true, durationMinutes: true, price: true } },
+          },
+        },
         orderItem: {
           include: {
             order: { select: { id: true, payStatus: true, createdAt: true } },
