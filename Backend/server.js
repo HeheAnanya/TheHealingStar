@@ -10,6 +10,7 @@ const order = require("./routes/orderRoute")
 const adminOrder = require("./routes/adminOrder")
 const payment = require("./routes/payment.route.js")
 const address = require("./routes/addressRoute.js")
+const calendly = require("./routes/calendlyRoute")
 const cookieParser = require("cookie-parser");
 
 const app = express()
@@ -23,6 +24,7 @@ app.use("/admin",adminOrder)
 app.use("/admin", adminRoute)
 app.use("/payment", payment);
 app.use("/address",address)
+app.use("/admin/calendly", calendly)
 
 
 app.get("/",(req,res)=>(
