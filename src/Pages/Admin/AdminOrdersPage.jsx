@@ -116,11 +116,11 @@ const AdminOrdersPage = () => {
             <div className="admin-bookings-grid">{bookings.map(booking => (
               <article className="admin-booking-card" key={booking.id}>
                 <div className="admin-booking-card-head"><span>BOOKING #{booking.id}</span><span className={`admin-orders-status ${String(booking.status).toLowerCase()}`}>{booking.status}</span></div>
-                <h3>{booking.serviceName || booking.orderItem?.productName || "Healing session"}</h3>
+                <h3>{booking.serviceOrder?.package?.name || booking.serviceName || booking.orderItem?.productName || "Healing session"}</h3>
                 <p className="admin-booking-customer">{booking.user?.name || "Customer"} · {booking.user?.email || "—"}</p>
                 <div className="admin-booking-details">
-                  <div><small>Appointment time</small><strong>{dateTime(booking.slot?.startsAt)}</strong></div>
-                  <div><small>Payment</small><strong>{booking.orderItem?.order?.payStatus || "See linked order"}</strong></div>
+                  <div><small>Appointment time</small><strong>{dateTime(booking.scheduledAt || booking.slot?.startsAt)}</strong></div>
+                  <div><small>Payment</small><strong>{booking.serviceOrder?.payStatus || booking.orderItem?.order?.payStatus || "Payment record unavailable"}</strong></div>
                   <div><small>Booked on</small><strong>{dateTime(booking.bookedAt)}</strong></div>
                 </div>
                 <label className="admin-booking-status-label">Update booking status
