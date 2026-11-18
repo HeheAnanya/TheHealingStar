@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { api } from "../../api/axios";
+import "./AdminCalendlyEvents.css";
 
 /**
  * Admin utility for checking the Calendly connection and reviewing Event Types.
