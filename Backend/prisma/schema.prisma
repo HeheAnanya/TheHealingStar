@@ -21,6 +21,7 @@ model User {
   profile      Profile?
   order        Order[]
   appointments Appointment[]
+  serviceOrders ServiceOrder[]
 }
 
 model Product {
