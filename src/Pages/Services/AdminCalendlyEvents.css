@@ -1,0 +1,98 @@
+.admin-calendly {
+  padding: 24px;
+  color: #38271e;
+  background: #fffdf8;
+  border: 1px solid #e9ddc9;
+  border-radius: 16px;
+}
+
+.admin-calendly__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.admin-calendly__eyebrow {
+  margin: 0 0 6px;
+  color: #a47b3b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.admin-calendly__heading h2 {
+  margin: 0 0 6px;
+  font-family: Georgia, serif;
+  font-weight: 500;
+}
+
+.admin-calendly__heading p:last-child {
+  margin: 0;
+  color: #806f60;
+  font-size: 13px;
+}
+
+.admin-calendly__heading button {
+  padding: 10px 16px;
+  color: #fffaf0;
+  background: #684a32;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.admin-calendly__heading button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.admin-calendly__list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-calendly__event {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #eee4d5;
+  border-radius: 10px;
+}
+
+.admin-calendly__event h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.admin-calendly__event p,
+.admin-calendly__event small {
+  margin: 0;
+  color: #806f60;
+  font-size: 13px;
+}
+
+.admin-calendly__event a {
+  color: #8a642e;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.admin-calendly__error {
+  padding: 12px;
+  color: #8a2929;
+  background: #fff1ef;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .admin-calendly__heading,
+  .admin-calendly__event {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
