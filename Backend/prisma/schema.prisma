@@ -17,10 +17,10 @@ model User {
   resetPasswordToken   String?   @unique
   resetPasswordExpires DateTime?
 
-  cart         Cart?
-  profile      Profile?
-  order        Order[]
-  appointments Appointment[]
+  cart          Cart?
+  profile       Profile?
+  order         Order[]
+  appointments  Appointment[]
   serviceOrders ServiceOrder[]
 }
 
@@ -166,6 +166,12 @@ enum ISSUE {
   IN_PROGRESS
 }
 
+enum ServiceCategory {
+  TAROT
+  REIKI
+  NUMEROLOGY
+}
+
 model AvailabilitySlot {
   id          Int          @id @default(autoincrement())
   startsAt    DateTime
@@ -179,18 +185,60 @@ model AvailabilitySlot {
 }
 
 model Appointment {
-  id          Int               @id @default(autoincrement())
-  userId      Int
-  orderItemId Int               @unique
-  slotId      Int               @unique
-  serviceName String
-  status      AppointmentStatus @default(BOOKED)
-  bookedAt    DateTime          @default(now())
-  user        User              @relation(fields: [userId], references: [id])
-  orderItem   OrderItem         @relation(fields: [orderItemId], references: [id])
-  slot        AvailabilitySlot  @relation(fields: [slotId], references: [id])
+  id                 Int               @id @default(autoincrement())
+  userId             Int
+  orderItemId        Int?              @unique
+  slotId             Int?              @unique
+  serviceOrderId     Int?              @unique
+  serviceName        String
+  durationMinutes    Int?
+  calendlyEventUri   String?           @unique @db.VarChar(500)
+  calendlyInviteeUri String?           @unique @db.VarChar(500)
+  scheduledAt        DateTime?
+  cancelUrl          String?           @db.VarChar(1000)
+  rescheduleUrl      String?           @db.VarChar(1000)
+  status             AppointmentStatus @default(BOOKED)
+  bookedAt           DateTime          @default(now())
+
+  user         User              @relation(fields: [userId], references: [id])
+  orderItem    OrderItem?        @relation(fields: [orderItemId], references: [id])
+  slot         AvailabilitySlot? @relation(fields: [slotId], references: [id])
+  serviceOrder ServiceOrder?     @relation(fields: [serviceOrderId], references: [id])
 
   @@index([userId, status])
+  @@index([scheduledAt])
+}
+
+model ServicePackage {
+  id                   Int             @id @default(autoincrement())
+  name                 String
+  category             ServiceCategory
+  description          String?         @db.Text
+  price                Int
+  durationMinutes      Int
+  calendlyEventTypeUri String?         @db.VarChar(500)
+  schedulingUrl        String?         @db.VarChar(1000)
+  isActive             Boolean         @default(true)
+  createdAt            DateTime        @default(now())
+
+  bookings ServiceOrder[]
+}
+
+model ServiceOrder {
+  id                Int       @id @default(autoincrement())
+  userId            Int
+  packageId         Int
+  amount            Int
+  payStatus         PayStatus @default(FAILED)
+  razorpayOrderId   String?   @unique
+  razorpayPaymentId String?   @unique
+  createdAt         DateTime  @default(now())
+
+  user        User           @relation(fields: [userId], references: [id])
+  package     ServicePackage @relation(fields: [packageId], references: [id])
+  appointment Appointment?
+
+  @@index([userId, createdAt])
 }
 
 enum AppointmentStatus {
