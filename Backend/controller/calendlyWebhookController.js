@@ -56,7 +56,7 @@ async function calendlyWebhook(req, res) {
           package: { calendlyEventTypeUri: eventTypeUri },
           user: { email: { equals: email } },
         },
-        include: { package: true, user: true },
+        include: { package: true, user: true, appointment: true },
         orderBy: { createdAt: "desc" },
       });
       if (!paidOrder) {
@@ -64,20 +64,26 @@ async function calendlyWebhook(req, res) {
         return res.status(200).json({ received: true, matched: false });
       }
 
-      const appointment = await prisma.appointment.create({
-        data: {
-          userId: paidOrder.userId,
-          serviceOrderId: paidOrder.id,
-          serviceName: paidOrder.package.name,
-          durationMinutes: paidOrder.package.durationMinutes,
-          calendlyEventUri: eventUri,
-          calendlyInviteeUri: inviteeUri,
-          scheduledAt: scheduledEvent.start_time ? new Date(scheduledEvent.start_time) : null,
-          cancelUrl: payload.cancel_url || null,
-          rescheduleUrl: payload.reschedule_url || null,
-          status: "BOOKED",
-        },
-      });
+      if (paidOrder.appointment && paidOrder.appointment.status !== "CANCELLED") {
+        console.warn("Calendly booking received for an already booked service order", paidOrder.id);
+        return res.status(200).json({ received: true, matched: false, reason: "Service order already has an active appointment" });
+      }
+
+      const appointmentData = {
+        userId: paidOrder.userId,
+        serviceOrderId: paidOrder.id,
+        serviceName: paidOrder.package.name,
+        durationMinutes: paidOrder.package.durationMinutes,
+        calendlyEventUri: eventUri,
+        calendlyInviteeUri: inviteeUri,
+        scheduledAt: scheduledEvent.start_time ? new Date(scheduledEvent.start_time) : null,
+        cancelUrl: payload.cancel_url || null,
+        rescheduleUrl: payload.reschedule_url || null,
+        status: "BOOKED",
+      };
+      const appointment = paidOrder.appointment
+        ? await prisma.appointment.update({ where: { id: paidOrder.appointment.id }, data: appointmentData })
+        : await prisma.appointment.create({ data: appointmentData });
       await sendServiceBookingEmails({ appointment, user: paidOrder.user, servicePackage: paidOrder.package });
       return res.status(200).json({ received: true, matched: true });
     }
