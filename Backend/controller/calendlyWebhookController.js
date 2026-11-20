@@ -85,10 +85,24 @@ async function calendlyWebhook(req, res) {
     if (eventName === "invitee.canceled") {
       const inviteeUri = payload.uri;
       if (inviteeUri) {
-        await prisma.appointment.updateMany({
+        const existingAppointment = await prisma.appointment.findUnique({
           where: { calendlyInviteeUri: inviteeUri },
-          data: { status: "CANCELLED" },
+          include: { user: true, serviceOrder: { include: { package: true } } },
         });
+        if (existingAppointment && existingAppointment.status !== "CANCELLED") {
+          const cancelledAppointment = await prisma.appointment.update({
+            where: { id: existingAppointment.id },
+            data: { status: "CANCELLED" },
+          });
+          if (existingAppointment.serviceOrder?.package) {
+            await sendServiceBookingEmails({
+              appointment: cancelledAppointment,
+              user: existingAppointment.user,
+              servicePackage: existingAppointment.serviceOrder.package,
+              cancelled: true,
+            });
+          }
+        }
       }
       return res.status(200).json({ received: true });
     }
