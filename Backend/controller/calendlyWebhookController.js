@@ -1,5 +1,6 @@
 const crypto = require("crypto");
 const prisma = require("../prisma/client");
+const { sendServiceBookingEmails } = require("../services/serviceBookingEmailService");
 
 function verifyCalendlySignature(req) {
   const secret = process.env.CALENDLY_WEBHOOK_SIGNING_KEY;
@@ -63,7 +64,7 @@ async function calendlyWebhook(req, res) {
         return res.status(200).json({ received: true, matched: false });
       }
 
-      await prisma.appointment.create({
+      const appointment = await prisma.appointment.create({
         data: {
           userId: paidOrder.userId,
           serviceOrderId: paidOrder.id,
@@ -77,6 +78,7 @@ async function calendlyWebhook(req, res) {
           status: "BOOKED",
         },
       });
+      await sendServiceBookingEmails({ appointment, user: paidOrder.user, servicePackage: paidOrder.package });
       return res.status(200).json({ received: true, matched: true });
     }
 
