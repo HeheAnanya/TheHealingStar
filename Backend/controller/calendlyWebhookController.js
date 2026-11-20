@@ -52,7 +52,6 @@ async function calendlyWebhook(req, res) {
       const paidOrder = await prisma.serviceOrder.findFirst({
         where: {
           payStatus: "SUCCESS",
-          appointment: null,
           package: { calendlyEventTypeUri: eventTypeUri },
           user: { email: { equals: email } },
         },
