@@ -14,10 +14,11 @@ const calendly = require("./routes/calendlyRoute")
 const servicePackages = require("./routes/servicePackageRoute")
 const adminServicePackages = require("./routes/adminServicePackageRoute")
 const servicePayments = require("./routes/servicePaymentRoute")
+const calendlyWebhook = require("./routes/calendlyWebhookRoute")
 const cookieParser = require("cookie-parser");
 
 const app = express()
-app.use(express.json())
+app.use(express.json({ verify: (req, res, buffer) => { req.rawBody = buffer.toString("utf8"); } }))
 app.use(cookieParser())
 app.use(cors)
 app.use("/auth",authRoute)
