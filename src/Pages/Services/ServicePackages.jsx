@@ -13,7 +13,6 @@ const ServicePackages = () => {
   const [loading, setLoading] = useState(true);
   const [busyId, setBusyId] = useState(null);
   const [error, setError] = useState("");
-  const [notice, setNotice] = useState("");
 
   useEffect(() => {
     api.get("/services/packages")
@@ -33,7 +32,6 @@ const ServicePackages = () => {
 
   const book = async (item) => {
     setError("");
-    setNotice("");
     setBusyId(item.id);
     try {
       const account = await api.get("/auth/me");
@@ -99,7 +97,6 @@ const ServicePackages = () => {
     <section className="service-packages" id="book-a-session">
       <div className="service-packages__intro"><span>BOOK YOUR SESSION</span><h2>Choose Your Healing Experience</h2><p>Select a service and duration. Complete secure payment first, then choose your appointment time on Calendly.</p></div>
       {error && <p className="service-packages__alert" role="alert">{error}</p>}
-      {notice && <p role="status">{notice}</p>}
       {loading ? <p className="service-packages__empty">Loading available sessions…</p> :
         packages.length === 0 ? <p className="service-packages__empty">Sessions will be available here soon.</p> :
         categories.map(category => {
