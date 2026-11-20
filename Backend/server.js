@@ -11,6 +11,9 @@ const adminOrder = require("./routes/adminOrder")
 const payment = require("./routes/payment.route.js")
 const address = require("./routes/addressRoute.js")
 const calendly = require("./routes/calendlyRoute")
+const servicePackages = require("./routes/servicePackageRoute")
+const adminServicePackages = require("./routes/adminServicePackageRoute")
+const servicePayments = require("./routes/servicePaymentRoute")
 const cookieParser = require("cookie-parser");
 
 const app = express()
