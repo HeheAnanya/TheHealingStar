@@ -29,6 +29,10 @@ app.use("/admin", adminRoute)
 app.use("/payment", payment);
 app.use("/address",address)
 app.use("/admin/calendly", calendly)
+app.use("/services", servicePackages)
+app.use("/admin/service-packages", adminServicePackages)
+app.use("/payment/service", servicePayments)
+app.use("/calendly", calendlyWebhook)
 
 
 app.get("/",(req,res)=>(
