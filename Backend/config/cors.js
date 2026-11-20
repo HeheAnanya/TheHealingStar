@@ -4,7 +4,7 @@ const options = {
     origin:["http://localhost:5173",
         "https://the-healing-star.vercel.app"
     ],
-    methods:["GET","PUT","POST","DELETE"],
+    methods:["GET","PUT","POST","PATCH","DELETE","OPTIONS"],
     allowedHeaders:["Content-Type", "Authorization"],
     credentials: true
 }
