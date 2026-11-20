@@ -125,6 +125,8 @@ const AdminOrdersPage = () => {
                 <div className="admin-booking-details">
                   <div><small>Appointment time</small><strong>{dateTime(booking.scheduledAt || booking.slot?.startsAt)}</strong></div>
                   <div><small>Payment</small><strong>{booking.serviceOrder?.payStatus || booking.orderItem?.order?.payStatus || "Payment record unavailable"}</strong></div>
+                  {booking.serviceOrder ? <div><small>Amount paid</small><strong>{money(booking.serviceOrder.amount)}</strong></div> : null}
+                  {booking.durationMinutes ? <div><small>Session length</small><strong>{booking.durationMinutes} minutes</strong></div> : null}
                   <div><small>Booked on</small><strong>{dateTime(booking.bookedAt)}</strong></div>
                 </div>
                 <label className="admin-booking-status-label">Update booking status
