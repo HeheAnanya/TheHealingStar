@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { api } from "../../api/axios";
 import AdminCalendlyEvents from "../Services/AdminCalendlyEvents";
+import AdminServicePackages from "./AdminServicePackages";
 import "./AdminOrdersPage.css";
 
 const money = (value) => new Intl.NumberFormat("en-IN", {
@@ -79,6 +80,9 @@ const AdminOrdersPage = () => {
           className={activeTab === "services" ? "active" : ""} onClick={() => setActiveTab("services")}>
           Service Bookings <span>{bookings.length}</span>
         </button>
+        <button role="tab" aria-selected={activeTab === "packages"} className={activeTab === "packages" ? "active" : ""} onClick={() => setActiveTab("packages")}>
+          Service Packages
+        </button>
         <button role="tab" aria-selected={activeTab === "calendly"}
           className={activeTab === "calendly" ? "active" : ""} onClick={() => setActiveTab("calendly")}>
           Calendly Settings
@@ -133,6 +137,7 @@ const AdminOrdersPage = () => {
         </section>
       )}
 
+      {activeTab === "packages" && <AdminServicePackages />}
       {activeTab === "calendly" && <AdminCalendlyEvents />}
     </main>
   );
