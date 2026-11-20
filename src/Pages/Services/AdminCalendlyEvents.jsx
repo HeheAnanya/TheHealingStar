@@ -11,6 +11,9 @@ const AdminCalendlyEvents = () => {
   const [account, setAccount] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [webhookBusy, setWebhookBusy] = useState(false);
+  const [signingKey, setSigningKey] = useState("");
+  const [webhookMessage, setWebhookMessage] = useState("");
 
   const loadEventTypes = async () => {
     setLoading(true);
@@ -50,7 +53,7 @@ const AdminCalendlyEvents = () => {
       </div>
 
       {error ? <p className="admin-calendly__error" role="alert">{error}</p> : null}
-      {loading ? <p>Loading Calendly events...</p> : null}
+      {webhookMessage ? <p className="admin-calendly__success">{webhookMessage}</p> : null}\n      {signingKey ? <div className="admin-calendly__signing-key"><strong>Webhook signing key (shown once)</strong><code>{signingKey}</code></div> : null}\n      {loading ? <p>Loading Calendly events...</p> : null}
 
       {!loading && !error && events.length === 0 ? (
         <p>No active Event Types found in this Calendly account yet.</p>
