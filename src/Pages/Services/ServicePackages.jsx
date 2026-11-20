@@ -66,7 +66,7 @@ const ServicePackages = () => {
             const bookingUrl = new URL(verified.data.schedulingUrl);
             bookingUrl.searchParams.set("name", user.name);
             bookingUrl.searchParams.set("email", user.email);
-            bookingUrl.searchParams.set("a1", "Asia/Kolkata");
+            bookingUrl.searchParams.set("timezone", "Asia/Kolkata");
             window.location.assign(bookingUrl.toString());
           } catch (verificationError) {
             setError(verificationError.response?.data?.message || "Payment could not be verified. Please contact support before paying again.");
