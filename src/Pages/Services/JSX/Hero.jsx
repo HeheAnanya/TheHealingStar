@@ -88,7 +88,7 @@ const Hero = () => (
         text={item.text}
         description={item.description}
         items={item.items}
-        to={`/shop/${item.navi}`}
+        to={item.navi === "bracelets" ? "/shop/bracelets" : `/services/${item.navi}`}
       />
     ))}
   </div>
