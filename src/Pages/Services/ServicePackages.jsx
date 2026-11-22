@@ -7,7 +7,7 @@ const money = (value) => new Intl.NumberFormat("en-IN", {
   style: "currency", currency: "INR", maximumFractionDigits: 0,
 }).format(Number(value || 0));
 
-const ServicePackages = () => {
+const ServicePackages = ({ categoryFilter = null }) => {
   const navigate = useNavigate();
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -98,8 +98,8 @@ const ServicePackages = () => {
       <div className="service-packages__intro"><span>BOOK YOUR SESSION</span><h2>Choose Your Healing Experience</h2><p>Select a service and duration. Complete secure payment first, then choose your appointment time on Calendly.</p></div>
       {error && <p className="service-packages__alert" role="alert">{error}</p>}
       {loading ? <p className="service-packages__empty">Loading available sessions…</p> :
-        packages.length === 0 ? <p className="service-packages__empty">Sessions will be available here soon.</p> :
-        categories.map(category => {
+        packages.filter(item => !categoryFilter || item.category === categoryFilter).length === 0 ? <p className="service-packages__empty">Sessions will be available here soon.</p> :
+        categories.filter(category => !categoryFilter || category.key === categoryFilter).map(category => {
           const entries = packages.filter(item => item.category === category.key);
           if (!entries.length) return null;
           return <div className="service-package-group" key={category.key}>
