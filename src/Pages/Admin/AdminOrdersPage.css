@@ -1,0 +1,48 @@
+.admin-orders-page {
+  min-height: 100vh;
+  padding: clamp(20px, 4vw, 52px);
+  color: #38271e;
+  background: #faf7f0;
+  font-family: Arial, sans-serif;
+}
+.admin-orders-top { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; max-width:1440px; margin:0 auto 30px; }
+.admin-orders-eyebrow { margin:0 0 9px; color:#a47b3b; font-size:11px; font-weight:700; letter-spacing:.18em; }
+.admin-orders-top h1 { margin:0; color:#39291f; font:500 clamp(30px,4vw,44px)/1.1 Georgia,serif; }
+.admin-orders-subtitle { margin:10px 0 0; color:#857465; font-size:14px; }
+.admin-orders-refresh { border:1px solid #d9c8ad; border-radius:8px; padding:11px 18px; color:#fffaf0; background:#684a32; cursor:pointer; }
+.admin-orders-refresh:disabled { opacity:.6; cursor:wait; }
+.admin-orders-tabs { display:flex; flex-wrap:wrap; gap:8px; max-width:1440px; margin:0 auto 22px; padding-bottom:12px; border-bottom:1px solid #e6dccd; }
+.admin-orders-tabs button { display:flex; align-items:center; gap:9px; padding:12px 17px; border:1px solid transparent; border-radius:9px; color:#786656; background:transparent; cursor:pointer; font-size:14px; }
+.admin-orders-tabs button.active { border-color:#e5d7c3; color:#533a28; background:#fffdf8; box-shadow:0 3px 12px #4c32100a; }
+.admin-orders-tabs button span { padding:2px 7px; border-radius:20px; color:#76552e; background:#f1e8d9; font-size:11px; }
+.admin-orders-panel { max-width:1440px; margin:0 auto; padding:24px; border:1px solid #e9dfd1; border-radius:15px; background:#fffdf9; }
+.admin-orders-panel-heading { display:flex; justify-content:space-between; align-items:center; gap:15px; margin-bottom:18px; }
+.admin-orders-panel-heading h2 { margin:0; font:500 24px Georgia,serif; }
+.admin-orders-panel-heading span { color:#8a7868; font-size:13px; }
+.admin-orders-table-wrap { overflow-x:auto; }
+.admin-orders-table { width:100%; border-collapse:collapse; text-align:left; font-size:13px; }
+.admin-orders-table th { padding:13px 12px; color:#8a7868; background:#faf6ef; font-size:11px; letter-spacing:.06em; text-transform:uppercase; white-space:nowrap; }
+.admin-orders-table td { padding:15px 12px; border-bottom:1px solid #f0e9df; vertical-align:top; }
+.admin-orders-table td small { display:block; margin-top:5px; color:#8a7868; }
+.admin-orders-table select,.admin-booking-status-label select { max-width:170px; padding:9px 10px; border:1px solid #dfd2c0; border-radius:7px; color:#49372a; background:#fff; }
+.admin-orders-status { display:inline-block; padding:5px 9px; border-radius:20px; background:#f1eadf; color:#72552f; font-size:11px; font-weight:700; text-transform:capitalize; white-space:nowrap; }
+.admin-orders-status.success,.admin-orders-status.delivered,.admin-orders-status.completed { color:#326344; background:#e8f2e9; }
+.admin-orders-status.failed,.admin-orders-status.cancelled { color:#914d42; background:#f8eae6; }
+.admin-orders-empty { padding:35px 15px; color:#8a7868; text-align:center; }
+.admin-orders-error { max-width:1440px; margin:0 auto 18px; padding:13px 16px; border-radius:8px; color:#8a2929; background:#fff0ed; font-size:14px; }
+.admin-bookings-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr)); gap:15px; }
+.admin-booking-card { padding:19px; border:1px solid #eee3d4; border-radius:12px; background:#fffefa; }
+.admin-booking-card-head { display:flex; align-items:center; justify-content:space-between; gap:10px; color:#9a805f; font-size:10px; font-weight:700; letter-spacing:.1em; }
+.admin-booking-card h3 { margin:16px 0 5px; font:500 21px Georgia,serif; color:#443126; }
+.admin-booking-customer { margin:0; color:#887666; font-size:13px; overflow-wrap:anywhere; }
+.admin-booking-details { display:grid; gap:13px; margin:20px 0; padding:15px 0; border-top:1px solid #f0e8dc; border-bottom:1px solid #f0e8dc; }
+.admin-booking-details small { display:block; margin-bottom:5px; color:#9a8878; font-size:11px; }
+.admin-booking-details strong { color:#594536; font-size:13px; font-weight:600; }
+.admin-booking-status-label { display:flex; align-items:center; justify-content:space-between; gap:10px; color:#786656; font-size:12px; }
+@media(max-width:650px) {
+ .admin-orders-page { padding:20px 13px; }
+ .admin-orders-top { align-items:flex-start; flex-direction:column; }
+ .admin-orders-panel { padding:15px; }
+ .admin-orders-tabs button { padding:10px 11px; font-size:12px; }
+ .admin-booking-status-label { align-items:flex-start; flex-direction:column; }
+}

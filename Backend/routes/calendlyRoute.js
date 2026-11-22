@@ -5,10 +5,12 @@ const { rbac } = require("../middlewares/rbaMiddle");
 const {
   calendlyConnection,
   listCalendlyEventTypes,
+  createCalendlyWebhook,
 } = require("../controller/calendlyController");
 
 // Admin-only: never expose Calendly account details to public visitors.
 router.get("/connection", authMiddleware, rbac(["ADMIN"]), calendlyConnection);
 router.get("/event-types", authMiddleware, rbac(["ADMIN"]), listCalendlyEventTypes);
+router.post("/webhook", authMiddleware, rbac(["ADMIN"]), createCalendlyWebhook);
 
 module.exports = router;

@@ -49,7 +49,7 @@ async function forgotPassword(req, res) {
             return res.status(400).json({ message: "Email is required" })
         }
 
-        const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173"
+        const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5174"
         const result = await AuthService.forgotPassword(email, frontendUrl)
         return res.status(200).json(result)
     } catch (err) {

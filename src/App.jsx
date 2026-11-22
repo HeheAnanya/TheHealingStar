@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../src/Pages/Home/Home';
 import Services from '../src/Pages/Services/Services';
+import ServiceCategory from "./Pages/Services/ServiceCategory.jsx";
 import Shop from "./Pages/Shop/Shop"
 import ProductDetail from "../src/Pages/Shop/JSX/ProductDetail";
 import AboutPage from "../src/Pages/About/About"
@@ -17,6 +18,7 @@ import Checkout from './Pages/Shop/JSX/Checkout'
 import AuthCallback from "./Pages/Home/JSX/AuthCallback.jsx";
 import ResetPassword from "./Pages/Home/JSX/ResetPassword.jsx";
 import Profile from "./Pages/Home/JSX/Profile.jsx";
+import AdminOrdersPage from "./Pages/Admin/AdminOrdersPage.jsx";
 
 // import a from "./Pages/S"
 
@@ -33,12 +35,14 @@ const App = () => {
         <Route path="/resetPassword" element={<ResetPassword />} /> 
         
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:category" element={<ServiceCategory />} />
         <Route path="/shop/:category" element={<Shop />} />
         <Route path="/products/:category/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order/my" element={<MyOrder />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/admin/orders" element={<AdminOrdersPage />} />
        <Route path="/about" element={<AboutPage />} />
        <Route path="/contact" element={<ContactPage />} />
 

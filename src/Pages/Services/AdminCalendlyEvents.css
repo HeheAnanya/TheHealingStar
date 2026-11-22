@@ -96,3 +96,5 @@
     flex-direction: column;
   }
 }
+
+.admin-calendly__actions{display:flex;gap:9px;flex-wrap:wrap}.admin-calendly__actions button:last-child{background:#8a642e}.admin-calendly__success{padding:12px;background:#edf7ed;border-radius:8px;color:#285c32;font-size:13px;line-height:1.6}.admin-calendly__signing-key{display:grid;gap:8px;margin:12px 0;padding:14px;background:#fff8e8;border:1px solid #e9ddc9;border-radius:8px}.admin-calendly__signing-key code{overflow-wrap:anywhere;padding:9px;background:#fff;border-radius:5px;color:#49382d}
