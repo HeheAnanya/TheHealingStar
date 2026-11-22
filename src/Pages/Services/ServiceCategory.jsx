@@ -3,11 +3,14 @@ import { Navigate, useParams } from "react-router-dom";
 import Navbar from "../Home/JSX/Navbar";
 import Footer from "../Home/JSX/Footer";
 import ServicePackages from "./ServicePackages";
+import Tarot from "../../../public/assets/tarrot.png";
+import Numerology from "../../../public/assets/numerlogy.png";
+import Reiki from "../../../public/assets/reiki.png";
 
 const serviceCategories = {
-  tarot: { key: "TAROT", title: "Tarot Card Reading" },
-  reiki: { key: "REIKI", title: "Reiki Healing" },
-  numerology: { key: "NUMEROLOGY", title: "Numerology" },
+  tarot: { key: "TAROT", title: "Tarot Card Reading", image: Tarot },
+  reiki: { key: "REIKI", title: "Reiki Healing", image: Reiki },
+  numerology: { key: "NUMEROLOGY", title: "Numerology", image: Numerology },
 };
 
 const ServiceCategory = () => {
@@ -19,7 +22,7 @@ const ServiceCategory = () => {
   return (
     <div className="service-category-page">
       <Navbar />
-      <ServicePackages categoryFilter={selected.key} />
+      <ServicePackages categoryFilter={selected.key} categoryTitle={selected.title} categoryImage={selected.image} />
       <Footer />
     </div>
   );
