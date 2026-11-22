@@ -1,3 +1,4 @@
+const crypto = require("crypto");
 const CALENDLY_API = "https://api.calendly.com";
 
 function getHeaders() {
@@ -77,6 +78,10 @@ async function createCalendlyWebhookSubscription(webhookUrl) {
     error.status = 502;
     throw error;
   }
+  // Calendly does not return a signing key after creation. Generate it here,
+  // send it with the subscription request, and return the same value to the
+  // admin UI so it can be stored in CALENDLY_WEBHOOK_SIGNING_KEY.
+  const signingKey = crypto.randomBytes(32).toString("base64url");
   const data = await calendlyRequest("/webhook_subscriptions", {
     method: "POST",
     body: {
@@ -85,9 +90,10 @@ async function createCalendlyWebhookSubscription(webhookUrl) {
       organization: user.current_organization,
       scope: "user",
       user: user.uri,
+      signing_key: signingKey,
     },
   });
-  return data.resource;
+  return { ...data.resource, signing_key: signingKey };
 }
 
 module.exports = {
