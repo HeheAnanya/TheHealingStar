@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../src/Pages/Home/Home';
 import Services from '../src/Pages/Services/Services';
+import ServiceCategory from "./Pages/Services/ServiceCategory.jsx";
 import Shop from "./Pages/Shop/Shop"
 import ProductDetail from "../src/Pages/Shop/JSX/ProductDetail";
 import AboutPage from "../src/Pages/About/About"
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/resetPassword" element={<ResetPassword />} /> 
         
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:category" element={<ServiceCategory />} />
         <Route path="/shop/:category" element={<Shop />} />
         <Route path="/products/:category/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
