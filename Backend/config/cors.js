@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const cors = require("cors")
 const options = {
-    origin:["http://localhost:5173",
+    origin:["http://localhost:5174",
         "https://the-healing-star.vercel.app"
     ],
     methods:["GET","PUT","POST","PATCH","DELETE","OPTIONS"],
